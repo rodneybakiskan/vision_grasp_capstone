@@ -1,0 +1,9 @@
+<launch>
+
+<rosparam file="$(find camera_mount_assembly_urdf_no-adp_description)/launch/controller.yaml" command="load"/>
+<node args="Rev12_position_controller Rev13_position_controller Rev14_position_controller Rev15_position_controller Rev16_position_controller Rev17_position_controller Rev25_position_controller Rev26_position_controller Rev29_position_controller Rev31_position_controller Rev44_position_controller Rev45_position_controller joint_state_controller " name="controller_spawner" ns="camera_mount_assembly_urdf_no-adp" output="screen" pkg="controller_manager" respawn="false" type="spawner"/>
+<node name="robot_state_publisher" output="screen" pkg="robot_state_publisher" respawn="false" type="robot_state_publisher">
+  <remap from="/joint_states" to="/camera_mount_assembly_urdf_no-adp/joint_states"/>
+</node>
+
+</launch>
