@@ -1,0 +1,11 @@
+h5py
+Pillow
+pybullet
+numpy
+scikit-image
+opencv-python
+matplotlib
+torch
+torchvision
+torchsummary
+tensorboardX
