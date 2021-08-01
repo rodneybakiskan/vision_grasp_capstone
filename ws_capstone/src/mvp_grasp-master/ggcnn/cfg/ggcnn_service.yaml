@@ -4,7 +4,10 @@ ggcnn_service:
 # depth_topic: /camera/depth/image_meters
     depth_topic: /camera/depth/image_rect_raw
     camera_frame: camera_depth_optical_frame
+# update robot_base_frame
     robot_base_frame: camera_link
     crop_size: 300
     crop_y_offset: 40
     fov: 65.5
+
+

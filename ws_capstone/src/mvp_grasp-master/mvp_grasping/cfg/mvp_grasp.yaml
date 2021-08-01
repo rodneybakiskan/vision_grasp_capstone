@@ -19,7 +19,7 @@ grasp_entropy_node:
         z2: 0.40
     camera:
         info_topic: /camera/depth/camera_info
-        depth_topic: /camera/depth/image_meters
+        depth_topic: /camera/depth/image_rect_raw
         camera_frame: camera_depth_optical_frame
         base_frame: camera_link
         crop_size: 350

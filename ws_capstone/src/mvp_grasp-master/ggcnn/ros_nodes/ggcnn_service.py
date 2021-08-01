@@ -29,27 +29,20 @@ TimeIt.print_output = False
 class GGCNNService:
     def __init__(self):
         # Get the camera parameters
+        print('Begin GGCNNService() Init')
         cam_info_topic = rospy.get_param('~camera/info_topic')
-        print(cam_info_topic)
+        print('cam_info_topic: ' + cam_info_topic)
         camera_info_msg = rospy.wait_for_message(cam_info_topic, CameraInfo)
-        print(camera_info_msg)
         self.cam_K = np.array(camera_info_msg.K).reshape((3, 3))
-        print(self.cam_K)
         self.img_pub = rospy.Publisher('~visualisation', Image, queue_size=1)
-        print(self.img_pub)
         rospy.Service('~predict', GraspPrediction,
                       self.compute_service_handler)
-        print(rospy.Service)
         self.base_frame = rospy.get_param('~camera/robot_base_frame')
-        print(self.base_frame)
+        print('robot_base_frame: ' + self.base_frame)
         self.camera_frame = rospy.get_param('~camera/camera_frame')
-        print(self.camera_frame)
         self.img_crop_size = rospy.get_param('~camera/crop_size')
-        print(self.img_crop_size)
         self.img_crop_y_offset = rospy.get_param('~camera/crop_y_offset')
-        print(self.img_crop_y_offset)
         self.cam_fov = rospy.get_param('~camera/fov')
-        print(self.cam_fov)
 
         self.counter = 0
         self.curr_depth_img = None
@@ -57,49 +50,51 @@ class GGCNNService:
         self.last_image_pose = None
         rospy.Subscriber(rospy.get_param('~camera/depth_topic'),
                          Image, self._depth_img_callback, queue_size=1)
-        print(rospy.Subscriber)
 
         self.waiting = False
         self.received = False
-        print('Got Camera Parameters')
+        print('GGCNNService() Init complete...')
 
     def _depth_img_callback(self, msg):
         # Doing a rospy.wait_for_message is super slow, compared to just subscribing and keeping the newest one.
         if not self.waiting:
-            print('Not Waiting')
+            print('waiting...')
+            rospy.sleep(1)
             return
 
         self.curr_img_time = time.time()
-        #self.last_image_pose = tfh.current_robot_pose(
-        #    self.base_frame, self.camera_frame)
+        self.last_image_pose = tfh.current_robot_pose(
+            self.base_frame, self.camera_frame)
         self.curr_depth_img = bridge.imgmsg_to_cv2(msg)
         self.received = True
-        print('Img callback OK')
+        print('Img callback complete...')
 
     def compute_service_handler(self, req):
-        print('Got here')
-        # if self.curr_depth_img is None:
-        #     rospy.logerr('No depth image received yet.')
-        #     rospy.sleep(0.5)
-
-        # if time.time() - self.curr_img_time > 0.5:
-        #     rospy.logerr('The Realsense node has died')
-        #     return GraspPredictionResponse()
+        
         print('Inside compute_service_handler')
+
+        # keep this commented as realsense node is too unreliable
+#        if self.curr_depth_img is None:
+#            rospy.logerr('No depth image received yet.')
+#            rospy.sleep(0.5)
+
+#        if time.time() - self.curr_img_time > 0.5:
+#            rospy.logerr('The Realsense node has died')
+#            return GraspPredictionResponse()
 
         self.waiting = True
         while not self.received:
             rospy.sleep(0.01)
+
         self.waiting = False
         self.received = False
 
         with TimeIt('Total'):
             depth = self.curr_depth_img.copy()
-            #camera_pose = self.last_image_pose
-            #cam_p = camera_pose.position
-            print(depth)
-            #camera_rot = tft.quaternion_matrix(
-            #    tfh.quaternion_to_list(camera_pose.orientation))[0:3, 0:3]
+            camera_pose = self.last_image_pose
+            cam_p = camera_pose.position
+            camera_rot = tft.quaternion_matrix(
+                tfh.quaternion_to_list(camera_pose.orientation))[0:3, 0:3]
 
             # Do grasp prediction
             depth_crop, depth_nan_mask = process_depth_image(
@@ -110,9 +105,9 @@ class GGCNNService:
             # Mask Points Here
 
             # Correct for the rotation of the camera
-            #angle -= np.arcsin(camera_rot[0, 1])
-            #angle = (angle + np.pi/2) % np.pi - np.pi / \
-            #    2  # Wrap [-np.pi/2, np.pi/2]
+            angle -= np.arcsin(camera_rot[0, 1])
+            angle = (angle + np.pi/2) % np.pi - np.pi / \
+                2  # Wrap [-np.pi/2, np.pi/2]
 
             # Convert to 3D positions.
             imh, imw = depth.shape
@@ -149,13 +144,12 @@ class GGCNNService:
                             False)
 
             self.img_pub.publish(bridge.cv2_to_imgmsg(show))
-
             return ret
 
 
 if __name__ == '__main__':
     rospy.init_node('ggcnn_service')
-    #import dougsm_helpers.tf_helpers as tfh
+    import dougsm_helpers.tf_helpers as tfh
     GGCNN = GGCNNService()
     print(GGCNN)
     rospy.spin()

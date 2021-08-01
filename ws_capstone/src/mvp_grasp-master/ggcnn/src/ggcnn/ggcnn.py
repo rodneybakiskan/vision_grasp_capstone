@@ -6,14 +6,16 @@ import numpy as np
 import scipy.ndimage as ndimage
 
 import torch
-
+import torch.nn as nn
 from dougsm_helpers.timeit import TimeIt
+#from models.ggcnn import GGCNN
 
-# MODEL_FILE = 'models/epoch_24_iou_0.82_morezoom'
-MODEL_FILE = 'models/epoch_50_cornell'
+
+#MODEL_FILE = 'models/epoch_50_cornell'
+MODEL_FILE = 'models/ggcnn_epoch_23_cornell'
+
 here = path.dirname(path.abspath(__file__))
 sys.path.append(here)
-print(path.join(path.dirname(__file__), MODEL_FILE))
 model = torch.load(path.join(path.dirname(__file__), MODEL_FILE))
 device = torch.device("cuda:0")
 
@@ -68,6 +70,10 @@ def predict(depth, process_depth=True, crop_size=300, out_size=300, depth_nan_ma
     # Inference
     depth = np.clip((depth - depth.mean()), -1, 1)
     depthT = torch.from_numpy(depth.reshape(1, 1, out_size, out_size).astype(np.float32)).to(device)
+
+
+
+
     with torch.no_grad():
         pred_out = model(depthT)
 
