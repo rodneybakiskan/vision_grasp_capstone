@@ -1,8 +1,0 @@
-prefix=/home/liam/git/vision_grasp_capstone/ws_capstone/devel/.private/moveit_config
-
-Name: moveit_config
-Description: Description of moveit_config
-Version: 0.3.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
