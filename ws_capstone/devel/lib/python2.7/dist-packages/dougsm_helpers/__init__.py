@@ -1,0 +1,1 @@
+/home/liam/git/vision_grasp_capstone/ws_capstone/devel/.private/dougsm_helpers/lib/python2.7/dist-packages/dougsm_helpers/__init__.py

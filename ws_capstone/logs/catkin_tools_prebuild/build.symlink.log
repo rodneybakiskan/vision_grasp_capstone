@@ -1,0 +1,12 @@
+Symlinking /home/liam/git/vision_grasp_capstone/ws_capstone/devel/./local_setup.zsh
+Symlinking /home/liam/git/vision_grasp_capstone/ws_capstone/devel/./env.sh
+Symlinking /home/liam/git/vision_grasp_capstone/ws_capstone/devel/./_setup_util.py
+Symlinking /home/liam/git/vision_grasp_capstone/ws_capstone/devel/./local_setup.bash
+Symlinking /home/liam/git/vision_grasp_capstone/ws_capstone/devel/./setup.zsh
+Symlinking /home/liam/git/vision_grasp_capstone/ws_capstone/devel/./setup.bash
+Symlinking /home/liam/git/vision_grasp_capstone/ws_capstone/devel/./local_setup.sh
+Symlinking /home/liam/git/vision_grasp_capstone/ws_capstone/devel/./cmake.lock
+Symlinking /home/liam/git/vision_grasp_capstone/ws_capstone/devel/./setup.sh
+Symlinking /home/liam/git/vision_grasp_capstone/ws_capstone/devel/lib/pkgconfig/catkin_tools_prebuild.pc
+Symlinking /home/liam/git/vision_grasp_capstone/ws_capstone/devel/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig.cmake
+Symlinking /home/liam/git/vision_grasp_capstone/ws_capstone/devel/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig-version.cmake
