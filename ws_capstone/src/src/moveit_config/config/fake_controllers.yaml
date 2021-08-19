@@ -1,0 +1,15 @@
+controller_list:
+  - name: fake_ur5e_arm_controller
+    joints:
+      - Rev12
+      - Rev13
+      - Rev14
+      - Rev15
+      - Rev16
+      - Rev17
+  - name: fake_gripper_controller
+    joints:
+      - Rev26
+initial:  # Define initial robot poses.
+  - group: ur5e_arm
+    pose: home
