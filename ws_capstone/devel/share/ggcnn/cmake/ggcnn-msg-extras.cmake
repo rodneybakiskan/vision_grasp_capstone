@@ -1,0 +1,1 @@
+/home/liam/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/ggcnn/cmake/ggcnn-msg-extras.cmake

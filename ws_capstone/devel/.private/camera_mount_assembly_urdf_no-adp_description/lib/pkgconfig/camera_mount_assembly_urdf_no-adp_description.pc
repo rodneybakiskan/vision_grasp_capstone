@@ -1,0 +1,8 @@
+prefix=/home/liam/git/vision_grasp_capstone/ws_capstone/devel/.private/camera_mount_assembly_urdf_no-adp_description
+
+Name: camera_mount_assembly_urdf_no-adp_description
+Description: Description of camera_mount_assembly_urdf_no-adp_description
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

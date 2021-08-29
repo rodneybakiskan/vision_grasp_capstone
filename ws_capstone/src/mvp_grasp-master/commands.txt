@@ -1,0 +1,17 @@
+catkin clean
+catkin build
+
+roscore &
+
+//camera
+roslaunch realsense2_camera rs_camera.launch
+roslaunch mvp_grasping wrist_realsense.launch
+
+//ggcnn service
+roslaunch ggcnn ggcnn_service.launch
+
+//open loop grasping
+rosrun mvp_grasping panda_open_loop_grasp.py
+
+//observe visualisation topic in rviz
+rosrun rviz rviz

@@ -28,6 +28,7 @@ TimeIt.print_output = False
 
 class GGCNNService:
     def __init__(self):
+
         # Get the camera parameters
         print('Begin GGCNNService() Init')
         cam_info_topic = rospy.get_param('~camera/info_topic')
@@ -73,7 +74,7 @@ class GGCNNService:
         
         print('Inside compute_service_handler')
 
-        # keep this commented as realsense node is too unreliable
+        # keep commented as realsense node is too unreliable
 #        if self.curr_depth_img is None:
 #            rospy.logerr('No depth image received yet.')
 #            rospy.sleep(0.5)
@@ -91,6 +92,7 @@ class GGCNNService:
 
         with TimeIt('Total'):
             depth = self.curr_depth_img.copy()
+
             camera_pose = self.last_image_pose
             cam_p = camera_pose.position
             camera_rot = tft.quaternion_matrix(
@@ -99,6 +101,10 @@ class GGCNNService:
             # Do grasp prediction
             depth_crop, depth_nan_mask = process_depth_image(
                 depth, self.img_crop_size, 300, return_mask=True, crop_y_offset=self.img_crop_y_offset)
+
+            #cv2.imshow('image',depth)
+            #cv2.waitKey(0)
+            
             points, angle, width_img, _ = predict(
                 depth_crop, process_depth=False, depth_nan_mask=depth_nan_mask, filters=(2.0, 2.0, 2.0))
 
@@ -136,12 +142,10 @@ class GGCNNService:
             g.width = width_m[best_g_unr]
             g.quality = points[best_g_unr]
 
-            show = gridshow('Display',
-                            [depth_crop, points],
+            show = gridshow('Display', [depth_crop, points],
                             [(0.30, 0.55), None, (-np.pi/2, np.pi/2)],
                             [cv2.COLORMAP_BONE, cv2.COLORMAP_JET, cv2.COLORMAP_BONE],
-                            3,
-                            False)
+                            3, False)
 
             self.img_pub.publish(bridge.cv2_to_imgmsg(show))
             return ret

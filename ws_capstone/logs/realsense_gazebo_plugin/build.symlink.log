@@ -1,0 +1,4 @@
+Symlinking /home/liam/git/vision_grasp_capstone/ws_capstone/devel/lib/librealsense_gazebo_plugin.so
+Symlinking /home/liam/git/vision_grasp_capstone/ws_capstone/devel/lib/pkgconfig/realsense_gazebo_plugin.pc
+Symlinking /home/liam/git/vision_grasp_capstone/ws_capstone/devel/share/realsense_gazebo_plugin/cmake/realsense_gazebo_pluginConfig.cmake
+Symlinking /home/liam/git/vision_grasp_capstone/ws_capstone/devel/share/realsense_gazebo_plugin/cmake/realsense_gazebo_pluginConfig-version.cmake

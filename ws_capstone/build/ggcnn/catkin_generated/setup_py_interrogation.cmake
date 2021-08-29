@@ -1,0 +1,7 @@
+set(ggcnn_SETUP_PY_SETUP_MODULE "distutils.core")
+set(ggcnn_SETUP_PY_VERSION "0.0.0")
+set(ggcnn_SETUP_PY_SCRIPTS "")
+set(ggcnn_SETUP_PY_PACKAGES "ggcnn")
+set(ggcnn_SETUP_PY_PACKAGE_DIRS "src/ggcnn")
+set(ggcnn_SETUP_PY_MODULES "")
+set(ggcnn_SETUP_PY_MODULE_DIRS "")

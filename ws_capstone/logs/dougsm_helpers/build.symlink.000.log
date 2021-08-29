@@ -1,0 +1,4 @@
+Symlinking /home/liam/git/vision_grasp_capstone/ws_capstone/devel/lib/pkgconfig/dougsm_helpers.pc
+Symlinking /home/liam/git/vision_grasp_capstone/ws_capstone/devel/lib/python2.7/dist-packages/dougsm_helpers/__init__.py
+Symlinking /home/liam/git/vision_grasp_capstone/ws_capstone/devel/share/dougsm_helpers/cmake/dougsm_helpersConfig-version.cmake
+Symlinking /home/liam/git/vision_grasp_capstone/ws_capstone/devel/share/dougsm_helpers/cmake/dougsm_helpersConfig.cmake

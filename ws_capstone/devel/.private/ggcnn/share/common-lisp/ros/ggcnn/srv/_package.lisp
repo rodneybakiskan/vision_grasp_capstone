@@ -1,0 +1,10 @@
+(cl:defpackage ggcnn-srv
+  (:use )
+  (:export
+   "GRASPPREDICTION"
+   "<GRASPPREDICTION-REQUEST>"
+   "GRASPPREDICTION-REQUEST"
+   "<GRASPPREDICTION-RESPONSE>"
+   "GRASPPREDICTION-RESPONSE"
+  ))
+

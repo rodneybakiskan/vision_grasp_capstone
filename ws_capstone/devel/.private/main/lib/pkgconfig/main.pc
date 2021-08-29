@@ -1,0 +1,8 @@
+prefix=/home/liam/git/vision_grasp_capstone/ws_capstone/devel/.private/main
+
+Name: main
+Description: Description of main
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

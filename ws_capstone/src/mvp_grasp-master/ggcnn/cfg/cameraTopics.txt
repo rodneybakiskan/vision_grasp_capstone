@@ -1,4 +1,4 @@
-List of camera topics bnroadcast by Realsense D435
+List of camera topics broadcast by Realsense D435
 
 /camera/color/camera_info
 /camera/color/image_raw

@@ -1,0 +1,8 @@
+prefix=/home/liam/git/vision_grasp_capstone/ws_capstone/devel/.private/dougsm_helpers
+
+Name: dougsm_helpers
+Description: Description of dougsm_helpers
+Version: 0.0.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

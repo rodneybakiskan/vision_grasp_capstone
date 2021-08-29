@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>main</name>
+  <version>1.0.0</version>
+  <description>main</description>
+  <maintainer email="1@gmail.com">ye</maintainer>
+  <license>ye</license>
+  <buildtool_depend>catkin</buildtool_depend>
+
+</package>

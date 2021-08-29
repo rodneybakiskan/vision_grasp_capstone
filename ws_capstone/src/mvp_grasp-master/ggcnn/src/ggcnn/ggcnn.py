@@ -10,10 +10,14 @@ import torch.nn as nn
 from dougsm_helpers.timeit import TimeIt
 #from models.ggcnn import GGCNN
 
-
-#MODEL_FILE = 'models/epoch_50_cornell'
+#GGCNN
 MODEL_FILE = 'models/ggcnn_epoch_23_cornell'
 
+# GGCNN2
+#MODEL_FILE = 'models/ggcnn2_epoch_50_cornell'
+
+
+#load GGCNN model 
 here = path.dirname(path.abspath(__file__))
 sys.path.append(here)
 model = torch.load(path.join(path.dirname(__file__), MODEL_FILE))
@@ -71,10 +75,8 @@ def predict(depth, process_depth=True, crop_size=300, out_size=300, depth_nan_ma
     depth = np.clip((depth - depth.mean()), -1, 1)
     depthT = torch.from_numpy(depth.reshape(1, 1, out_size, out_size).astype(np.float32)).to(device)
 
-
-
-
     with torch.no_grad():
+        # input depth image to ggcnn
         pred_out = model(depthT)
 
     points_out = pred_out[0].cpu().numpy().squeeze()
