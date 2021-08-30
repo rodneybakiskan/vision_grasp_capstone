@@ -6,6 +6,8 @@ roscore &
 //camera
 roslaunch realsense2_camera rs_camera.launch
 roslaunch mvp_grasping wrist_realsense.launch
+roslaunch main view_d435_model_rviz_gazebo.launch
+
 
 //ggcnn service
 roslaunch ggcnn ggcnn_service.launch

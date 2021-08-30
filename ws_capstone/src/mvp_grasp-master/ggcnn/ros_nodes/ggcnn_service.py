@@ -30,10 +30,11 @@ class GGCNNService:
     def __init__(self):
 
         # Get the camera parameters
-        print('Begin GGCNNService() Init')
+        print('Begin GGCNNService() Init...')
         cam_info_topic = rospy.get_param('~camera/info_topic')
         print('cam_info_topic: ' + cam_info_topic)
         camera_info_msg = rospy.wait_for_message(cam_info_topic, CameraInfo)
+        print('camera_info_msg: ' + str(camera_info_msg))
         self.cam_K = np.array(camera_info_msg.K).reshape((3, 3))
         self.img_pub = rospy.Publisher('~visualisation', Image, queue_size=1)
         rospy.Service('~predict', GraspPrediction,
@@ -59,7 +60,7 @@ class GGCNNService:
     def _depth_img_callback(self, msg):
         # Doing a rospy.wait_for_message is super slow, compared to just subscribing and keeping the newest one.
         if not self.waiting:
-            print('waiting...')
+            print('Waiting inside img callback...')
             rospy.sleep(1)
             return
 
@@ -85,6 +86,7 @@ class GGCNNService:
 
         self.waiting = True
         while not self.received:
+	    print('Waiting inside service handler...');
             rospy.sleep(0.01)
 
         self.waiting = False

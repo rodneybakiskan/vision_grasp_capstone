@@ -1,49 +1,49 @@
 [35m[1mScanning dependencies of target std_msgs_generate_messages_cpp[0m
-[35m[1mScanning dependencies of target geometry_msgs_generate_messages_cpp[0m
-[35m[1mScanning dependencies of target _ggcnn_generate_messages_check_deps_Grasp[0m
 [35m[1mScanning dependencies of target _ggcnn_generate_messages_check_deps_GraspPrediction[0m
-[35m[1mScanning dependencies of target std_msgs_generate_messages_py[0m
+[35m[1mScanning dependencies of target _ggcnn_generate_messages_check_deps_Grasp[0m
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_cpp[0m
 [  0%] Built target std_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target std_msgs_generate_messages_py[0m
 [  0%] Built target geometry_msgs_generate_messages_cpp
-[  0%] Built target std_msgs_generate_messages_py
 [35m[1mScanning dependencies of target geometry_msgs_generate_messages_py[0m
+[  0%] Built target std_msgs_generate_messages_py
 [35m[1mScanning dependencies of target std_msgs_generate_messages_nodejs[0m
 [35m[1mScanning dependencies of target geometry_msgs_generate_messages_nodejs[0m
 [  0%] Built target geometry_msgs_generate_messages_py
 [  0%] Built target std_msgs_generate_messages_nodejs
 [  0%] Built target geometry_msgs_generate_messages_nodejs
 [35m[1mScanning dependencies of target std_msgs_generate_messages_eus[0m
-[35m[1mScanning dependencies of target std_msgs_generate_messages_lisp[0m
 [35m[1mScanning dependencies of target geometry_msgs_generate_messages_eus[0m
+[35m[1mScanning dependencies of target std_msgs_generate_messages_lisp[0m
 [  0%] Built target std_msgs_generate_messages_eus
 [  0%] Built target std_msgs_generate_messages_lisp
-[  0%] Built target geometry_msgs_generate_messages_eus
 [  0%] Built target _ggcnn_generate_messages_check_deps_GraspPrediction
-[35m[1mScanning dependencies of target geometry_msgs_generate_messages_lisp[0m
+[  0%] Built target geometry_msgs_generate_messages_eus
 [  0%] Built target _ggcnn_generate_messages_check_deps_Grasp
-[35m[1mScanning dependencies of target ggcnn_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_lisp[0m
 [35m[1mScanning dependencies of target ggcnn_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target ggcnn_generate_messages_eus[0m
+[35m[1mScanning dependencies of target ggcnn_generate_messages_nodejs[0m
 [35m[1mScanning dependencies of target ggcnn_generate_messages_py[0m
 [  0%] Built target geometry_msgs_generate_messages_lisp
-[35m[1mScanning dependencies of target ggcnn_generate_messages_eus[0m
 [  7%] [34m[1mGenerating C++ code from ggcnn/Grasp.msg[0m
-[ 15%] [34m[1mGenerating Javascript code from ggcnn/Grasp.msg[0m
-[ 23%] [34m[1mGenerating Python from MSG ggcnn/Grasp[0m
-[35m[1mScanning dependencies of target ggcnn_generate_messages_lisp[0m
-[ 30%] [34m[1mGenerating EusLisp code from ggcnn/Grasp.msg[0m
-[ 38%] [34m[1mGenerating Lisp code from ggcnn/Grasp.msg[0m
+[ 15%] [34m[1mGenerating EusLisp code from ggcnn/Grasp.msg[0m
+[ 23%] [34m[1mGenerating Python code from SRV ggcnn/GraspPrediction[0m
+[ 30%] [34m[1mGenerating Javascript code from ggcnn/Grasp.msg[0m
+[ 38%] [34m[1mGenerating Python from MSG ggcnn/Grasp[0m
 [ 46%] [34m[1mGenerating Javascript code from ggcnn/GraspPrediction.srv[0m
-[ 53%] [34m[1mGenerating Lisp code from ggcnn/GraspPrediction.srv[0m
-[ 61%] [34m[1mGenerating EusLisp code from ggcnn/GraspPrediction.srv[0m
-[ 61%] Built target ggcnn_generate_messages_lisp
-[ 61%] Built target ggcnn_generate_messages_nodejs
+[ 53%] [34m[1mGenerating EusLisp code from ggcnn/GraspPrediction.srv[0m
+[ 53%] Built target ggcnn_generate_messages_nodejs
+[ 61%] [34m[1mGenerating C++ code from ggcnn/GraspPrediction.srv[0m
 [ 69%] [34m[1mGenerating EusLisp manifest code for ggcnn[0m
-[ 76%] [34m[1mGenerating C++ code from ggcnn/GraspPrediction.srv[0m
-[ 84%] [34m[1mGenerating Python code from SRV ggcnn/GraspPrediction[0m
-[ 92%] [34m[1mGenerating Python msg __init__.py for ggcnn[0m
-[100%] [34m[1mGenerating Python srv __init__.py for ggcnn[0m
-[100%] Built target ggcnn_generate_messages_cpp
+[35m[1mScanning dependencies of target ggcnn_generate_messages_lisp[0m
+[ 76%] [34m[1mGenerating Lisp code from ggcnn/Grasp.msg[0m
+[ 84%] [34m[1mGenerating Python msg __init__.py for ggcnn[0m
+[ 92%] [34m[1mGenerating Python srv __init__.py for ggcnn[0m
+[100%] [34m[1mGenerating Lisp code from ggcnn/GraspPrediction.srv[0m
+[100%] Built target ggcnn_generate_messages_lisp
 [100%] Built target ggcnn_generate_messages_py
+[100%] Built target ggcnn_generate_messages_cpp
 [100%] Built target ggcnn_generate_messages_eus
 [35m[1mScanning dependencies of target ggcnn_generate_messages[0m
 [100%] Built target ggcnn_generate_messages

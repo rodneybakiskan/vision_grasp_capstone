@@ -1,10 +1,10 @@
 ggcnn_service:
   camera:
     info_topic: /camera/depth/camera_info
-# depth_topic: /camera/depth/image_meters
-    depth_topic: /camera/depth/image_rect_raw
+    depth_topic: /camera/depth/image_raw
+#    depth_topic: /camera/depth/image_rect_raw
     camera_frame: camera_depth_optical_frame
-# update robot_base_frame with ur5 base
+#    robot_base_frame: base_link
     robot_base_frame: camera_link
     crop_size: 300
     crop_y_offset: 40
