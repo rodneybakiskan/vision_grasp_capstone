@@ -1,24 +1,24 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/ggcnn/CMakeFiles/CMakeTmp
+Change Dir: /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/ggcnn/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_4c59d/fast"
-/usr/bin/make -f CMakeFiles/cmTC_4c59d.dir/build.make CMakeFiles/cmTC_4c59d.dir/build
-make[1]: Entering directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/ggcnn/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_4c59d.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_4c59d.dir/CheckSymbolExists.c.o   -c /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/ggcnn/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_4c59d
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4c59d.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_4c59d.dir/CheckSymbolExists.c.o  -o cmTC_4c59d 
-CMakeFiles/cmTC_4c59d.dir/CheckSymbolExists.c.o: In function `main':
+Run Build Command:"/usr/bin/make" "cmTC_40302/fast"
+/usr/bin/make -f CMakeFiles/cmTC_40302.dir/build.make CMakeFiles/cmTC_40302.dir/build
+make[1]: Entering directory '/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/ggcnn/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_40302.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_40302.dir/CheckSymbolExists.c.o   -c /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/ggcnn/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_40302
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_40302.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_40302.dir/CheckSymbolExists.c.o  -o cmTC_40302 
+CMakeFiles/cmTC_40302.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_4c59d.dir/build.make:97: recipe for target 'cmTC_4c59d' failed
-make[1]: *** [cmTC_4c59d] Error 1
-make[1]: Leaving directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/ggcnn/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_4c59d/fast' failed
-make: *** [cmTC_4c59d/fast] Error 2
+CMakeFiles/cmTC_40302.dir/build.make:97: recipe for target 'cmTC_40302' failed
+make[1]: *** [cmTC_40302] Error 1
+make[1]: Leaving directory '/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/ggcnn/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_40302/fast' failed
+make: *** [cmTC_40302/fast] Error 2
 
-File /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/ggcnn/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/ggcnn/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
@@ -34,22 +34,22 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/ggcnn/CMakeFiles/CMakeTmp
+Change Dir: /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/ggcnn/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_87a97/fast"
-/usr/bin/make -f CMakeFiles/cmTC_87a97.dir/build.make CMakeFiles/cmTC_87a97.dir/build
-make[1]: Entering directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/ggcnn/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_87a97.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_87a97.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
-Linking C executable cmTC_87a97
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_87a97.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_87a97.dir/CheckFunctionExists.c.o  -o cmTC_87a97 -lpthreads 
+Run Build Command:"/usr/bin/make" "cmTC_875ea/fast"
+/usr/bin/make -f CMakeFiles/cmTC_875ea.dir/build.make CMakeFiles/cmTC_875ea.dir/build
+make[1]: Entering directory '/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/ggcnn/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_875ea.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_875ea.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_875ea
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_875ea.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_875ea.dir/CheckFunctionExists.c.o  -o cmTC_875ea -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_87a97.dir/build.make:97: recipe for target 'cmTC_87a97' failed
-make[1]: *** [cmTC_87a97] Error 1
-make[1]: Leaving directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/ggcnn/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_87a97/fast' failed
-make: *** [cmTC_87a97/fast] Error 2
+CMakeFiles/cmTC_875ea.dir/build.make:97: recipe for target 'cmTC_875ea' failed
+make[1]: *** [cmTC_875ea] Error 1
+make[1]: Leaving directory '/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/ggcnn/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_875ea/fast' failed
+make: *** [cmTC_875ea/fast] Error 2
 
 

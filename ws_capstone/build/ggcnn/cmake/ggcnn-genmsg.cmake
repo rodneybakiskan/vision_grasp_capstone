@@ -2,7 +2,7 @@
 
 message(STATUS "ggcnn: 1 messages, 1 services")
 
-set(MSG_I_FLAGS "-Iggcnn:/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Iggcnn:/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -17,14 +17,14 @@ add_custom_target(ggcnn_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/srv/GraspPrediction.srv" NAME_WE)
+get_filename_component(_filename "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg" NAME_WE)
 add_custom_target(_ggcnn_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ggcnn" "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/srv/GraspPrediction.srv" "geometry_msgs/Pose:geometry_msgs/Quaternion:ggcnn/Grasp:geometry_msgs/Point"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ggcnn" "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg" "geometry_msgs/Pose:geometry_msgs/Quaternion:geometry_msgs/Point"
 )
 
-get_filename_component(_filename "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg" NAME_WE)
+get_filename_component(_filename "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/srv/GraspPrediction.srv" NAME_WE)
 add_custom_target(_ggcnn_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ggcnn" "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg" "geometry_msgs/Pose:geometry_msgs/Quaternion:geometry_msgs/Point"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ggcnn" "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/srv/GraspPrediction.srv" "ggcnn/Grasp:geometry_msgs/Point:geometry_msgs/Quaternion:geometry_msgs/Pose"
 )
 
 #
@@ -34,7 +34,7 @@ add_custom_target(_ggcnn_generate_messages_check_deps_${_filename}
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(ggcnn
-  "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg"
+  "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/ggcnn
@@ -42,9 +42,9 @@ _generate_msg_cpp(ggcnn
 
 ### Generating Services
 _generate_srv_cpp(ggcnn
-  "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/srv/GraspPrediction.srv"
+  "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/srv/GraspPrediction.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/ggcnn
 )
 
@@ -60,9 +60,9 @@ add_custom_target(ggcnn_generate_messages_cpp
 add_dependencies(ggcnn_generate_messages ggcnn_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/srv/GraspPrediction.srv" NAME_WE)
+get_filename_component(_filename "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg" NAME_WE)
 add_dependencies(ggcnn_generate_messages_cpp _ggcnn_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg" NAME_WE)
+get_filename_component(_filename "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/srv/GraspPrediction.srv" NAME_WE)
 add_dependencies(ggcnn_generate_messages_cpp _ggcnn_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -75,7 +75,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS ggcnn_generate_messages_cpp)
 ### Section generating for lang: geneus
 ### Generating Messages
 _generate_msg_eus(ggcnn
-  "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg"
+  "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/ggcnn
@@ -83,9 +83,9 @@ _generate_msg_eus(ggcnn
 
 ### Generating Services
 _generate_srv_eus(ggcnn
-  "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/srv/GraspPrediction.srv"
+  "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/srv/GraspPrediction.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/ggcnn
 )
 
@@ -101,9 +101,9 @@ add_custom_target(ggcnn_generate_messages_eus
 add_dependencies(ggcnn_generate_messages ggcnn_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/srv/GraspPrediction.srv" NAME_WE)
+get_filename_component(_filename "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg" NAME_WE)
 add_dependencies(ggcnn_generate_messages_eus _ggcnn_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg" NAME_WE)
+get_filename_component(_filename "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/srv/GraspPrediction.srv" NAME_WE)
 add_dependencies(ggcnn_generate_messages_eus _ggcnn_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -116,7 +116,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS ggcnn_generate_messages_eus)
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(ggcnn
-  "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg"
+  "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/ggcnn
@@ -124,9 +124,9 @@ _generate_msg_lisp(ggcnn
 
 ### Generating Services
 _generate_srv_lisp(ggcnn
-  "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/srv/GraspPrediction.srv"
+  "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/srv/GraspPrediction.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/ggcnn
 )
 
@@ -142,9 +142,9 @@ add_custom_target(ggcnn_generate_messages_lisp
 add_dependencies(ggcnn_generate_messages ggcnn_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/srv/GraspPrediction.srv" NAME_WE)
+get_filename_component(_filename "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg" NAME_WE)
 add_dependencies(ggcnn_generate_messages_lisp _ggcnn_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg" NAME_WE)
+get_filename_component(_filename "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/srv/GraspPrediction.srv" NAME_WE)
 add_dependencies(ggcnn_generate_messages_lisp _ggcnn_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -157,7 +157,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS ggcnn_generate_messages_lisp)
 ### Section generating for lang: gennodejs
 ### Generating Messages
 _generate_msg_nodejs(ggcnn
-  "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg"
+  "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/ggcnn
@@ -165,9 +165,9 @@ _generate_msg_nodejs(ggcnn
 
 ### Generating Services
 _generate_srv_nodejs(ggcnn
-  "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/srv/GraspPrediction.srv"
+  "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/srv/GraspPrediction.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/ggcnn
 )
 
@@ -183,9 +183,9 @@ add_custom_target(ggcnn_generate_messages_nodejs
 add_dependencies(ggcnn_generate_messages ggcnn_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/srv/GraspPrediction.srv" NAME_WE)
+get_filename_component(_filename "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg" NAME_WE)
 add_dependencies(ggcnn_generate_messages_nodejs _ggcnn_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg" NAME_WE)
+get_filename_component(_filename "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/srv/GraspPrediction.srv" NAME_WE)
 add_dependencies(ggcnn_generate_messages_nodejs _ggcnn_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -198,7 +198,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS ggcnn_generate_messages_nodejs)
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(ggcnn
-  "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg"
+  "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/ggcnn
@@ -206,9 +206,9 @@ _generate_msg_py(ggcnn
 
 ### Generating Services
 _generate_srv_py(ggcnn
-  "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/srv/GraspPrediction.srv"
+  "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/srv/GraspPrediction.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/ggcnn
 )
 
@@ -224,9 +224,9 @@ add_custom_target(ggcnn_generate_messages_py
 add_dependencies(ggcnn_generate_messages ggcnn_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/srv/GraspPrediction.srv" NAME_WE)
+get_filename_component(_filename "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg" NAME_WE)
 add_dependencies(ggcnn_generate_messages_py _ggcnn_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg" NAME_WE)
+get_filename_component(_filename "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/srv/GraspPrediction.srv" NAME_WE)
 add_dependencies(ggcnn_generate_messages_py _ggcnn_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

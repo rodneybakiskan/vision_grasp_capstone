@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ggcnn_generate_messages_lisp"
-  "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/common-lisp/ros/ggcnn/msg/Grasp.lisp"
-  "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/common-lisp/ros/ggcnn/srv/GraspPrediction.lisp"
+  "/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/common-lisp/ros/ggcnn/msg/Grasp.lisp"
+  "/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/common-lisp/ros/ggcnn/srv/GraspPrediction.lisp"
 )
 
 # Per-language clean rules from dependency scanning.

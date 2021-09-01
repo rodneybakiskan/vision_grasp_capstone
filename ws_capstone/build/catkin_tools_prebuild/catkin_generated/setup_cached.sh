@@ -7,7 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/catkin_tools_prebuild:$CMAKE_PREFIX_PATH"
-export PWD='/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/catkin_tools_prebuild'
-export ROSLISP_PACKAGE_DIRECTORIES='/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/catkin_tools_prebuild/share/common-lisp'
-export ROS_PACKAGE_PATH="/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/catkin_tools_prebuild:$ROS_PACKAGE_PATH"
+export CMAKE_PREFIX_PATH="/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/catkin_tools_prebuild:$CMAKE_PREFIX_PATH"
+export PWD='/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/catkin_tools_prebuild'
+export ROSLISP_PACKAGE_DIRECTORIES='/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/catkin_tools_prebuild/share/common-lisp'
+export ROS_PACKAGE_PATH="/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/catkin_tools_prebuild:$ROS_PACKAGE_PATH"

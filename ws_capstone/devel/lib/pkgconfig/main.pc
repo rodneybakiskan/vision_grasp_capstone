@@ -1,1 +1,1 @@
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/main/lib/pkgconfig/main.pc
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/main/lib/pkgconfig/main.pc

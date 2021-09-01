@@ -6,7 +6,7 @@ from os import path as os_path
 from pkgutil import extend_path
 from sys import path as sys_path
 
-__extended_path = '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/src'.split(';')
+__extended_path = '/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/src'.split(';')
 for p in reversed(__extended_path):
     sys_path.insert(0, p)
     del p

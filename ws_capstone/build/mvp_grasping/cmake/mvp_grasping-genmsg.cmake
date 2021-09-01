@@ -2,7 +2,7 @@
 
 message(STATUS "mvp_grasping: 1 messages, 2 services")
 
-set(MSG_I_FLAGS "-Imvp_grasping:/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Imvp_grasping:/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -17,19 +17,19 @@ add_custom_target(mvp_grasping_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/AddFailurePoint.srv" NAME_WE)
+get_filename_component(_filename "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/AddFailurePoint.srv" NAME_WE)
 add_custom_target(_mvp_grasping_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mvp_grasping" "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/AddFailurePoint.srv" "geometry_msgs/Point"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mvp_grasping" "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/AddFailurePoint.srv" "geometry_msgs/Point"
 )
 
-get_filename_component(_filename "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/NextViewpoint.srv" NAME_WE)
+get_filename_component(_filename "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/NextViewpoint.srv" NAME_WE)
 add_custom_target(_mvp_grasping_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mvp_grasping" "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/NextViewpoint.srv" "mvp_grasping/Grasp:geometry_msgs/Twist:geometry_msgs/Vector3:geometry_msgs/Pose:geometry_msgs/Quaternion:geometry_msgs/Point"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mvp_grasping" "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/NextViewpoint.srv" "geometry_msgs/Twist:geometry_msgs/Vector3:geometry_msgs/Pose:mvp_grasping/Grasp:geometry_msgs/Point:geometry_msgs/Quaternion"
 )
 
-get_filename_component(_filename "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/msg/Grasp.msg" NAME_WE)
+get_filename_component(_filename "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/msg/Grasp.msg" NAME_WE)
 add_custom_target(_mvp_grasping_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mvp_grasping" "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/msg/Grasp.msg" "geometry_msgs/Pose:geometry_msgs/Quaternion:geometry_msgs/Point"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mvp_grasping" "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/msg/Grasp.msg" "geometry_msgs/Pose:geometry_msgs/Quaternion:geometry_msgs/Point"
 )
 
 #
@@ -39,7 +39,7 @@ add_custom_target(_mvp_grasping_generate_messages_check_deps_${_filename}
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(mvp_grasping
-  "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/msg/Grasp.msg"
+  "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/msg/Grasp.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/mvp_grasping
@@ -47,15 +47,15 @@ _generate_msg_cpp(mvp_grasping
 
 ### Generating Services
 _generate_srv_cpp(mvp_grasping
-  "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/AddFailurePoint.srv"
+  "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/AddFailurePoint.srv"
   "${MSG_I_FLAGS}"
   "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/mvp_grasping
 )
 _generate_srv_cpp(mvp_grasping
-  "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/NextViewpoint.srv"
+  "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/NextViewpoint.srv"
   "${MSG_I_FLAGS}"
-  "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/msg/Grasp.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/msg/Grasp.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/mvp_grasping
 )
 
@@ -71,11 +71,11 @@ add_custom_target(mvp_grasping_generate_messages_cpp
 add_dependencies(mvp_grasping_generate_messages mvp_grasping_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/AddFailurePoint.srv" NAME_WE)
+get_filename_component(_filename "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/AddFailurePoint.srv" NAME_WE)
 add_dependencies(mvp_grasping_generate_messages_cpp _mvp_grasping_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/NextViewpoint.srv" NAME_WE)
+get_filename_component(_filename "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/NextViewpoint.srv" NAME_WE)
 add_dependencies(mvp_grasping_generate_messages_cpp _mvp_grasping_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/msg/Grasp.msg" NAME_WE)
+get_filename_component(_filename "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/msg/Grasp.msg" NAME_WE)
 add_dependencies(mvp_grasping_generate_messages_cpp _mvp_grasping_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -88,7 +88,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS mvp_grasping_generate_messages_cpp)
 ### Section generating for lang: geneus
 ### Generating Messages
 _generate_msg_eus(mvp_grasping
-  "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/msg/Grasp.msg"
+  "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/msg/Grasp.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/mvp_grasping
@@ -96,15 +96,15 @@ _generate_msg_eus(mvp_grasping
 
 ### Generating Services
 _generate_srv_eus(mvp_grasping
-  "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/AddFailurePoint.srv"
+  "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/AddFailurePoint.srv"
   "${MSG_I_FLAGS}"
   "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/mvp_grasping
 )
 _generate_srv_eus(mvp_grasping
-  "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/NextViewpoint.srv"
+  "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/NextViewpoint.srv"
   "${MSG_I_FLAGS}"
-  "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/msg/Grasp.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/msg/Grasp.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/mvp_grasping
 )
 
@@ -120,11 +120,11 @@ add_custom_target(mvp_grasping_generate_messages_eus
 add_dependencies(mvp_grasping_generate_messages mvp_grasping_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/AddFailurePoint.srv" NAME_WE)
+get_filename_component(_filename "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/AddFailurePoint.srv" NAME_WE)
 add_dependencies(mvp_grasping_generate_messages_eus _mvp_grasping_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/NextViewpoint.srv" NAME_WE)
+get_filename_component(_filename "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/NextViewpoint.srv" NAME_WE)
 add_dependencies(mvp_grasping_generate_messages_eus _mvp_grasping_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/msg/Grasp.msg" NAME_WE)
+get_filename_component(_filename "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/msg/Grasp.msg" NAME_WE)
 add_dependencies(mvp_grasping_generate_messages_eus _mvp_grasping_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -137,7 +137,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS mvp_grasping_generate_messages_eus)
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(mvp_grasping
-  "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/msg/Grasp.msg"
+  "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/msg/Grasp.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/mvp_grasping
@@ -145,15 +145,15 @@ _generate_msg_lisp(mvp_grasping
 
 ### Generating Services
 _generate_srv_lisp(mvp_grasping
-  "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/AddFailurePoint.srv"
+  "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/AddFailurePoint.srv"
   "${MSG_I_FLAGS}"
   "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/mvp_grasping
 )
 _generate_srv_lisp(mvp_grasping
-  "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/NextViewpoint.srv"
+  "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/NextViewpoint.srv"
   "${MSG_I_FLAGS}"
-  "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/msg/Grasp.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/msg/Grasp.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/mvp_grasping
 )
 
@@ -169,11 +169,11 @@ add_custom_target(mvp_grasping_generate_messages_lisp
 add_dependencies(mvp_grasping_generate_messages mvp_grasping_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/AddFailurePoint.srv" NAME_WE)
+get_filename_component(_filename "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/AddFailurePoint.srv" NAME_WE)
 add_dependencies(mvp_grasping_generate_messages_lisp _mvp_grasping_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/NextViewpoint.srv" NAME_WE)
+get_filename_component(_filename "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/NextViewpoint.srv" NAME_WE)
 add_dependencies(mvp_grasping_generate_messages_lisp _mvp_grasping_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/msg/Grasp.msg" NAME_WE)
+get_filename_component(_filename "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/msg/Grasp.msg" NAME_WE)
 add_dependencies(mvp_grasping_generate_messages_lisp _mvp_grasping_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -186,7 +186,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS mvp_grasping_generate_messages_lisp
 ### Section generating for lang: gennodejs
 ### Generating Messages
 _generate_msg_nodejs(mvp_grasping
-  "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/msg/Grasp.msg"
+  "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/msg/Grasp.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/mvp_grasping
@@ -194,15 +194,15 @@ _generate_msg_nodejs(mvp_grasping
 
 ### Generating Services
 _generate_srv_nodejs(mvp_grasping
-  "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/AddFailurePoint.srv"
+  "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/AddFailurePoint.srv"
   "${MSG_I_FLAGS}"
   "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/mvp_grasping
 )
 _generate_srv_nodejs(mvp_grasping
-  "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/NextViewpoint.srv"
+  "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/NextViewpoint.srv"
   "${MSG_I_FLAGS}"
-  "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/msg/Grasp.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/msg/Grasp.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/mvp_grasping
 )
 
@@ -218,11 +218,11 @@ add_custom_target(mvp_grasping_generate_messages_nodejs
 add_dependencies(mvp_grasping_generate_messages mvp_grasping_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/AddFailurePoint.srv" NAME_WE)
+get_filename_component(_filename "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/AddFailurePoint.srv" NAME_WE)
 add_dependencies(mvp_grasping_generate_messages_nodejs _mvp_grasping_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/NextViewpoint.srv" NAME_WE)
+get_filename_component(_filename "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/NextViewpoint.srv" NAME_WE)
 add_dependencies(mvp_grasping_generate_messages_nodejs _mvp_grasping_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/msg/Grasp.msg" NAME_WE)
+get_filename_component(_filename "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/msg/Grasp.msg" NAME_WE)
 add_dependencies(mvp_grasping_generate_messages_nodejs _mvp_grasping_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -235,7 +235,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS mvp_grasping_generate_messages_node
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(mvp_grasping
-  "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/msg/Grasp.msg"
+  "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/msg/Grasp.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/mvp_grasping
@@ -243,15 +243,15 @@ _generate_msg_py(mvp_grasping
 
 ### Generating Services
 _generate_srv_py(mvp_grasping
-  "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/AddFailurePoint.srv"
+  "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/AddFailurePoint.srv"
   "${MSG_I_FLAGS}"
   "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/mvp_grasping
 )
 _generate_srv_py(mvp_grasping
-  "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/NextViewpoint.srv"
+  "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/NextViewpoint.srv"
   "${MSG_I_FLAGS}"
-  "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/msg/Grasp.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/msg/Grasp.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/mvp_grasping
 )
 
@@ -267,11 +267,11 @@ add_custom_target(mvp_grasping_generate_messages_py
 add_dependencies(mvp_grasping_generate_messages mvp_grasping_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/AddFailurePoint.srv" NAME_WE)
+get_filename_component(_filename "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/AddFailurePoint.srv" NAME_WE)
 add_dependencies(mvp_grasping_generate_messages_py _mvp_grasping_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/NextViewpoint.srv" NAME_WE)
+get_filename_component(_filename "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/srv/NextViewpoint.srv" NAME_WE)
 add_dependencies(mvp_grasping_generate_messages_py _mvp_grasping_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/msg/Grasp.msg" NAME_WE)
+get_filename_component(_filename "/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/msg/Grasp.msg" NAME_WE)
 add_dependencies(mvp_grasping_generate_messages_py _mvp_grasping_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

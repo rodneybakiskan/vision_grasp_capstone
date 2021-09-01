@@ -43,56 +43,56 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn
+CMAKE_SOURCE_DIR = /home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/ggcnn
+CMAKE_BINARY_DIR = /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/ggcnn
 
 # Utility rule file for ggcnn_generate_messages_py.
 
 # Include the progress variables for this target.
 include CMakeFiles/ggcnn_generate_messages_py.dir/progress.make
 
-CMakeFiles/ggcnn_generate_messages_py: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/msg/_Grasp.py
-CMakeFiles/ggcnn_generate_messages_py: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/srv/_GraspPrediction.py
-CMakeFiles/ggcnn_generate_messages_py: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/msg/__init__.py
-CMakeFiles/ggcnn_generate_messages_py: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/srv/__init__.py
+CMakeFiles/ggcnn_generate_messages_py: /home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/msg/_Grasp.py
+CMakeFiles/ggcnn_generate_messages_py: /home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/srv/_GraspPrediction.py
+CMakeFiles/ggcnn_generate_messages_py: /home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/msg/__init__.py
+CMakeFiles/ggcnn_generate_messages_py: /home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/srv/__init__.py
 
 
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/msg/_Grasp.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/msg/_Grasp.py: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/msg/_Grasp.py: /opt/ros/melodic/share/geometry_msgs/msg/Pose.msg
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/msg/_Grasp.py: /opt/ros/melodic/share/geometry_msgs/msg/Quaternion.msg
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/msg/_Grasp.py: /opt/ros/melodic/share/geometry_msgs/msg/Point.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/ggcnn/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG ggcnn/Grasp"
-	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg -Iggcnn:/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -p ggcnn -o /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/msg
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/msg/_Grasp.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/msg/_Grasp.py: /home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/msg/_Grasp.py: /opt/ros/melodic/share/geometry_msgs/msg/Pose.msg
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/msg/_Grasp.py: /opt/ros/melodic/share/geometry_msgs/msg/Quaternion.msg
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/msg/_Grasp.py: /opt/ros/melodic/share/geometry_msgs/msg/Point.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/ggcnn/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG ggcnn/Grasp"
+	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg -Iggcnn:/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -p ggcnn -o /home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/msg
 
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/srv/_GraspPrediction.py: /opt/ros/melodic/lib/genpy/gensrv_py.py
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/srv/_GraspPrediction.py: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/srv/GraspPrediction.srv
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/srv/_GraspPrediction.py: /opt/ros/melodic/share/geometry_msgs/msg/Pose.msg
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/srv/_GraspPrediction.py: /opt/ros/melodic/share/geometry_msgs/msg/Quaternion.msg
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/srv/_GraspPrediction.py: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/srv/_GraspPrediction.py: /opt/ros/melodic/share/geometry_msgs/msg/Point.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/ggcnn/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python code from SRV ggcnn/GraspPrediction"
-	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/srv/GraspPrediction.srv -Iggcnn:/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -p ggcnn -o /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/srv
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/srv/_GraspPrediction.py: /opt/ros/melodic/lib/genpy/gensrv_py.py
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/srv/_GraspPrediction.py: /home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/srv/GraspPrediction.srv
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/srv/_GraspPrediction.py: /home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/srv/_GraspPrediction.py: /opt/ros/melodic/share/geometry_msgs/msg/Point.msg
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/srv/_GraspPrediction.py: /opt/ros/melodic/share/geometry_msgs/msg/Quaternion.msg
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/srv/_GraspPrediction.py: /opt/ros/melodic/share/geometry_msgs/msg/Pose.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/ggcnn/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python code from SRV ggcnn/GraspPrediction"
+	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/srv/GraspPrediction.srv -Iggcnn:/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -p ggcnn -o /home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/srv
 
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/msg/__init__.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/msg/__init__.py: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/msg/_Grasp.py
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/msg/__init__.py: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/srv/_GraspPrediction.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/ggcnn/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python msg __init__.py for ggcnn"
-	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/msg --initpy
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/msg/__init__.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/msg/__init__.py: /home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/msg/_Grasp.py
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/msg/__init__.py: /home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/srv/_GraspPrediction.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/ggcnn/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python msg __init__.py for ggcnn"
+	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/msg --initpy
 
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/srv/__init__.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/srv/__init__.py: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/msg/_Grasp.py
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/srv/__init__.py: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/srv/_GraspPrediction.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/ggcnn/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python srv __init__.py for ggcnn"
-	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/srv --initpy
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/srv/__init__.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/srv/__init__.py: /home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/msg/_Grasp.py
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/srv/__init__.py: /home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/srv/_GraspPrediction.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/ggcnn/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python srv __init__.py for ggcnn"
+	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/srv --initpy
 
 ggcnn_generate_messages_py: CMakeFiles/ggcnn_generate_messages_py
-ggcnn_generate_messages_py: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/msg/_Grasp.py
-ggcnn_generate_messages_py: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/srv/_GraspPrediction.py
-ggcnn_generate_messages_py: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/msg/__init__.py
-ggcnn_generate_messages_py: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/srv/__init__.py
+ggcnn_generate_messages_py: /home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/msg/_Grasp.py
+ggcnn_generate_messages_py: /home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/srv/_GraspPrediction.py
+ggcnn_generate_messages_py: /home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/msg/__init__.py
+ggcnn_generate_messages_py: /home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/srv/__init__.py
 ggcnn_generate_messages_py: CMakeFiles/ggcnn_generate_messages_py.dir/build.make
 
 .PHONY : ggcnn_generate_messages_py
@@ -107,6 +107,6 @@ CMakeFiles/ggcnn_generate_messages_py.dir/clean:
 .PHONY : CMakeFiles/ggcnn_generate_messages_py.dir/clean
 
 CMakeFiles/ggcnn_generate_messages_py.dir/depend:
-	cd /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/ggcnn && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/ggcnn /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/ggcnn /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/ggcnn/CMakeFiles/ggcnn_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/ggcnn && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn /home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/ggcnn /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/ggcnn /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/ggcnn/CMakeFiles/ggcnn_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ggcnn_generate_messages_py.dir/depend
 

@@ -1,4 +1,4 @@
-Symlinking /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/share/dougsm_helpers/cmake/dougsm_helpersConfig.cmake
-Symlinking /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/share/dougsm_helpers/cmake/dougsm_helpersConfig-version.cmake
-Symlinking /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/lib/pkgconfig/dougsm_helpers.pc
-Symlinking /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/lib/python2.7/dist-packages/dougsm_helpers/__init__.py
+Symlinking /home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/share/dougsm_helpers/cmake/dougsm_helpersConfig-version.cmake
+Symlinking /home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/share/dougsm_helpers/cmake/dougsm_helpersConfig.cmake
+Symlinking /home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/lib/pkgconfig/dougsm_helpers.pc
+Symlinking /home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/lib/python2.7/dist-packages/dougsm_helpers/__init__.py

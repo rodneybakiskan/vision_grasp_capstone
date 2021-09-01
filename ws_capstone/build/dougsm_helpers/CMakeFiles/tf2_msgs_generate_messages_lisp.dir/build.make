@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/dougsm_helpers
+CMAKE_SOURCE_DIR = /home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/dougsm_helpers
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/dougsm_helpers
+CMAKE_BINARY_DIR = /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/dougsm_helpers
 
 # Utility rule file for tf2_msgs_generate_messages_lisp.
 
@@ -67,6 +67,6 @@ CMakeFiles/tf2_msgs_generate_messages_lisp.dir/clean:
 .PHONY : CMakeFiles/tf2_msgs_generate_messages_lisp.dir/clean
 
 CMakeFiles/tf2_msgs_generate_messages_lisp.dir/depend:
-	cd /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/dougsm_helpers && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/dougsm_helpers /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/dougsm_helpers /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/dougsm_helpers /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/dougsm_helpers /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/dougsm_helpers/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/dougsm_helpers && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/dougsm_helpers /home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/dougsm_helpers /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/dougsm_helpers /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/dougsm_helpers /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/dougsm_helpers/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/tf2_msgs_generate_messages_lisp.dir/depend
 

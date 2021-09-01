@@ -1,1 +1,1 @@
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/common-lisp/ros/ggcnn/srv/_package_GraspPrediction.lisp
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/common-lisp/ros/ggcnn/srv/_package_GraspPrediction.lisp

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin
+CMAKE_SOURCE_DIR = /home/nuwan/git/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/realsense_gazebo_plugin
+CMAKE_BINARY_DIR = /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/realsense_gazebo_plugin
 
 # Utility rule file for actionlib_generate_messages_py.
 
@@ -67,6 +67,6 @@ CMakeFiles/actionlib_generate_messages_py.dir/clean:
 .PHONY : CMakeFiles/actionlib_generate_messages_py.dir/clean
 
 CMakeFiles/actionlib_generate_messages_py.dir/depend:
-	cd /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/realsense_gazebo_plugin && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/realsense_gazebo_plugin /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/realsense_gazebo_plugin /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/realsense_gazebo_plugin/CMakeFiles/actionlib_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/realsense_gazebo_plugin && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nuwan/git/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin /home/nuwan/git/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/realsense_gazebo_plugin /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/realsense_gazebo_plugin /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/realsense_gazebo_plugin/CMakeFiles/actionlib_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/actionlib_generate_messages_py.dir/depend
 

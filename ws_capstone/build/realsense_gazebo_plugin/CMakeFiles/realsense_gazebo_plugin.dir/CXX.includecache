@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin/include/realsense_gazebo_plugin/RealSensePlugin.h
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin/include/realsense_gazebo_plugin/RealSensePlugin.h
 gazebo/common/Plugin.hh
 -
 gazebo/common/common.hh
@@ -26,9 +26,9 @@ memory
 string
 -
 
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin/include/realsense_gazebo_plugin/gazebo_ros_realsense.h
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin/include/realsense_gazebo_plugin/gazebo_ros_realsense.h
 realsense_gazebo_plugin/RealSensePlugin.h
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin/include/realsense_gazebo_plugin/realsense_gazebo_plugin/RealSensePlugin.h
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin/include/realsense_gazebo_plugin/realsense_gazebo_plugin/RealSensePlugin.h
 ros/ros.h
 -
 sensor_msgs/CameraInfo.h
@@ -48,9 +48,9 @@ memory
 string
 -
 
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin/src/RealSensePlugin.cpp
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin/src/RealSensePlugin.cpp
 realsense_gazebo_plugin/RealSensePlugin.h
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin/src/realsense_gazebo_plugin/RealSensePlugin.h
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin/src/realsense_gazebo_plugin/RealSensePlugin.h
 gazebo/physics/physics.hh
 -
 gazebo/rendering/DepthCamera.hh
@@ -58,9 +58,9 @@ gazebo/rendering/DepthCamera.hh
 gazebo/sensors/sensors.hh
 -
 
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin/src/gazebo_ros_realsense.cpp
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin/src/gazebo_ros_realsense.cpp
 realsense_gazebo_plugin/gazebo_ros_realsense.h
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin/src/realsense_gazebo_plugin/gazebo_ros_realsense.h
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin/src/realsense_gazebo_plugin/gazebo_ros_realsense.h
 sensor_msgs/fill_image.h
 -
 sensor_msgs/point_cloud2_iterator.h

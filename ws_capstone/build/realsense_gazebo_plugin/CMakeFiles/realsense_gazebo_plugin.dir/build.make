@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin
+CMAKE_SOURCE_DIR = /home/nuwan/git/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/realsense_gazebo_plugin
+CMAKE_BINARY_DIR = /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/realsense_gazebo_plugin
 
 # Include any dependencies generated for this target.
 include CMakeFiles/realsense_gazebo_plugin.dir/depend.make
@@ -58,17 +58,17 @@ include CMakeFiles/realsense_gazebo_plugin.dir/progress.make
 include CMakeFiles/realsense_gazebo_plugin.dir/flags.make
 
 CMakeFiles/realsense_gazebo_plugin.dir/src/RealSensePlugin.cpp.o: CMakeFiles/realsense_gazebo_plugin.dir/flags.make
-CMakeFiles/realsense_gazebo_plugin.dir/src/RealSensePlugin.cpp.o: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin/src/RealSensePlugin.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/realsense_gazebo_plugin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/realsense_gazebo_plugin.dir/src/RealSensePlugin.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/realsense_gazebo_plugin.dir/src/RealSensePlugin.cpp.o -c /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin/src/RealSensePlugin.cpp
+CMakeFiles/realsense_gazebo_plugin.dir/src/RealSensePlugin.cpp.o: /home/nuwan/git/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin/src/RealSensePlugin.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/realsense_gazebo_plugin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/realsense_gazebo_plugin.dir/src/RealSensePlugin.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/realsense_gazebo_plugin.dir/src/RealSensePlugin.cpp.o -c /home/nuwan/git/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin/src/RealSensePlugin.cpp
 
 CMakeFiles/realsense_gazebo_plugin.dir/src/RealSensePlugin.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/realsense_gazebo_plugin.dir/src/RealSensePlugin.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin/src/RealSensePlugin.cpp > CMakeFiles/realsense_gazebo_plugin.dir/src/RealSensePlugin.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nuwan/git/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin/src/RealSensePlugin.cpp > CMakeFiles/realsense_gazebo_plugin.dir/src/RealSensePlugin.cpp.i
 
 CMakeFiles/realsense_gazebo_plugin.dir/src/RealSensePlugin.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/realsense_gazebo_plugin.dir/src/RealSensePlugin.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin/src/RealSensePlugin.cpp -o CMakeFiles/realsense_gazebo_plugin.dir/src/RealSensePlugin.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nuwan/git/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin/src/RealSensePlugin.cpp -o CMakeFiles/realsense_gazebo_plugin.dir/src/RealSensePlugin.cpp.s
 
 CMakeFiles/realsense_gazebo_plugin.dir/src/RealSensePlugin.cpp.o.requires:
 
@@ -82,17 +82,17 @@ CMakeFiles/realsense_gazebo_plugin.dir/src/RealSensePlugin.cpp.o.provides.build:
 
 
 CMakeFiles/realsense_gazebo_plugin.dir/src/gazebo_ros_realsense.cpp.o: CMakeFiles/realsense_gazebo_plugin.dir/flags.make
-CMakeFiles/realsense_gazebo_plugin.dir/src/gazebo_ros_realsense.cpp.o: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin/src/gazebo_ros_realsense.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/realsense_gazebo_plugin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/realsense_gazebo_plugin.dir/src/gazebo_ros_realsense.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/realsense_gazebo_plugin.dir/src/gazebo_ros_realsense.cpp.o -c /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin/src/gazebo_ros_realsense.cpp
+CMakeFiles/realsense_gazebo_plugin.dir/src/gazebo_ros_realsense.cpp.o: /home/nuwan/git/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin/src/gazebo_ros_realsense.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/realsense_gazebo_plugin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/realsense_gazebo_plugin.dir/src/gazebo_ros_realsense.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/realsense_gazebo_plugin.dir/src/gazebo_ros_realsense.cpp.o -c /home/nuwan/git/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin/src/gazebo_ros_realsense.cpp
 
 CMakeFiles/realsense_gazebo_plugin.dir/src/gazebo_ros_realsense.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/realsense_gazebo_plugin.dir/src/gazebo_ros_realsense.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin/src/gazebo_ros_realsense.cpp > CMakeFiles/realsense_gazebo_plugin.dir/src/gazebo_ros_realsense.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nuwan/git/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin/src/gazebo_ros_realsense.cpp > CMakeFiles/realsense_gazebo_plugin.dir/src/gazebo_ros_realsense.cpp.i
 
 CMakeFiles/realsense_gazebo_plugin.dir/src/gazebo_ros_realsense.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/realsense_gazebo_plugin.dir/src/gazebo_ros_realsense.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin/src/gazebo_ros_realsense.cpp -o CMakeFiles/realsense_gazebo_plugin.dir/src/gazebo_ros_realsense.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nuwan/git/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin/src/gazebo_ros_realsense.cpp -o CMakeFiles/realsense_gazebo_plugin.dir/src/gazebo_ros_realsense.cpp.s
 
 CMakeFiles/realsense_gazebo_plugin.dir/src/gazebo_ros_realsense.cpp.o.requires:
 
@@ -113,156 +113,156 @@ realsense_gazebo_plugin_OBJECTS = \
 # External object files for target realsense_gazebo_plugin
 realsense_gazebo_plugin_EXTERNAL_OBJECTS =
 
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: CMakeFiles/realsense_gazebo_plugin.dir/src/RealSensePlugin.cpp.o
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: CMakeFiles/realsense_gazebo_plugin.dir/src/gazebo_ros_realsense.cpp.o
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: CMakeFiles/realsense_gazebo_plugin.dir/build.make
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libgazebo_ros_api_plugin.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libgazebo_ros_paths_plugin.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libtinyxml.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libtf.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libtf2_ros.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libactionlib.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libtf2.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libimage_transport.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libmessage_filters.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libclass_loader.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/libPocoFoundation.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libdl.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libroslib.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/librospack.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libpython2.7.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libcamera_info_manager.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libcamera_calibration_parsers.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libroscpp.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/librosconsole.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/librosconsole_log4cxx.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/librosconsole_backend_interface.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libxmlrpcpp.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libroscpp_serialization.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/librostime.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libcpp_common.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libSimTKsimbody.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libSimTKmath.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libSimTKcommon.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libblas.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/liblapack.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libblas.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_client.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_gui.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_sensors.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_rendering.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_physics.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_ode.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_transport.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_msgs.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_util.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_common.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_gimpact.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_opcode.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_opende_ou.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_signals.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_iostreams.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libsdformat.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libOgreMain.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libOgreTerrain.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libOgrePaging.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libignition-transport4.so.4.0.0
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libignition-msgs1.so.1.0.0
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libignition-common1.so.1.0.1
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libignition-fuel_tools1.so.1.0.0
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libcamera_info_manager.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libcamera_calibration_parsers.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libroscpp.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/librosconsole.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/librosconsole_log4cxx.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/librosconsole_backend_interface.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libxmlrpcpp.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libroscpp_serialization.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/librostime.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libcpp_common.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libSimTKsimbody.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libSimTKmath.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libSimTKcommon.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libblas.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/liblapack.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_client.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_gui.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_sensors.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_rendering.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_physics.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_ode.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_transport.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_msgs.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_util.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_common.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_gimpact.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_opcode.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_opende_ou.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_signals.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_iostreams.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libsdformat.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libOgreMain.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libOgreTerrain.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libOgrePaging.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libignition-math4.so.4.0.0
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libuuid.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libuuid.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libswscale.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libswscale.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libavdevice.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libavdevice.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libavformat.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libavformat.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libavcodec.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libavcodec.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libavutil.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libavutil.so
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: CMakeFiles/realsense_gazebo_plugin.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/realsense_gazebo_plugin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so"
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: CMakeFiles/realsense_gazebo_plugin.dir/src/RealSensePlugin.cpp.o
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: CMakeFiles/realsense_gazebo_plugin.dir/src/gazebo_ros_realsense.cpp.o
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: CMakeFiles/realsense_gazebo_plugin.dir/build.make
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libgazebo_ros_api_plugin.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libgazebo_ros_paths_plugin.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libtinyxml.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libtf.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libtf2_ros.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libactionlib.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libtf2.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libimage_transport.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libmessage_filters.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libclass_loader.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/libPocoFoundation.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libdl.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libroslib.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/librospack.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libpython2.7.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libcamera_info_manager.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libcamera_calibration_parsers.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libroscpp.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/librosconsole.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/librosconsole_log4cxx.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/librosconsole_backend_interface.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libxmlrpcpp.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libroscpp_serialization.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/librostime.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libcpp_common.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libSimTKsimbody.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libSimTKmath.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libSimTKcommon.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libblas.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/liblapack.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libblas.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_client.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_gui.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_sensors.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_rendering.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_physics.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_ode.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_transport.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_msgs.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_util.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_common.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_gimpact.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_opcode.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_opende_ou.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_signals.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_iostreams.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libsdformat.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libOgreMain.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libOgrePaging.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libignition-transport4.so.4.0.0
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libignition-msgs1.so.1.0.0
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libignition-common1.so.1.0.1
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libignition-fuel_tools1.so.1.0.0
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libcamera_info_manager.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libcamera_calibration_parsers.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libroscpp.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/librosconsole.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/librosconsole_log4cxx.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/librosconsole_backend_interface.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libxmlrpcpp.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libroscpp_serialization.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/librostime.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /opt/ros/melodic/lib/libcpp_common.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libSimTKsimbody.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libSimTKmath.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libSimTKcommon.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libblas.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/liblapack.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_client.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_gui.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_sensors.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_rendering.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_physics.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_ode.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_transport.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_msgs.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_util.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_common.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_gimpact.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_opcode.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_opende_ou.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_signals.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_iostreams.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libsdformat.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libOgreMain.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libOgrePaging.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libignition-math4.so.4.0.0
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libuuid.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libuuid.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libswscale.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libswscale.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libavdevice.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libavdevice.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libavformat.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libavformat.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libavcodec.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libavcodec.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libavutil.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: /usr/lib/x86_64-linux-gnu/libavutil.so
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so: CMakeFiles/realsense_gazebo_plugin.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/realsense_gazebo_plugin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library /home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/realsense_gazebo_plugin.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/realsense_gazebo_plugin.dir/build: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so
+CMakeFiles/realsense_gazebo_plugin.dir/build: /home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so
 
 .PHONY : CMakeFiles/realsense_gazebo_plugin.dir/build
 
@@ -276,6 +276,6 @@ CMakeFiles/realsense_gazebo_plugin.dir/clean:
 .PHONY : CMakeFiles/realsense_gazebo_plugin.dir/clean
 
 CMakeFiles/realsense_gazebo_plugin.dir/depend:
-	cd /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/realsense_gazebo_plugin && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/realsense_gazebo_plugin /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/realsense_gazebo_plugin /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_plugin.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/realsense_gazebo_plugin && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nuwan/git/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin /home/nuwan/git/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/realsense_gazebo_plugin /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/realsense_gazebo_plugin /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_plugin.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/realsense_gazebo_plugin.dir/depend
 

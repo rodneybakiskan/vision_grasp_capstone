@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/catkin_tools_prebuild
+CMAKE_SOURCE_DIR = /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/catkin_tools_prebuild
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/catkin_tools_prebuild
+CMAKE_BINARY_DIR = /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/catkin_tools_prebuild
 
 # Utility rule file for doxygen.
 
@@ -67,6 +67,6 @@ CMakeFiles/doxygen.dir/clean:
 .PHONY : CMakeFiles/doxygen.dir/clean
 
 CMakeFiles/doxygen.dir/depend:
-	cd /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/catkin_tools_prebuild && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/catkin_tools_prebuild /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/catkin_tools_prebuild /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/catkin_tools_prebuild /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/catkin_tools_prebuild /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/catkin_tools_prebuild/CMakeFiles/doxygen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/catkin_tools_prebuild && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/catkin_tools_prebuild /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/catkin_tools_prebuild /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/catkin_tools_prebuild /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/catkin_tools_prebuild /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/catkin_tools_prebuild/CMakeFiles/doxygen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/doxygen.dir/depend
 

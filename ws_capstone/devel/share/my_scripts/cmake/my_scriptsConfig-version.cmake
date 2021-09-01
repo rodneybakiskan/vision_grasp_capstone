@@ -1,0 +1,1 @@
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/my_scripts/share/my_scripts/cmake/my_scriptsConfig-version.cmake

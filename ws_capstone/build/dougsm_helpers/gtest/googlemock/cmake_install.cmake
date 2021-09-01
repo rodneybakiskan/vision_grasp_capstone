@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/install")
+  set(CMAKE_INSTALL_PREFIX "/home/nuwan/git/vision_grasp_capstone/ws_capstone/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/dougsm_helpers/gtest/googlemock/gtest/cmake_install.cmake")
+  include("/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/dougsm_helpers/gtest/googlemock/gtest/cmake_install.cmake")
 
 endif()
 

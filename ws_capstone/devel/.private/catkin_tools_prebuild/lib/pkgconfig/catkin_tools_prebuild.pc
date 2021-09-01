@@ -1,4 +1,4 @@
-prefix=/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/catkin_tools_prebuild
+prefix=/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/catkin_tools_prebuild
 
 Name: catkin_tools_prebuild
 Description: Description of catkin_tools_prebuild

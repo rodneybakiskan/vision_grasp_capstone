@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin
+CMAKE_SOURCE_DIR = /home/nuwan/git/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/realsense_gazebo_plugin
+CMAKE_BINARY_DIR = /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/realsense_gazebo_plugin
 
 # Utility rule file for dynamic_reconfigure_generate_messages_lisp.
 
@@ -67,6 +67,6 @@ CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/clean:
 .PHONY : CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/clean
 
 CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/depend:
-	cd /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/realsense_gazebo_plugin && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/realsense_gazebo_plugin /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/realsense_gazebo_plugin /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/realsense_gazebo_plugin/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/realsense_gazebo_plugin && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nuwan/git/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin /home/nuwan/git/vision_grasp_capstone/ws_capstone/src/realsense_gazebo_plugin /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/realsense_gazebo_plugin /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/realsense_gazebo_plugin /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/realsense_gazebo_plugin/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/depend
 

@@ -3,7 +3,7 @@
 
 # since this file is sourced either use the provided _CATKIN_SETUP_DIR
 # or fall back to the destination set at configure time
-: ${_CATKIN_SETUP_DIR:=/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/dougsm_helpers}
+: ${_CATKIN_SETUP_DIR:=/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/dougsm_helpers}
 CATKIN_SETUP_UTIL_ARGS="--extend --local"
 . "$_CATKIN_SETUP_DIR/setup.sh"
 unset CATKIN_SETUP_UTIL_ARGS

@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/dougsm_helpers
+CMAKE_SOURCE_DIR = /home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/dougsm_helpers
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/dougsm_helpers
+CMAKE_BINARY_DIR = /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/dougsm_helpers
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,9 +137,9 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/dougsm_helpers/CMakeFiles /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/dougsm_helpers/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/dougsm_helpers/CMakeFiles /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/dougsm_helpers/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/dougsm_helpers/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/dougsm_helpers/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

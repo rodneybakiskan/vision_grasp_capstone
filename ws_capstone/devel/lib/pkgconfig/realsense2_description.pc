@@ -1,1 +1,1 @@
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense2_description/lib/pkgconfig/realsense2_description.pc
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense2_description/lib/pkgconfig/realsense2_description.pc

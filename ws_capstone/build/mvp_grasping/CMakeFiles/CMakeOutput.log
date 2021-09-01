@@ -10,7 +10,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/3.10.2/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/3.10.2/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /usr/bin/c++ 
@@ -23,33 +23,33 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/3.10.2/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/3.10.2/CompilerIdCXX/a.out"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp
+Change Dir: /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_010c1/fast"
-/usr/bin/make -f CMakeFiles/cmTC_010c1.dir/build.make CMakeFiles/cmTC_010c1.dir/build
-make[1]: Entering directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_010c1.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_010c1.dir/testCCompiler.c.o   -c /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_010c1
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_010c1.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_010c1.dir/testCCompiler.c.o  -o cmTC_010c1 
-make[1]: Leaving directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_0da99/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0da99.dir/build.make CMakeFiles/cmTC_0da99.dir/build
+make[1]: Entering directory '/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0da99.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_0da99.dir/testCCompiler.c.o   -c /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_0da99
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0da99.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_0da99.dir/testCCompiler.c.o  -o cmTC_0da99 
+make[1]: Leaving directory '/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp
+Change Dir: /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_c85e6/fast"
-/usr/bin/make -f CMakeFiles/cmTC_c85e6.dir/build.make CMakeFiles/cmTC_c85e6.dir/build
-make[1]: Entering directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_c85e6.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_c85e6.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_c85e6
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c85e6.dir/link.txt --verbose=1
-/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_c85e6.dir/CMakeCCompilerABI.c.o  -o cmTC_c85e6 
+Run Build Command:"/usr/bin/make" "cmTC_a1bce/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a1bce.dir/build.make CMakeFiles/cmTC_a1bce.dir/build
+make[1]: Entering directory '/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a1bce.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_a1bce.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_a1bce
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a1bce.dir/link.txt --verbose=1
+/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_a1bce.dir/CMakeCCompilerABI.c.o  -o cmTC_a1bce 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -61,24 +61,24 @@ Thread model: posix
 gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_c85e6' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccC38gwW.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_c85e6 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_c85e6.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_c85e6' '-mtune=generic' '-march=x86-64'
-make[1]: Leaving directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_a1bce' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cc1jjaxl.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_a1bce /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_a1bce.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_a1bce' '-mtune=generic' '-march=x86-64'
+make[1]: Leaving directory '/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_c85e6/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_c85e6.dir/build.make CMakeFiles/cmTC_c85e6.dir/build]
-  ignore line: [make[1]: Entering directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_c85e6.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_c85e6.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_c85e6]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c85e6.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_c85e6.dir/CMakeCCompilerABI.c.o  -o cmTC_c85e6 ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_a1bce/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_a1bce.dir/build.make CMakeFiles/cmTC_a1bce.dir/build]
+  ignore line: [make[1]: Entering directory '/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_a1bce.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_a1bce.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_a1bce]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a1bce.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_a1bce.dir/CMakeCCompilerABI.c.o  -o cmTC_a1bce ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -90,13 +90,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_c85e6' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccC38gwW.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_c85e6 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_c85e6.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_a1bce' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cc1jjaxl.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_a1bce /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_a1bce.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccC38gwW.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cc1jjaxl.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -115,7 +115,7 @@ Parsed C implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_c85e6] ==> ignore
+    arg [cmTC_a1bce] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -127,7 +127,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_c85e6.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_a1bce.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--push-state] ==> ignore
     arg [--as-needed] ==> ignore
@@ -157,17 +157,17 @@ Parsed C implicit link information from above output:
 
 
 Detecting C [-std=c11] compiler features compiled with the following output:
-Change Dir: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp
+Change Dir: /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_e3726/fast"
-/usr/bin/make -f CMakeFiles/cmTC_e3726.dir/build.make CMakeFiles/cmTC_e3726.dir/build
-make[1]: Entering directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_e3726.dir/feature_tests.c.o
-/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_e3726.dir/feature_tests.c.o   -c /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/feature_tests.c
-Linking C executable cmTC_e3726
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e3726.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_e3726.dir/feature_tests.c.o  -o cmTC_e3726 
-make[1]: Leaving directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_e1e12/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e1e12.dir/build.make CMakeFiles/cmTC_e1e12.dir/build
+make[1]: Entering directory '/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e1e12.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_e1e12.dir/feature_tests.c.o   -c /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/feature_tests.c
+Linking C executable cmTC_e1e12
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e1e12.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_e1e12.dir/feature_tests.c.o  -o cmTC_e1e12 
+make[1]: Leaving directory '/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -177,17 +177,17 @@ make[1]: Leaving directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws
 
 
 Detecting C [-std=c99] compiler features compiled with the following output:
-Change Dir: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp
+Change Dir: /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_7567b/fast"
-/usr/bin/make -f CMakeFiles/cmTC_7567b.dir/build.make CMakeFiles/cmTC_7567b.dir/build
-make[1]: Entering directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_7567b.dir/feature_tests.c.o
-/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_7567b.dir/feature_tests.c.o   -c /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/feature_tests.c
-Linking C executable cmTC_7567b
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7567b.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_7567b.dir/feature_tests.c.o  -o cmTC_7567b 
-make[1]: Leaving directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_24606/fast"
+/usr/bin/make -f CMakeFiles/cmTC_24606.dir/build.make CMakeFiles/cmTC_24606.dir/build
+make[1]: Entering directory '/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_24606.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_24606.dir/feature_tests.c.o   -c /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/feature_tests.c
+Linking C executable cmTC_24606
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_24606.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_24606.dir/feature_tests.c.o  -o cmTC_24606 
+make[1]: Leaving directory '/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -197,17 +197,17 @@ make[1]: Leaving directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws
 
 
 Detecting C [-std=c90] compiler features compiled with the following output:
-Change Dir: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp
+Change Dir: /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_202a0/fast"
-/usr/bin/make -f CMakeFiles/cmTC_202a0.dir/build.make CMakeFiles/cmTC_202a0.dir/build
-make[1]: Entering directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_202a0.dir/feature_tests.c.o
-/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_202a0.dir/feature_tests.c.o   -c /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/feature_tests.c
-Linking C executable cmTC_202a0
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_202a0.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_202a0.dir/feature_tests.c.o  -o cmTC_202a0 
-make[1]: Leaving directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_8166d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8166d.dir/build.make CMakeFiles/cmTC_8166d.dir/build
+make[1]: Entering directory '/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8166d.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_8166d.dir/feature_tests.c.o   -c /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/feature_tests.c
+Linking C executable cmTC_8166d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8166d.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_8166d.dir/feature_tests.c.o  -o cmTC_8166d 
+make[1]: Leaving directory '/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -215,30 +215,30 @@ make[1]: Leaving directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws
     Feature record: C_FEATURE:0c_static_assert
     Feature record: C_FEATURE:0c_variadic_macros
 Determining if the CXX compiler works passed with the following output:
-Change Dir: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp
+Change Dir: /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_36202/fast"
-/usr/bin/make -f CMakeFiles/cmTC_36202.dir/build.make CMakeFiles/cmTC_36202.dir/build
-make[1]: Entering directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_36202.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTC_36202.dir/testCXXCompiler.cxx.o -c /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_36202
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_36202.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_36202.dir/testCXXCompiler.cxx.o  -o cmTC_36202 
-make[1]: Leaving directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_4cf70/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4cf70.dir/build.make CMakeFiles/cmTC_4cf70.dir/build
+make[1]: Entering directory '/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_4cf70.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_4cf70.dir/testCXXCompiler.cxx.o -c /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_4cf70
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4cf70.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_4cf70.dir/testCXXCompiler.cxx.o  -o cmTC_4cf70 
+make[1]: Leaving directory '/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp
+Change Dir: /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_a2bba/fast"
-/usr/bin/make -f CMakeFiles/cmTC_a2bba.dir/build.make CMakeFiles/cmTC_a2bba.dir/build
-make[1]: Entering directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_a2bba.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++     -o CMakeFiles/cmTC_a2bba.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_a2bba
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a2bba.dir/link.txt --verbose=1
-/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_a2bba.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_a2bba 
+Run Build Command:"/usr/bin/make" "cmTC_31512/fast"
+/usr/bin/make -f CMakeFiles/cmTC_31512.dir/build.make CMakeFiles/cmTC_31512.dir/build
+make[1]: Entering directory '/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_31512.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTC_31512.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_31512
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_31512.dir/link.txt --verbose=1
+/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_31512.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_31512 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -250,24 +250,24 @@ Thread model: posix
 gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_a2bba' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccrb1Qxl.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_a2bba /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_a2bba.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_a2bba' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-make[1]: Leaving directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_31512' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccpCYclW.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_31512 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_31512.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_31512' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+make[1]: Leaving directory '/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_a2bba/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_a2bba.dir/build.make CMakeFiles/cmTC_a2bba.dir/build]
-  ignore line: [make[1]: Entering directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_a2bba.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_a2bba.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_a2bba]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a2bba.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_a2bba.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_a2bba ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_31512/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_31512.dir/build.make CMakeFiles/cmTC_31512.dir/build]
+  ignore line: [make[1]: Entering directory '/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_31512.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_31512.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_31512]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_31512.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_31512.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_31512 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -279,13 +279,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_a2bba' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccrb1Qxl.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_a2bba /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_a2bba.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_31512' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccpCYclW.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_31512 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_31512.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccrb1Qxl.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccpCYclW.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -304,7 +304,7 @@ Parsed CXX implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_a2bba] ==> ignore
+    arg [cmTC_31512] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -316,7 +316,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_a2bba.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_31512.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -342,17 +342,17 @@ Parsed CXX implicit link information from above output:
 
 
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
-Change Dir: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp
+Change Dir: /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_3369b/fast"
-/usr/bin/make -f CMakeFiles/cmTC_3369b.dir/build.make CMakeFiles/cmTC_3369b.dir/build
-make[1]: Entering directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_3369b.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_3369b.dir/feature_tests.cxx.o -c /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_3369b
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3369b.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_3369b.dir/feature_tests.cxx.o  -o cmTC_3369b 
-make[1]: Leaving directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_fe8df/fast"
+/usr/bin/make -f CMakeFiles/cmTC_fe8df.dir/build.make CMakeFiles/cmTC_fe8df.dir/build
+make[1]: Entering directory '/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_fe8df.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_fe8df.dir/feature_tests.cxx.o -c /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_fe8df
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fe8df.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_fe8df.dir/feature_tests.cxx.o  -o cmTC_fe8df 
+make[1]: Leaving directory '/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -415,17 +415,17 @@ make[1]: Leaving directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws
 
 
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
-Change Dir: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp
+Change Dir: /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_b008a/fast"
-/usr/bin/make -f CMakeFiles/cmTC_b008a.dir/build.make CMakeFiles/cmTC_b008a.dir/build
-make[1]: Entering directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_b008a.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_b008a.dir/feature_tests.cxx.o -c /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_b008a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b008a.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_b008a.dir/feature_tests.cxx.o  -o cmTC_b008a 
-make[1]: Leaving directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_2776f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2776f.dir/build.make CMakeFiles/cmTC_2776f.dir/build
+make[1]: Entering directory '/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_2776f.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_2776f.dir/feature_tests.cxx.o -c /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_2776f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2776f.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_2776f.dir/feature_tests.cxx.o  -o cmTC_2776f 
+make[1]: Leaving directory '/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -488,17 +488,17 @@ make[1]: Leaving directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws
 
 
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
-Change Dir: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp
+Change Dir: /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_d3738/fast"
-/usr/bin/make -f CMakeFiles/cmTC_d3738.dir/build.make CMakeFiles/cmTC_d3738.dir/build
-make[1]: Entering directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_d3738.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_d3738.dir/feature_tests.cxx.o -c /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_d3738
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d3738.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_d3738.dir/feature_tests.cxx.o  -o cmTC_d3738 
-make[1]: Leaving directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_a4ef3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a4ef3.dir/build.make CMakeFiles/cmTC_a4ef3.dir/build
+make[1]: Entering directory '/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_a4ef3.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_a4ef3.dir/feature_tests.cxx.o -c /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_a4ef3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a4ef3.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_a4ef3.dir/feature_tests.cxx.o  -o cmTC_a4ef3 
+make[1]: Leaving directory '/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -561,17 +561,17 @@ make[1]: Leaving directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws
 
 
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
-Change Dir: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp
+Change Dir: /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_0a3d3/fast"
-/usr/bin/make -f CMakeFiles/cmTC_0a3d3.dir/build.make CMakeFiles/cmTC_0a3d3.dir/build
-make[1]: Entering directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_0a3d3.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_0a3d3.dir/feature_tests.cxx.o -c /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_0a3d3
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0a3d3.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_0a3d3.dir/feature_tests.cxx.o  -o cmTC_0a3d3 
-make[1]: Leaving directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_542a6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_542a6.dir/build.make CMakeFiles/cmTC_542a6.dir/build
+make[1]: Entering directory '/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_542a6.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_542a6.dir/feature_tests.cxx.o -c /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_542a6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_542a6.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_542a6.dir/feature_tests.cxx.o  -o cmTC_542a6 
+make[1]: Leaving directory '/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -632,30 +632,30 @@ make[1]: Leaving directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws
     Feature record: CXX_FEATURE:0cxx_variadic_macros
     Feature record: CXX_FEATURE:0cxx_variadic_templates
 Determining if the include file pthread.h exists passed with the following output:
-Change Dir: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp
+Change Dir: /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_aa7a0/fast"
-/usr/bin/make -f CMakeFiles/cmTC_aa7a0.dir/build.make CMakeFiles/cmTC_aa7a0.dir/build
-make[1]: Entering directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_aa7a0.dir/CheckIncludeFile.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_aa7a0.dir/CheckIncludeFile.c.o   -c /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_aa7a0
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aa7a0.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_aa7a0.dir/CheckIncludeFile.c.o  -o cmTC_aa7a0 
-make[1]: Leaving directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_6fdfd/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6fdfd.dir/build.make CMakeFiles/cmTC_6fdfd.dir/build
+make[1]: Entering directory '/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6fdfd.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_6fdfd.dir/CheckIncludeFile.c.o   -c /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_6fdfd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6fdfd.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_6fdfd.dir/CheckIncludeFile.c.o  -o cmTC_6fdfd 
+make[1]: Leaving directory '/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
 
 
 Determining if the function pthread_create exists in the pthread passed with the following output:
-Change Dir: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp
+Change Dir: /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f8060/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f8060.dir/build.make CMakeFiles/cmTC_f8060.dir/build
-make[1]: Entering directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_f8060.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_f8060.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
-Linking C executable cmTC_f8060
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f8060.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_f8060.dir/CheckFunctionExists.c.o  -o cmTC_f8060 -lpthread 
-make[1]: Leaving directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_a83d8/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a83d8.dir/build.make CMakeFiles/cmTC_a83d8.dir/build
+make[1]: Entering directory '/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a83d8.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_a83d8.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a83d8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a83d8.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_a83d8.dir/CheckFunctionExists.c.o  -o cmTC_a83d8 -lpthread 
+make[1]: Leaving directory '/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/mvp_grasping/CMakeFiles/CMakeTmp'
 
 

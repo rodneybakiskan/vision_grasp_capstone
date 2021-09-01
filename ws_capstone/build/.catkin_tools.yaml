@@ -1,6 +1,6 @@
-devel_space: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel
+devel_space: /home/nuwan/git/vision_grasp_capstone/ws_capstone/devel
 install: false
-install_space: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/install
+install_space: /home/nuwan/git/vision_grasp_capstone/ws_capstone/install
 profile: default
-source_space: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src
-workspace: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone
+source_space: /home/nuwan/git/vision_grasp_capstone/ws_capstone/src
+workspace: /home/nuwan/git/vision_grasp_capstone/ws_capstone

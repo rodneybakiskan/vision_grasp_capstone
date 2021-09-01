@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/moveit_config
+CMAKE_SOURCE_DIR = /home/nuwan/git/vision_grasp_capstone/ws_capstone/src/moveit_config
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/moveit_config
+CMAKE_BINARY_DIR = /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/moveit_config
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,9 +137,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/moveit_config/CMakeFiles /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/moveit_config/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/moveit_config/CMakeFiles /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/moveit_config/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/moveit_config/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/moveit_config/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/moveit_config
+CMAKE_SOURCE_DIR = /home/nuwan/git/vision_grasp_capstone/ws_capstone/src/moveit_config
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/moveit_config
+CMAKE_BINARY_DIR = /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/moveit_config
 
 # Utility rule file for tests.
 
@@ -67,6 +67,6 @@ CMakeFiles/tests.dir/clean:
 .PHONY : CMakeFiles/tests.dir/clean
 
 CMakeFiles/tests.dir/depend:
-	cd /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/moveit_config && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/moveit_config /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/moveit_config /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/moveit_config /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/moveit_config /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/moveit_config/CMakeFiles/tests.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/moveit_config && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nuwan/git/vision_grasp_capstone/ws_capstone/src/moveit_config /home/nuwan/git/vision_grasp_capstone/ws_capstone/src/moveit_config /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/moveit_config /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/moveit_config /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/moveit_config/CMakeFiles/tests.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/tests.dir/depend
 

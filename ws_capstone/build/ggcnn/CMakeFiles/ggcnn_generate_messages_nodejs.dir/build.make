@@ -43,40 +43,40 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn
+CMAKE_SOURCE_DIR = /home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/ggcnn
+CMAKE_BINARY_DIR = /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/ggcnn
 
 # Utility rule file for ggcnn_generate_messages_nodejs.
 
 # Include the progress variables for this target.
 include CMakeFiles/ggcnn_generate_messages_nodejs.dir/progress.make
 
-CMakeFiles/ggcnn_generate_messages_nodejs: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/gennodejs/ros/ggcnn/msg/Grasp.js
-CMakeFiles/ggcnn_generate_messages_nodejs: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/gennodejs/ros/ggcnn/srv/GraspPrediction.js
+CMakeFiles/ggcnn_generate_messages_nodejs: /home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/gennodejs/ros/ggcnn/msg/Grasp.js
+CMakeFiles/ggcnn_generate_messages_nodejs: /home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/gennodejs/ros/ggcnn/srv/GraspPrediction.js
 
 
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/gennodejs/ros/ggcnn/msg/Grasp.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/gennodejs/ros/ggcnn/msg/Grasp.js: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/gennodejs/ros/ggcnn/msg/Grasp.js: /opt/ros/melodic/share/geometry_msgs/msg/Pose.msg
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/gennodejs/ros/ggcnn/msg/Grasp.js: /opt/ros/melodic/share/geometry_msgs/msg/Quaternion.msg
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/gennodejs/ros/ggcnn/msg/Grasp.js: /opt/ros/melodic/share/geometry_msgs/msg/Point.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/ggcnn/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from ggcnn/Grasp.msg"
-	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg -Iggcnn:/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -p ggcnn -o /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/gennodejs/ros/ggcnn/msg
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/gennodejs/ros/ggcnn/msg/Grasp.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/gennodejs/ros/ggcnn/msg/Grasp.js: /home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/gennodejs/ros/ggcnn/msg/Grasp.js: /opt/ros/melodic/share/geometry_msgs/msg/Pose.msg
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/gennodejs/ros/ggcnn/msg/Grasp.js: /opt/ros/melodic/share/geometry_msgs/msg/Quaternion.msg
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/gennodejs/ros/ggcnn/msg/Grasp.js: /opt/ros/melodic/share/geometry_msgs/msg/Point.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/ggcnn/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from ggcnn/Grasp.msg"
+	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg -Iggcnn:/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -p ggcnn -o /home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/gennodejs/ros/ggcnn/msg
 
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/gennodejs/ros/ggcnn/srv/GraspPrediction.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/gennodejs/ros/ggcnn/srv/GraspPrediction.js: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/srv/GraspPrediction.srv
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/gennodejs/ros/ggcnn/srv/GraspPrediction.js: /opt/ros/melodic/share/geometry_msgs/msg/Pose.msg
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/gennodejs/ros/ggcnn/srv/GraspPrediction.js: /opt/ros/melodic/share/geometry_msgs/msg/Quaternion.msg
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/gennodejs/ros/ggcnn/srv/GraspPrediction.js: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg
-/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/gennodejs/ros/ggcnn/srv/GraspPrediction.js: /opt/ros/melodic/share/geometry_msgs/msg/Point.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/ggcnn/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from ggcnn/GraspPrediction.srv"
-	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/srv/GraspPrediction.srv -Iggcnn:/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -p ggcnn -o /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/gennodejs/ros/ggcnn/srv
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/gennodejs/ros/ggcnn/srv/GraspPrediction.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/gennodejs/ros/ggcnn/srv/GraspPrediction.js: /home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/srv/GraspPrediction.srv
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/gennodejs/ros/ggcnn/srv/GraspPrediction.js: /home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg/Grasp.msg
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/gennodejs/ros/ggcnn/srv/GraspPrediction.js: /opt/ros/melodic/share/geometry_msgs/msg/Point.msg
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/gennodejs/ros/ggcnn/srv/GraspPrediction.js: /opt/ros/melodic/share/geometry_msgs/msg/Quaternion.msg
+/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/gennodejs/ros/ggcnn/srv/GraspPrediction.js: /opt/ros/melodic/share/geometry_msgs/msg/Pose.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nuwan/git/vision_grasp_capstone/ws_capstone/build/ggcnn/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from ggcnn/GraspPrediction.srv"
+	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/srv/GraspPrediction.srv -Iggcnn:/home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -p ggcnn -o /home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/gennodejs/ros/ggcnn/srv
 
 ggcnn_generate_messages_nodejs: CMakeFiles/ggcnn_generate_messages_nodejs
-ggcnn_generate_messages_nodejs: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/gennodejs/ros/ggcnn/msg/Grasp.js
-ggcnn_generate_messages_nodejs: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/gennodejs/ros/ggcnn/srv/GraspPrediction.js
+ggcnn_generate_messages_nodejs: /home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/gennodejs/ros/ggcnn/msg/Grasp.js
+ggcnn_generate_messages_nodejs: /home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/gennodejs/ros/ggcnn/srv/GraspPrediction.js
 ggcnn_generate_messages_nodejs: CMakeFiles/ggcnn_generate_messages_nodejs.dir/build.make
 
 .PHONY : ggcnn_generate_messages_nodejs
@@ -91,6 +91,6 @@ CMakeFiles/ggcnn_generate_messages_nodejs.dir/clean:
 .PHONY : CMakeFiles/ggcnn_generate_messages_nodejs.dir/clean
 
 CMakeFiles/ggcnn_generate_messages_nodejs.dir/depend:
-	cd /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/ggcnn && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/ggcnn /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/ggcnn /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/ggcnn/CMakeFiles/ggcnn_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/ggcnn && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn /home/nuwan/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/ggcnn /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/ggcnn /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/ggcnn /home/nuwan/git/vision_grasp_capstone/ws_capstone/build/ggcnn/CMakeFiles/ggcnn_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ggcnn_generate_messages_nodejs.dir/depend
 
