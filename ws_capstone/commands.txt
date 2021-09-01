@@ -10,7 +10,6 @@ roslaunch mvp_grasping wrist_realsense.launch
 //world
 roslaunch main view_d435_model_rviz_gazebo.launch
 
-
 //ggcnn service
 roslaunch ggcnn ggcnn_service.launch
 
