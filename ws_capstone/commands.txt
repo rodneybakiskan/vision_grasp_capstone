@@ -6,6 +6,8 @@ roscore &
 //camera
 roslaunch realsense2_camera rs_camera.launch
 roslaunch mvp_grasping wrist_realsense.launch
+
+//world
 roslaunch main view_d435_model_rviz_gazebo.launch
 
 
