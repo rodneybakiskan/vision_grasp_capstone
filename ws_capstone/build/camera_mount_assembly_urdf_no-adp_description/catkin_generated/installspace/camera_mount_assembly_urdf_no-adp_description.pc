@@ -1,4 +1,4 @@
-prefix=/home/liam/git/vision_grasp_capstone/ws_capstone/install
+prefix=/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/install
 
 Name: camera_mount_assembly_urdf_no-adp_description
 Description: Description of camera_mount_assembly_urdf_no-adp_description

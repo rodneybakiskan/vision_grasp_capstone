@@ -1,65 +1,55 @@
-Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
-Change Dir: /home/liam/git/vision_grasp_capstone/ws_capstone/build/camera_mount_assembly_urdf_no-adp_description/CMakeFiles/CMakeTmp
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/camera_mount_assembly_urdf_no-adp_description/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_d2f9b/fast && /usr/bin/make  -f CMakeFiles/cmTC_d2f9b.dir/build.make CMakeFiles/cmTC_d2f9b.dir/build
-make[1]: Entering directory '/home/liam/git/vision_grasp_capstone/ws_capstone/build/camera_mount_assembly_urdf_no-adp_description/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_d2f9b.dir/src.c.o
-/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD -o CMakeFiles/cmTC_d2f9b.dir/src.c.o -c /home/liam/git/vision_grasp_capstone/ws_capstone/build/camera_mount_assembly_urdf_no-adp_description/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_d2f9b
-/home/liam/.local/lib/python2.7/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d2f9b.dir/link.txt --verbose=1
-/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD -rdynamic CMakeFiles/cmTC_d2f9b.dir/src.c.o -o cmTC_d2f9b 
-CMakeFiles/cmTC_d2f9b.dir/src.c.o: In function `main':
-src.c:(.text+0x3e): undefined reference to `pthread_create'
-src.c:(.text+0x4a): undefined reference to `pthread_detach'
-src.c:(.text+0x56): undefined reference to `pthread_cancel'
-src.c:(.text+0x67): undefined reference to `pthread_join'
-src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+Run Build Command:"/usr/bin/make" "cmTC_309a2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_309a2.dir/build.make CMakeFiles/cmTC_309a2.dir/build
+make[1]: Entering directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/camera_mount_assembly_urdf_no-adp_description/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_309a2.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_309a2.dir/CheckSymbolExists.c.o   -c /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/camera_mount_assembly_urdf_no-adp_description/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_309a2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_309a2.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_309a2.dir/CheckSymbolExists.c.o  -o cmTC_309a2 
+CMakeFiles/cmTC_309a2.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_d2f9b.dir/build.make:105: recipe for target 'cmTC_d2f9b' failed
-make[1]: *** [cmTC_d2f9b] Error 1
-make[1]: Leaving directory '/home/liam/git/vision_grasp_capstone/ws_capstone/build/camera_mount_assembly_urdf_no-adp_description/CMakeFiles/CMakeTmp'
-Makefile:140: recipe for target 'cmTC_d2f9b/fast' failed
-make: *** [cmTC_d2f9b/fast] Error 2
+CMakeFiles/cmTC_309a2.dir/build.make:97: recipe for target 'cmTC_309a2' failed
+make[1]: *** [cmTC_309a2] Error 1
+make[1]: Leaving directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/camera_mount_assembly_urdf_no-adp_description/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_309a2/fast' failed
+make: *** [cmTC_309a2/fast] Error 2
 
-
-Source file was:
+File /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/camera_mount_assembly_urdf_no-adp_description/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
 #include <pthread.h>
 
-void* test_func(void* data)
+int main(int argc, char** argv)
 {
-  return data;
-}
-
-int main(void)
-{
-  pthread_t thread;
-  pthread_create(&thread, NULL, test_func, NULL);
-  pthread_detach(thread);
-  pthread_cancel(thread);
-  pthread_join(thread, NULL);
-  pthread_atfork(NULL, NULL, NULL);
-  pthread_exit(NULL);
-
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
   return 0;
+#endif
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/liam/git/vision_grasp_capstone/ws_capstone/build/camera_mount_assembly_urdf_no-adp_description/CMakeFiles/CMakeTmp
+Change Dir: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/camera_mount_assembly_urdf_no-adp_description/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_e1d84/fast && /usr/bin/make  -f CMakeFiles/cmTC_e1d84.dir/build.make CMakeFiles/cmTC_e1d84.dir/build
-make[1]: Entering directory '/home/liam/git/vision_grasp_capstone/ws_capstone/build/camera_mount_assembly_urdf_no-adp_description/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_e1d84.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_e1d84.dir/CheckFunctionExists.c.o -c /home/liam/.local/lib/python2.7/site-packages/cmake/data/share/cmake-3.18/Modules/CheckFunctionExists.c
-Linking C executable cmTC_e1d84
-/home/liam/.local/lib/python2.7/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e1d84.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_e1d84.dir/CheckFunctionExists.c.o -o cmTC_e1d84  -lpthreads 
+Run Build Command:"/usr/bin/make" "cmTC_9159e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9159e.dir/build.make CMakeFiles/cmTC_9159e.dir/build
+make[1]: Entering directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/camera_mount_assembly_urdf_no-adp_description/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9159e.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_9159e.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_9159e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9159e.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_9159e.dir/CheckFunctionExists.c.o  -o cmTC_9159e -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_e1d84.dir/build.make:105: recipe for target 'cmTC_e1d84' failed
-make[1]: *** [cmTC_e1d84] Error 1
-make[1]: Leaving directory '/home/liam/git/vision_grasp_capstone/ws_capstone/build/camera_mount_assembly_urdf_no-adp_description/CMakeFiles/CMakeTmp'
-Makefile:140: recipe for target 'cmTC_e1d84/fast' failed
-make: *** [cmTC_e1d84/fast] Error 2
-
+CMakeFiles/cmTC_9159e.dir/build.make:97: recipe for target 'cmTC_9159e' failed
+make[1]: *** [cmTC_9159e] Error 1
+make[1]: Leaving directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/camera_mount_assembly_urdf_no-adp_description/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_9159e/fast' failed
+make: *** [cmTC_9159e/fast] Error 2
 
 

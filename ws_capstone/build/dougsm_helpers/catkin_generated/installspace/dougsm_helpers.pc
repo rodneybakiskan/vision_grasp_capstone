@@ -1,4 +1,4 @@
-prefix=/home/liam/git/vision_grasp_capstone/ws_capstone/install
+prefix=/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/install
 
 Name: dougsm_helpers
 Description: Description of dougsm_helpers

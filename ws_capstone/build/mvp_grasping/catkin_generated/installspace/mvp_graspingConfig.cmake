@@ -67,14 +67,14 @@ set(mvp_grasping_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(mvp_grasping_SOURCE_PREFIX /home/liam/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping)
-  set(mvp_grasping_DEVEL_PREFIX /home/liam/git/vision_grasp_capstone/ws_capstone/devel/.private/mvp_grasping)
+  set(mvp_grasping_SOURCE_PREFIX /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping)
+  set(mvp_grasping_DEVEL_PREFIX /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/mvp_grasping)
   set(mvp_grasping_INSTALL_PREFIX "")
   set(mvp_grasping_PREFIX ${mvp_grasping_DEVEL_PREFIX})
 else()
   set(mvp_grasping_SOURCE_PREFIX "")
   set(mvp_grasping_DEVEL_PREFIX "")
-  set(mvp_grasping_INSTALL_PREFIX /home/liam/git/vision_grasp_capstone/ws_capstone/install)
+  set(mvp_grasping_INSTALL_PREFIX /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/install)
   set(mvp_grasping_PREFIX ${mvp_grasping_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/liam/git/vision_grasp_capstone/ws_capstone/install/lib;/home/liam/git/vision_grasp_capstone/ws_capstone/devel/lib;/home/liam/git/vision_grasp_capstone/ws_capstone/devel/.private/catkin_tools_prebuild/lib;/home/liam/catkin_ws/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/install/lib;/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

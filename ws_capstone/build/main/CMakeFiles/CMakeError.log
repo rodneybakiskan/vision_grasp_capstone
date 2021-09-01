@@ -1,65 +1,55 @@
-Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
-Change Dir: /home/liam/git/vision_grasp_capstone/ws_capstone/build/main/CMakeFiles/CMakeTmp
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/main/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_b7c39/fast && /usr/bin/make  -f CMakeFiles/cmTC_b7c39.dir/build.make CMakeFiles/cmTC_b7c39.dir/build
-make[1]: Entering directory '/home/liam/git/vision_grasp_capstone/ws_capstone/build/main/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_b7c39.dir/src.c.o
-/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD -o CMakeFiles/cmTC_b7c39.dir/src.c.o -c /home/liam/git/vision_grasp_capstone/ws_capstone/build/main/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_b7c39
-/home/liam/.local/lib/python2.7/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b7c39.dir/link.txt --verbose=1
-/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD -rdynamic CMakeFiles/cmTC_b7c39.dir/src.c.o -o cmTC_b7c39 
-CMakeFiles/cmTC_b7c39.dir/src.c.o: In function `main':
-src.c:(.text+0x3e): undefined reference to `pthread_create'
-src.c:(.text+0x4a): undefined reference to `pthread_detach'
-src.c:(.text+0x56): undefined reference to `pthread_cancel'
-src.c:(.text+0x67): undefined reference to `pthread_join'
-src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+Run Build Command:"/usr/bin/make" "cmTC_b45e7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b45e7.dir/build.make CMakeFiles/cmTC_b45e7.dir/build
+make[1]: Entering directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/main/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b45e7.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_b45e7.dir/CheckSymbolExists.c.o   -c /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/main/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_b45e7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b45e7.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_b45e7.dir/CheckSymbolExists.c.o  -o cmTC_b45e7 
+CMakeFiles/cmTC_b45e7.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_b7c39.dir/build.make:105: recipe for target 'cmTC_b7c39' failed
-make[1]: *** [cmTC_b7c39] Error 1
-make[1]: Leaving directory '/home/liam/git/vision_grasp_capstone/ws_capstone/build/main/CMakeFiles/CMakeTmp'
-Makefile:140: recipe for target 'cmTC_b7c39/fast' failed
-make: *** [cmTC_b7c39/fast] Error 2
+CMakeFiles/cmTC_b45e7.dir/build.make:97: recipe for target 'cmTC_b45e7' failed
+make[1]: *** [cmTC_b45e7] Error 1
+make[1]: Leaving directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/main/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_b45e7/fast' failed
+make: *** [cmTC_b45e7/fast] Error 2
 
-
-Source file was:
+File /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/main/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
 #include <pthread.h>
 
-void* test_func(void* data)
+int main(int argc, char** argv)
 {
-  return data;
-}
-
-int main(void)
-{
-  pthread_t thread;
-  pthread_create(&thread, NULL, test_func, NULL);
-  pthread_detach(thread);
-  pthread_cancel(thread);
-  pthread_join(thread, NULL);
-  pthread_atfork(NULL, NULL, NULL);
-  pthread_exit(NULL);
-
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
   return 0;
+#endif
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/liam/git/vision_grasp_capstone/ws_capstone/build/main/CMakeFiles/CMakeTmp
+Change Dir: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/main/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_e7289/fast && /usr/bin/make  -f CMakeFiles/cmTC_e7289.dir/build.make CMakeFiles/cmTC_e7289.dir/build
-make[1]: Entering directory '/home/liam/git/vision_grasp_capstone/ws_capstone/build/main/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_e7289.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_e7289.dir/CheckFunctionExists.c.o -c /home/liam/.local/lib/python2.7/site-packages/cmake/data/share/cmake-3.18/Modules/CheckFunctionExists.c
-Linking C executable cmTC_e7289
-/home/liam/.local/lib/python2.7/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e7289.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_e7289.dir/CheckFunctionExists.c.o -o cmTC_e7289  -lpthreads 
+Run Build Command:"/usr/bin/make" "cmTC_27da1/fast"
+/usr/bin/make -f CMakeFiles/cmTC_27da1.dir/build.make CMakeFiles/cmTC_27da1.dir/build
+make[1]: Entering directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/main/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_27da1.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_27da1.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_27da1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_27da1.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_27da1.dir/CheckFunctionExists.c.o  -o cmTC_27da1 -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_e7289.dir/build.make:105: recipe for target 'cmTC_e7289' failed
-make[1]: *** [cmTC_e7289] Error 1
-make[1]: Leaving directory '/home/liam/git/vision_grasp_capstone/ws_capstone/build/main/CMakeFiles/CMakeTmp'
-Makefile:140: recipe for target 'cmTC_e7289/fast' failed
-make: *** [cmTC_e7289/fast] Error 2
-
+CMakeFiles/cmTC_27da1.dir/build.make:97: recipe for target 'cmTC_27da1' failed
+make[1]: *** [cmTC_27da1] Error 1
+make[1]: Leaving directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/main/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_27da1/fast' failed
+make: *** [cmTC_27da1/fast] Error 2
 
 

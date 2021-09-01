@@ -1,4 +1,4 @@
-prefix=/home/liam/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense2_description
+prefix=/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/realsense2_description
 
 Name: realsense2_description
 Description: Description of realsense2_description

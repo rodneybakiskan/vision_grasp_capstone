@@ -67,14 +67,14 @@ set(mvp_grasping_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(mvp_grasping_SOURCE_PREFIX /home/liam/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping)
-  set(mvp_grasping_DEVEL_PREFIX /home/liam/git/vision_grasp_capstone/ws_capstone/devel/.private/mvp_grasping)
+  set(mvp_grasping_SOURCE_PREFIX /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping)
+  set(mvp_grasping_DEVEL_PREFIX /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/mvp_grasping)
   set(mvp_grasping_INSTALL_PREFIX "")
   set(mvp_grasping_PREFIX ${mvp_grasping_DEVEL_PREFIX})
 else()
   set(mvp_grasping_SOURCE_PREFIX "")
   set(mvp_grasping_DEVEL_PREFIX "")
-  set(mvp_grasping_INSTALL_PREFIX /home/liam/git/vision_grasp_capstone/ws_capstone/install)
+  set(mvp_grasping_INSTALL_PREFIX /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/install)
   set(mvp_grasping_PREFIX ${mvp_grasping_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(mvp_grasping_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/liam/git/vision_grasp_capstone/ws_capstone/devel/.private/mvp_grasping/include " STREQUAL " ")
+if(NOT "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/mvp_grasping/include " STREQUAL " ")
   set(mvp_grasping_INCLUDE_DIRS "")
-  set(_include_dirs "/home/liam/git/vision_grasp_capstone/ws_capstone/devel/.private/mvp_grasping/include")
+  set(_include_dirs "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/mvp_grasping/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/liam/git/vision_grasp_capstone/ws_capstone/devel/.private/mvp_gras
         message(FATAL_ERROR "Project 'mvp_grasping' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'mvp_grasping' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/liam/git/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'mvp_grasping' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/src/mvp_grasp-master/mvp_grasping/${idir}'.  ${_report}")
     endif()
     _list_append_unique(mvp_grasping_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/liam/git/vision_grasp_capstone/ws_capstone/devel/.private/mvp_grasping/lib;/home/liam/git/vision_grasp_capstone/ws_capstone/devel/lib;/home/liam/git/vision_grasp_capstone/ws_capstone/devel/.private/catkin_tools_prebuild/lib;/home/liam/catkin_ws/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/mvp_grasping/lib;/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
