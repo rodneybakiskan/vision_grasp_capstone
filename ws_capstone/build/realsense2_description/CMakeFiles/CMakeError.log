@@ -1,65 +1,55 @@
-Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
-Change Dir: /home/liam/git/vision_grasp_capstone/ws_capstone/build/realsense2_description/CMakeFiles/CMakeTmp
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/realsense2_description/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_ba1a5/fast && /usr/bin/make  -f CMakeFiles/cmTC_ba1a5.dir/build.make CMakeFiles/cmTC_ba1a5.dir/build
-make[1]: Entering directory '/home/liam/git/vision_grasp_capstone/ws_capstone/build/realsense2_description/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_ba1a5.dir/src.c.o
-/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD -o CMakeFiles/cmTC_ba1a5.dir/src.c.o -c /home/liam/git/vision_grasp_capstone/ws_capstone/build/realsense2_description/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_ba1a5
-/home/liam/.local/lib/python2.7/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ba1a5.dir/link.txt --verbose=1
-/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD -rdynamic CMakeFiles/cmTC_ba1a5.dir/src.c.o -o cmTC_ba1a5 
-CMakeFiles/cmTC_ba1a5.dir/src.c.o: In function `main':
-src.c:(.text+0x3e): undefined reference to `pthread_create'
-src.c:(.text+0x4a): undefined reference to `pthread_detach'
-src.c:(.text+0x56): undefined reference to `pthread_cancel'
-src.c:(.text+0x67): undefined reference to `pthread_join'
-src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+Run Build Command:"/usr/bin/make" "cmTC_876a5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_876a5.dir/build.make CMakeFiles/cmTC_876a5.dir/build
+make[1]: Entering directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/realsense2_description/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_876a5.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_876a5.dir/CheckSymbolExists.c.o   -c /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/realsense2_description/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_876a5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_876a5.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_876a5.dir/CheckSymbolExists.c.o  -o cmTC_876a5 
+CMakeFiles/cmTC_876a5.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_ba1a5.dir/build.make:105: recipe for target 'cmTC_ba1a5' failed
-make[1]: *** [cmTC_ba1a5] Error 1
-make[1]: Leaving directory '/home/liam/git/vision_grasp_capstone/ws_capstone/build/realsense2_description/CMakeFiles/CMakeTmp'
-Makefile:140: recipe for target 'cmTC_ba1a5/fast' failed
-make: *** [cmTC_ba1a5/fast] Error 2
+CMakeFiles/cmTC_876a5.dir/build.make:97: recipe for target 'cmTC_876a5' failed
+make[1]: *** [cmTC_876a5] Error 1
+make[1]: Leaving directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/realsense2_description/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_876a5/fast' failed
+make: *** [cmTC_876a5/fast] Error 2
 
-
-Source file was:
+File /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/realsense2_description/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
 #include <pthread.h>
 
-void* test_func(void* data)
+int main(int argc, char** argv)
 {
-  return data;
-}
-
-int main(void)
-{
-  pthread_t thread;
-  pthread_create(&thread, NULL, test_func, NULL);
-  pthread_detach(thread);
-  pthread_cancel(thread);
-  pthread_join(thread, NULL);
-  pthread_atfork(NULL, NULL, NULL);
-  pthread_exit(NULL);
-
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
   return 0;
+#endif
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/liam/git/vision_grasp_capstone/ws_capstone/build/realsense2_description/CMakeFiles/CMakeTmp
+Change Dir: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/realsense2_description/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_73af5/fast && /usr/bin/make  -f CMakeFiles/cmTC_73af5.dir/build.make CMakeFiles/cmTC_73af5.dir/build
-make[1]: Entering directory '/home/liam/git/vision_grasp_capstone/ws_capstone/build/realsense2_description/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_73af5.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_73af5.dir/CheckFunctionExists.c.o -c /home/liam/.local/lib/python2.7/site-packages/cmake/data/share/cmake-3.18/Modules/CheckFunctionExists.c
-Linking C executable cmTC_73af5
-/home/liam/.local/lib/python2.7/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_73af5.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_73af5.dir/CheckFunctionExists.c.o -o cmTC_73af5  -lpthreads 
+Run Build Command:"/usr/bin/make" "cmTC_9bee4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9bee4.dir/build.make CMakeFiles/cmTC_9bee4.dir/build
+make[1]: Entering directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/realsense2_description/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9bee4.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_9bee4.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_9bee4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9bee4.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_9bee4.dir/CheckFunctionExists.c.o  -o cmTC_9bee4 -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_73af5.dir/build.make:105: recipe for target 'cmTC_73af5' failed
-make[1]: *** [cmTC_73af5] Error 1
-make[1]: Leaving directory '/home/liam/git/vision_grasp_capstone/ws_capstone/build/realsense2_description/CMakeFiles/CMakeTmp'
-Makefile:140: recipe for target 'cmTC_73af5/fast' failed
-make: *** [cmTC_73af5/fast] Error 2
-
+CMakeFiles/cmTC_9bee4.dir/build.make:97: recipe for target 'cmTC_9bee4' failed
+make[1]: *** [cmTC_9bee4] Error 1
+make[1]: Leaving directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/realsense2_description/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_9bee4/fast' failed
+make: *** [cmTC_9bee4/fast] Error 2
 
 

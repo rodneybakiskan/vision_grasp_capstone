@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "realsense2_description"
-PROJECT_SPACE_DIR = "/home/liam/git/vision_grasp_capstone/ws_capstone/install"
+PROJECT_SPACE_DIR = "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/install"
 PROJECT_VERSION = "3.1.7"

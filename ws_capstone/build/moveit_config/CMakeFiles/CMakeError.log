@@ -1,65 +1,55 @@
-Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
-Change Dir: /home/liam/git/vision_grasp_capstone/ws_capstone/build/moveit_config/CMakeFiles/CMakeTmp
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/moveit_config/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_ce881/fast && /usr/bin/make  -f CMakeFiles/cmTC_ce881.dir/build.make CMakeFiles/cmTC_ce881.dir/build
-make[1]: Entering directory '/home/liam/git/vision_grasp_capstone/ws_capstone/build/moveit_config/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_ce881.dir/src.c.o
-/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD -o CMakeFiles/cmTC_ce881.dir/src.c.o -c /home/liam/git/vision_grasp_capstone/ws_capstone/build/moveit_config/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_ce881
-/home/liam/.local/lib/python2.7/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ce881.dir/link.txt --verbose=1
-/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD -rdynamic CMakeFiles/cmTC_ce881.dir/src.c.o -o cmTC_ce881 
-CMakeFiles/cmTC_ce881.dir/src.c.o: In function `main':
-src.c:(.text+0x3e): undefined reference to `pthread_create'
-src.c:(.text+0x4a): undefined reference to `pthread_detach'
-src.c:(.text+0x56): undefined reference to `pthread_cancel'
-src.c:(.text+0x67): undefined reference to `pthread_join'
-src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+Run Build Command:"/usr/bin/make" "cmTC_53bb0/fast"
+/usr/bin/make -f CMakeFiles/cmTC_53bb0.dir/build.make CMakeFiles/cmTC_53bb0.dir/build
+make[1]: Entering directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/moveit_config/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_53bb0.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_53bb0.dir/CheckSymbolExists.c.o   -c /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/moveit_config/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_53bb0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_53bb0.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_53bb0.dir/CheckSymbolExists.c.o  -o cmTC_53bb0 
+CMakeFiles/cmTC_53bb0.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_ce881.dir/build.make:105: recipe for target 'cmTC_ce881' failed
-make[1]: *** [cmTC_ce881] Error 1
-make[1]: Leaving directory '/home/liam/git/vision_grasp_capstone/ws_capstone/build/moveit_config/CMakeFiles/CMakeTmp'
-Makefile:140: recipe for target 'cmTC_ce881/fast' failed
-make: *** [cmTC_ce881/fast] Error 2
+CMakeFiles/cmTC_53bb0.dir/build.make:97: recipe for target 'cmTC_53bb0' failed
+make[1]: *** [cmTC_53bb0] Error 1
+make[1]: Leaving directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/moveit_config/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_53bb0/fast' failed
+make: *** [cmTC_53bb0/fast] Error 2
 
-
-Source file was:
+File /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/moveit_config/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
 #include <pthread.h>
 
-void* test_func(void* data)
+int main(int argc, char** argv)
 {
-  return data;
-}
-
-int main(void)
-{
-  pthread_t thread;
-  pthread_create(&thread, NULL, test_func, NULL);
-  pthread_detach(thread);
-  pthread_cancel(thread);
-  pthread_join(thread, NULL);
-  pthread_atfork(NULL, NULL, NULL);
-  pthread_exit(NULL);
-
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
   return 0;
+#endif
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/liam/git/vision_grasp_capstone/ws_capstone/build/moveit_config/CMakeFiles/CMakeTmp
+Change Dir: /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/moveit_config/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_1c7d7/fast && /usr/bin/make  -f CMakeFiles/cmTC_1c7d7.dir/build.make CMakeFiles/cmTC_1c7d7.dir/build
-make[1]: Entering directory '/home/liam/git/vision_grasp_capstone/ws_capstone/build/moveit_config/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_1c7d7.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_1c7d7.dir/CheckFunctionExists.c.o -c /home/liam/.local/lib/python2.7/site-packages/cmake/data/share/cmake-3.18/Modules/CheckFunctionExists.c
-Linking C executable cmTC_1c7d7
-/home/liam/.local/lib/python2.7/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1c7d7.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_1c7d7.dir/CheckFunctionExists.c.o -o cmTC_1c7d7  -lpthreads 
+Run Build Command:"/usr/bin/make" "cmTC_ab372/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ab372.dir/build.make CMakeFiles/cmTC_ab372.dir/build
+make[1]: Entering directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/moveit_config/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ab372.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_ab372.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_ab372
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ab372.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_ab372.dir/CheckFunctionExists.c.o  -o cmTC_ab372 -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_1c7d7.dir/build.make:105: recipe for target 'cmTC_1c7d7' failed
-make[1]: *** [cmTC_1c7d7] Error 1
-make[1]: Leaving directory '/home/liam/git/vision_grasp_capstone/ws_capstone/build/moveit_config/CMakeFiles/CMakeTmp'
-Makefile:140: recipe for target 'cmTC_1c7d7/fast' failed
-make: *** [cmTC_1c7d7/fast] Error 2
-
+CMakeFiles/cmTC_ab372.dir/build.make:97: recipe for target 'cmTC_ab372' failed
+make[1]: *** [cmTC_ab372] Error 1
+make[1]: Leaving directory '/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/moveit_config/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_ab372/fast' failed
+make: *** [cmTC_ab372/fast] Error 2
 
 

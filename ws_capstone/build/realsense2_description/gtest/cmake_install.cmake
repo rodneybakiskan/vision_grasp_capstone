@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/liam/git/vision_grasp_capstone/ws_capstone/install")
+  set(CMAKE_INSTALL_PREFIX "/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -37,14 +37,9 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
-# Set default install directory permissions.
-if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/usr/bin/objdump")
-endif()
-
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/liam/git/vision_grasp_capstone/ws_capstone/build/realsense2_description/gtest/googlemock/cmake_install.cmake")
+  include("/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/realsense2_description/gtest/googlemock/cmake_install.cmake")
 
 endif()
 

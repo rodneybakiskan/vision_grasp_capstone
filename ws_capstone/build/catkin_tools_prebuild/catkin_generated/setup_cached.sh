@@ -7,7 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export LD_LIBRARY_PATH='/home/liam/catkin_ws/devel/lib:/opt/ros/melodic/lib'
-export PKG_CONFIG_PATH='/home/liam/catkin_ws/devel/lib/pkgconfig:/opt/ros/melodic/lib/pkgconfig'
-export PWD='/home/liam/git/vision_grasp_capstone/ws_capstone/build/catkin_tools_prebuild'
-export PYTHONPATH='/home/liam/catkin_ws/devel/lib/python2.7/dist-packages:/opt/ros/melodic/lib/python2.7/dist-packages'
+export CMAKE_PREFIX_PATH="/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/catkin_tools_prebuild:$CMAKE_PREFIX_PATH"
+export PWD='/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/catkin_tools_prebuild'
+export ROSLISP_PACKAGE_DIRECTORIES='/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/catkin_tools_prebuild/share/common-lisp'
+export ROS_PACKAGE_PATH="/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/build/catkin_tools_prebuild:$ROS_PACKAGE_PATH"

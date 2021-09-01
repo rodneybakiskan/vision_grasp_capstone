@@ -1,1 +1,1 @@
-/home/liam/git/vision_grasp_capstone/ws_capstone/devel/.private/mvp_grasping/share/common-lisp/ros/mvp_grasping/srv/AddFailurePoint.lisp
+/home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/.private/mvp_grasping/share/common-lisp/ros/mvp_grasping/srv/AddFailurePoint.lisp
