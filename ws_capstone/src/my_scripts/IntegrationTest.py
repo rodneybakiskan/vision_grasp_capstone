@@ -46,11 +46,8 @@ print ("============ Printing robot state")
 print (robot.get_current_state())
 print ("")
 
-
-
-
 #Stores the location
-class Itemlocation:
+class Graspinglocation:
     #needs statments to store the positions
 
 #Sets the robot arm to start postion (gripper not included)
@@ -61,10 +58,11 @@ def StartingPoint(self):
 
 #Grabs location of item of GCNN(needs location)
 def findposition(self):
-    Itemlocation = geometry_msgs.msg
-    return  Itemlocation
+    Graspinglocation = geometry_msgs.msg
+    return  Graspinglocation
 
 #heads to the position given by GCNN
+
 
 
 #Opens grippper(Writing Directly to the REV26)
@@ -90,35 +88,41 @@ def chosenobject(self):
     #scene.add_box(box_name,box_pose, size=(1,1,1))
 
 def Attachitem(self):
-   grasping_group = 'hand'
-   touch_links = robot.get_link_names(group=grasping_group)
-   scene.attach_box(eef_link, name, touch_links=touch_links)
-
+    grasping_group = 'gripper'
+    touch_links = robot.get_link_names(group=grasping_group)
+    scene.attach_box(eef_link, name, touch_links=touch_links)
+   
 def Removeitem(self):
-    scene.remove_attached_object(eef_link, name= chosenobject)
+    scene.remove_attached_object(eef_link, name= chosenobject())
 
 
-#Collision Updates
-start = rospy.get_time()
-seconds = rospy.get_time()
-while (seconds - start < timeout) and not rospy.is_shutdown():
-  # Test if the box is in attached objects
-  attached_objects = scene.get_attached_objects([chosenobject])
-  is_attached = len(attached_objects.keys()) > 0
+def CollisionUpdating():
+        #Collision Updates
+    start = rospy.get_time()
+    seconds = rospy.get_time()
+    while (seconds - start < timeout) and not rospy.is_shutdown():
+    # Test if the box is in attached objects
+        attached_objects = scene.get_attached_objects([chosenobject()])
+        is_attached = len(attached_objects.keys()) > 0
 
-  # Test if the box is in the scene.
-  # Note that attaching the box will remove it from known_objects
-  is_known = chosenobject in scene.get_known_object_names()
+    # Test if the box is in the scene.
+    # Note that attaching the box will remove it from known_objects
+        is_known = chosenobject() in scene.get_known_object_names()
 
-  # Test if we are in the expected state
-  if (chosenobject_is_attached == is_attached) and (chosenobject_is_known == is_known):
-    return True
+    # Test if we are in the expected state
+    if (chosenobject_is_attached == is_attached) and (chosenobject_is_known == is_known):
+        return True
+    else return False
 
+
+
+def Rospysleep ():
   # Sleep so that we give other threads time on the processor
-  rospy.sleep(0.1)
-  seconds = rospy.get_time()
+    rospy.sleep(0.1)
+    seconds = rospy.get_time()
 
 
-#Shuts down the commannder
-rospy.sleep(5)
-moveit_commander.roscpp_shutdown()
+def shutdown():
+    #Shuts down the commannder
+    rospy.sleep(5)
+    moveit_commander.roscpp_shutdown()
