@@ -6,10 +6,10 @@
   <arg name="robot_description" default="robot_description"/>
 
   <!-- Load universal robot description format (URDF) -->
-  <param if="$(arg load_robot_description)" name="$(arg robot_description)" command="xacro  '$(find camera_mount_assembly_urdf_no-adp_description)/urdf/camera_mount_assembly_urdf_no-adp.xacro'"/>
+  <param if="$(arg load_robot_description)" name="$(arg robot_description)" command="xacro  '$(find cma_urdf_description)/urdf/cma_urdf.xacro'"/>
 
   <!-- The semantic description that corresponds to the URDF -->
-  <param name="$(arg robot_description)_semantic" textfile="$(find moveit_config)/config/camera_mount_assembly_urdf_no-adp.srdf" />
+  <param name="$(arg robot_description)_semantic" textfile="$(find moveit_config)/config/cma_urdf.srdf" />
 
   <!-- Load updated joint limits (override information from URDF) -->
   <group ns="$(arg robot_description)_planning">

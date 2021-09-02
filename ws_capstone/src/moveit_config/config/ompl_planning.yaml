@@ -146,8 +146,10 @@ ur5e_arm:
     - LazyPRMstar
     - SPARS
     - SPARStwo
+  projection_evaluator: joints(rev_a1,rev_a2)
+  longest_valid_segment_fraction: 0.005
 gripper:
-  default_planner_config: None
+  default_planner_config: ""
   planner_configs:
     - SBL
     - EST

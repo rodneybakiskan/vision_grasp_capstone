@@ -9,13 +9,13 @@ generic_hw_control_loop:
 # Settings for ros_control hardware interface
 hardware_interface:
   joints:
-    - Rev12
-    - Rev13
-    - Rev14
-    - Rev15
-    - Rev16
-    - Rev17
-    - Rev26
+    - rev_a1
+    - rev_a2
+    - rev_a3
+    - rev_a4
+    - rev_a5
+    - rev_a6
+    - rev_grp
   sim_control_mode: 1  # 0: position, 1: velocity
 # Publish all joint states
 # Creates the /joint_states topic necessary in ROS
@@ -28,25 +28,15 @@ controller_list:
     default: True
     type: FollowJointTrajectory
     joints:
-      - Rev12
-      - Rev13
-      - Rev14
-      - Rev15
-      - Rev16
-      - Rev17
+      - rev_a1
+      - rev_a2
+      - rev_a3
+      - rev_a4
+      - rev_a5
+      - rev_a6
   - name: gripper_controller
     action_ns: follow_joint_trajectory
     default: True
     type: FollowJointTrajectory
     joints:
-      Rev26
-gripper_effort_controller:
-  type: effort_controllers/JointEffortController
-  joints:
-    Rev26
-  gains:
-    Rev26:
-      p: 100
-      d: 1
-      i: 1
-      i_clamp: 1
+      []

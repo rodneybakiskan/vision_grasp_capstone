@@ -2,7 +2,7 @@
 <launch>
   <arg name="paused" default="false"/>
   <arg name="gazebo_gui" default="true"/>
-  <arg name="urdf_path" default="$(find camera_mount_assembly_urdf_no-adp_description)/urdf/camera_mount_assembly_urdf_no-adp.xacro"/>
+  <arg name="urdf_path" default="$(find cma_urdf_description)/urdf/cma_urdf.xacro"/>
 
   <!-- startup simulated world -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
