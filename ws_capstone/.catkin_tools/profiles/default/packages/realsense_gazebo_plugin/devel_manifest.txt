@@ -1,0 +1,6 @@
+realsense_gazebo_plugin
+/home/liam/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/cmake.lock /home/liam/git/vision_grasp_capstone/ws_capstone/devel/./cmake.lock
+/home/liam/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so /home/liam/git/vision_grasp_capstone/ws_capstone/devel/lib/librealsense_gazebo_plugin.so
+/home/liam/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/lib/pkgconfig/realsense_gazebo_plugin.pc /home/liam/git/vision_grasp_capstone/ws_capstone/devel/lib/pkgconfig/realsense_gazebo_plugin.pc
+/home/liam/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/share/realsense_gazebo_plugin/cmake/realsense_gazebo_pluginConfig.cmake /home/liam/git/vision_grasp_capstone/ws_capstone/devel/share/realsense_gazebo_plugin/cmake/realsense_gazebo_pluginConfig.cmake
+/home/liam/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense_gazebo_plugin/share/realsense_gazebo_plugin/cmake/realsense_gazebo_pluginConfig-version.cmake /home/liam/git/vision_grasp_capstone/ws_capstone/devel/share/realsense_gazebo_plugin/cmake/realsense_gazebo_pluginConfig-version.cmake
