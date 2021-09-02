@@ -1,1 +1,0 @@
-/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/common-lisp/ros/ggcnn/msg/_package_Grasp.lisp

@@ -1,0 +1,5 @@
+vision_grasp_capstone/.gitignore
+
+ws_capstone/build
+ws_capstone/devel
+ws_capstone/logs

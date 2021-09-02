@@ -1,8 +1,0 @@
-prefix=/home/nuwan/git/vision_grasp_capstone/ws_capstone/install
-
-Name: my_scripts
-Description: Description of my_scripts
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

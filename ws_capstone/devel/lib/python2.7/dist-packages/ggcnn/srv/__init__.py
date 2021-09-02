@@ -1,1 +1,0 @@
-/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/lib/python2.7/dist-packages/ggcnn/srv/__init__.py

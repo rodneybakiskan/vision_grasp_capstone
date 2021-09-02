@@ -14,7 +14,7 @@ roslaunch main view_d435_model_rviz_gazebo.launch
 roslaunch ggcnn ggcnn_service.launch
 
 //open loop grasping
-rosrun mvp_grasping panda_open_loop_grasp.py
+rosrun mvp_grasping capstone_scheduler.py
 
 //observe visualisation topic in rviz
 rosrun rviz rviz

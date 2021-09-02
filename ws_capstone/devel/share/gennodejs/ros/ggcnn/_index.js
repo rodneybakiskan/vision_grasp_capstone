@@ -1,1 +1,0 @@
-/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/ggcnn/share/gennodejs/ros/ggcnn/_index.js

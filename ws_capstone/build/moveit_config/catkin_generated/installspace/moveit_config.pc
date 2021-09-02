@@ -1,8 +1,0 @@
-prefix=/home/nuwan/git/vision_grasp_capstone/ws_capstone/install
-
-Name: moveit_config
-Description: Description of moveit_config
-Version: 0.3.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

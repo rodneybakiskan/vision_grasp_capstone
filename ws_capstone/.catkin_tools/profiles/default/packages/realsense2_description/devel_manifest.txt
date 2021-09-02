@@ -1,5 +1,0 @@
-realsense2_description
-/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense2_description/cmake.lock /home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/./cmake.lock
-/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense2_description/share/realsense2_description/cmake/realsense2_descriptionConfig-version.cmake /home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/share/realsense2_description/cmake/realsense2_descriptionConfig-version.cmake
-/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense2_description/share/realsense2_description/cmake/realsense2_descriptionConfig.cmake /home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/share/realsense2_description/cmake/realsense2_descriptionConfig.cmake
-/home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense2_description/lib/pkgconfig/realsense2_description.pc /home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/lib/pkgconfig/realsense2_description.pc
