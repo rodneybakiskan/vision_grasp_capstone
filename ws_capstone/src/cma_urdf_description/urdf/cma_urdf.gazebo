@@ -4,7 +4,10 @@
 <xacro:property name="body_color" value="Gazebo/Silver" />
 
 <gazebo>
-  <plugin filename="libgazebo_ros_control.so" name="control"/>
+  <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so" />
+  <robotNamespace>/</robotNamespace>
+  <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+  <legacyModeNS>true</legacyModeNS>
 </gazebo>
 <gazebo reference="base_link">
   <material>${body_color}</material>
