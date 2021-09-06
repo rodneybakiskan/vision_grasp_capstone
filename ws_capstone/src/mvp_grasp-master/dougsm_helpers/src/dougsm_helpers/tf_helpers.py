@@ -91,7 +91,9 @@ def publish_stamped_transform(stamped_transform, seconds=1):
     # Publish transform for set time.
     i = 0
     iterations = seconds/0.05
+    print("publishing stamped transform")
     while not rospy.is_shutdown() and i < iterations:
+
         stamped_transform.header.stamp = rospy.Time.now()
         br.sendTransform(stamped_transform)
         rospy.sleep(0.05)

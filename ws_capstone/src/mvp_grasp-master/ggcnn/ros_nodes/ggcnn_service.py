@@ -17,8 +17,8 @@ from dougsm_helpers.gridshow import gridshow
 from ggcnn.srv import GraspPrediction, GraspPredictionResponse
 from sensor_msgs.msg import Image, CameraInfo
 from ggcnn.ggcnn import predict, process_depth_image
-#import ggcnn_torch
-#import predict, process_depth_image
+# import ggcnn_torch
+# import predict, process_depth_image
 
 import cv_bridge
 bridge = cv_bridge.CvBridge()
@@ -67,12 +67,12 @@ class GGCNNService:
         self.curr_img_time = time.time()
         self.last_image_pose = tfh.current_robot_pose(
             self.base_frame, self.camera_frame)
+        print(self.last_image_pose)
         self.curr_depth_img = bridge.imgmsg_to_cv2(msg)
         self.received = True
         print('Img callback complete...')
 
     def compute_service_handler(self, req):
-        
         print('Inside compute_service_handler')
 
         # keep commented as realsense node is too unreliable
@@ -86,9 +86,9 @@ class GGCNNService:
 
         self.waiting = True
         while not self.received:
-	    print('Waiting inside service handler...');
+            print('Waiting inside service handler...')
             rospy.sleep(0.01)
-
+        
         self.waiting = False
         self.received = False
 
@@ -104,8 +104,8 @@ class GGCNNService:
             depth_crop, depth_nan_mask = process_depth_image(
                 depth, self.img_crop_size, 300, return_mask=True, crop_y_offset=self.img_crop_y_offset)
 
-            #cv2.imshow('image',depth)
-            #cv2.waitKey(0)
+            # cv2.imshow('image',depth)
+            # cv2.waitKey(0)
             
             points, angle, width_img, _ = predict(
                 depth_crop, process_depth=False, depth_nan_mask=depth_nan_mask, filters=(2.0, 2.0, 2.0))
@@ -123,8 +123,13 @@ class GGCNNService:
                  depth_crop.shape[1], np.float), )*depth_crop.shape[0]) - self.cam_K[0, 2])/self.cam_K[0, 0] * depth_crop).flatten()
             y = ((np.vstack((np.linspace((imh - self.img_crop_size) // 2 - self.img_crop_y_offset, (imh - self.img_crop_size) // 2 + self.img_crop_size -
                  self.img_crop_y_offset, depth_crop.shape[0], np.float), )*depth_crop.shape[1]).T - self.cam_K[1, 2])/self.cam_K[1, 1] * depth_crop).flatten()
+
+            # pos = np.dot(camera_rot, np.stack((x, y, depth_crop.flatten()))
+            #             ).T + np.array([[cam_p.x, cam_p.y, cam_p.z]])
+
+            # maybe its just mm? converting to m
             pos = np.dot(camera_rot, np.stack((x, y, depth_crop.flatten()))
-                         ).T + np.array([[cam_p.x, cam_p.y, cam_p.z]])
+                         ).T + np.array([[cam_p.x, cam_p.y, cam_p.z]])/1000
 
             width_m = width_img / 300.0 * 2.0 * depth_crop * \
                 np.tan(self.cam_fov * self.img_crop_size /

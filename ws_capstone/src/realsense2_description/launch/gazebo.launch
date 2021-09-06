@@ -1,5 +1,10 @@
 <launch>
 
+
+
+
+
+
   <!-- these are the arguments you can pass this launch file, for example paused:=true -->
   <arg name="paused" default="false"/>
   <arg name="use_sim_time" default="true"/>
@@ -7,6 +12,7 @@
   <arg name="headless" default="false"/>
   <arg name="debug" default="false"/>
   <arg name="model" default="$(find realsense2_description)/urdf/test_d435_camera.urdf.xacro"/>
+
 
   <!-- robot description to load in rviz or gazebo -->
   <param name="robot_description" command="$(find xacro)/xacro $(arg model)" />
@@ -23,4 +29,7 @@
   <!-- push robot_description to factory and spawn robot in gazebo -->
   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model"
         args="-z 1.0 -unpause -urdf -model robot -param robot_description" respawn="false" output="screen" />
+
+
+
 </launch>

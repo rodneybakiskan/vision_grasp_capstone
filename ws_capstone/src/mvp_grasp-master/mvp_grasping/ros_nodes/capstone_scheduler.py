@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#! /usr/bin/env python2.7
 
 from __future__ import division, print_function
 
@@ -13,7 +13,7 @@ from std_msgs.msg import Int16
 from geometry_msgs.msg import Twist
 # from franka_msgs.msg import FrankaState, Errors as FrankaErrors
 
-#import dougsm_helpers.tf_helpers as tfh
+import dougsm_helpers.tf_helpers as tfh
 # from dougsm_helpers.ros_control import ControlSwitcher
 
 from ggcnn.msg import Grasp
@@ -49,7 +49,7 @@ class OpenLoopGraspController(object):
 
         ret = self.ggcnn_srv.call()
         if not ret.success:
-            print("failed grasp")
+            print("Failed grasp")
             return False
 
         best_grasp = ret.best_grasp
@@ -57,7 +57,7 @@ class OpenLoopGraspController(object):
         print(best_grasp)
         rospy.sleep(1)
         
-        #tfh.publish_pose_as_transform(best_grasp.pose, 'camera_link', 'G', 0.5)
+        tfh.publish_pose_as_transform(best_grasp.pose, 'camera_depth_optical_frame', 'GraspPose', 50)
 
         if input('Continue?') == '0':
             return False

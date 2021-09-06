@@ -3,9 +3,10 @@ ggcnn_service:
     info_topic: /camera/depth/camera_info
     depth_topic: /camera/depth/image_raw
 #    depth_topic: /camera/depth/image_rect_raw
+#    depth_topic: /camera/depth/image_meters
     camera_frame: camera_depth_optical_frame
-#    robot_base_frame: base_link
-    robot_base_frame: camera_link
+#    robot_base_frame: camera_frame
+    robot_base_frame: base_link
     crop_size: 300
     crop_y_offset: 40
     fov: 65.5
