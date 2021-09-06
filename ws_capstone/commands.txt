@@ -19,3 +19,6 @@ rosrun mvp_grasping capstone_scheduler.py
 
 //observe visualisation topic in rviz
 rosrun rviz rviz
+
+//gazebo simulation with the correct camera position
+roslaunch cma_urdf_description gazebo.launch

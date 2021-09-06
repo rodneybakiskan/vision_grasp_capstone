@@ -1,8 +1,12 @@
 <?xml version="1.0" ?>
 <robot name="cma_urdf" xmlns:xacro="http://www.ros.org/wiki/xacro" >
 
-<material name="silver">
-  <color rgba="0.700 0.700 0.700 1.000"/>
-</material>
+  <material name="silver">
+    <color rgba="0.700 0.700 0.700 1.000"/>
+  </material>
+
+  <material name="capstone_aluminum">
+    <color rgba="0.5 0.5 0.5 1"/>
+  </material>
 
 </robot>

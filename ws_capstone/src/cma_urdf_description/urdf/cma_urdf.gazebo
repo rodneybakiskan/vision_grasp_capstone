@@ -10,7 +10,7 @@
   <legacyModeNS>true</legacyModeNS>
 </gazebo>
 <gazebo reference="base_link">
-  <material>${body_color}</material>
+  <material>Gazebo/DarkGrey</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
@@ -18,126 +18,126 @@
 </gazebo>
 
 <gazebo reference="robot_to_table_adp_1">
-  <material>${body_color}</material>
+  <material>Gazebo/Grey</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="Base_UR5_1">
-  <material>${body_color}</material>
+  <material>Gazebo/Grey</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="Link1_UR5_1">
-  <material>${body_color}</material>
+  <material>Gazebo/Blue</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="Link2_UR5_1">
-  <material>${body_color}</material>
+  <material>Gazebo/Gold</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="Link3_UR5_1">
-  <material>${body_color}</material>
+  <material>Gazebo/Turquoise</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="Link4_UR5_1">
-  <material>${body_color}</material>
+  <material>Gazebo/DarkYellow</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="Link5_UR5_1">
-  <material>${body_color}</material>
+  <material>Gazebo/Orange</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="Link6_UR5_1">
-  <material>${body_color}</material>
+  <material>Gazebo/Indigo</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="Defeatured_2F-85_PAD_OPEN_finger4m_1">
-  <material>${body_color}</material>
+  <material>Gazebo/FlatBlack</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="Defeatured_2F-85_PAD_OPEN_Finger1m_1">
-  <material>${body_color}</material>
+  <material>Gazebo/FlatBlack</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="Defeatured_2F-85_PAD_OPEN_Finger1_1">
-  <material>${body_color}</material>
+  <material>Gazebo/FlatBlack</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="Defeatured_2F-85_PAD_OPEN_finger4_1">
-  <material>${body_color}</material>
+  <material>Gazebo/FlatBlack</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="Defeatured_2F-85_PAD_OPEN_base_1">
-  <material>${body_color}</material>
+  <material>Gazebo/FlatBlack</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="urdf_Intel_RealSense_Depth_Camera_D435_v2_1">
-  <material>${body_color}</material>
+  <material>Gazebo/capstone_aluminum</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="camera_mount_1">
-  <material>${body_color}</material>
+  <material>Gazebo/Green</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="WRIST_CAMERA_20171116_v2_1">
-  <material>${body_color}</material>
+  <material>Gazebo/ZincYellow</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="Defeatured_2F-85_PAD_OPEN_finger3m_1">
-  <material>${body_color}</material>
+  <material>Gazebo/FlatBlack</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="Defeatured_2F-85_PAD_OPEN_finger3_1">
-  <material>${body_color}</material>
+  <material>Gazebo/FlatBlack</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
