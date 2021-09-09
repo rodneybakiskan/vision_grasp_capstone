@@ -305,7 +305,7 @@
 
 
   <link name="urdf_Intel_RealSense_Depth_Camera_D435_v2_1">
-    <inertial>
+    <!-- <inertial>
       <origin rpy="0 0 0" xyz="0.02101336009113891 -0.010035295733690969 6.117083960499592e-05"/>
       <mass value="0.17091204023764017"/>
       <inertia ixx="2e-05" ixy="1e-06" ixz="-0.0" iyy="0.000115" iyz="0.0" izz="0.000115"/>
@@ -322,7 +322,7 @@
       <geometry>
         <mesh filename="package://cma_urdf_description/meshes/urdf_Intel_RealSense_Depth_Camera_D435_v2_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-    </collision>
+    </collision> -->
   </link>
 
   <link name="camera_mount_1">
@@ -535,7 +535,10 @@
   </joint>
 
   <xacro:sensor_d435 name="realsense_d435" topics_ns="realsense_d435" parent="Link6_UR5_1" publish_pointcloud="true">
+    <!-- <origin xyz="0 -0.02775 0.062" rpy="0 0 -1.57079632679" /> -->
     <origin xyz="0 -0.0379 0.0495" rpy="0 0 -1.57079632679" />
+
   </xacro:sensor_d435>
 
 </robot>
+
