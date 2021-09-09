@@ -7,12 +7,14 @@
   <xacro:include filename="$(find cma_urdf_description)/urdf/cma_urdf.gazebo" />
   <xacro:include filename="$(find realsense2_description)/urdf/_d435.urdf.xacro"/>
   
+
+
   <link name="base_link">
-    <inertial>
+    <!-- <inertial>
       <origin rpy="0 0 0" xyz="9.621533355862818e-14 3.3453199900713086e-14 0.008001282197718517"/>
       <mass value="106.9483036748442"/>
       <inertia ixx="5.167281" ixy="0.0" ixz="-0.0" iyy="13.220959" iyz="-0.0" izz="18.383707"/>
-    </inertial>
+    </inertial> -->
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -301,8 +303,9 @@
     </collision>
   </link>
 
+
   <link name="urdf_Intel_RealSense_Depth_Camera_D435_v2_1">
-    <inertial>
+    <!-- <inertial>
       <origin rpy="0 0 0" xyz="0.02101336009113891 -0.010035295733690969 6.117083960499592e-05"/>
       <mass value="0.17091204023764017"/>
       <inertia ixx="2e-05" ixy="1e-06" ixz="-0.0" iyy="0.000115" iyz="0.0" izz="0.000115"/>
@@ -312,14 +315,14 @@
       <geometry>
         <mesh filename="package://cma_urdf_description/meshes/urdf_Intel_RealSense_Depth_Camera_D435_v2_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="silver"/>
+      <material name="aluminum"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="-0.4601 -0.04665 -1.18745"/>
       <geometry>
         <mesh filename="package://cma_urdf_description/meshes/urdf_Intel_RealSense_Depth_Camera_D435_v2_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-    </collision>
+    </collision> -->
   </link>
 
   <link name="camera_mount_1">
@@ -532,7 +535,10 @@
   </joint>
 
   <xacro:sensor_d435 name="realsense_d435" topics_ns="realsense_d435" parent="Link6_UR5_1" publish_pointcloud="true">
-    <origin xyz="0 0 0" rpy="0 0 0" />
+    <!-- <origin xyz="0 -0.02775 0.062" rpy="0 0 -1.57079632679" /> -->
+    <origin xyz="0 -0.0379 0.0495" rpy="0 0 -1.57079632679" />
+
   </xacro:sensor_d435>
 
 </robot>
+

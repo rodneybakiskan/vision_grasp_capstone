@@ -40,3 +40,37 @@ controller_list:
     type: FollowJointTrajectory
     joints:
       - rev_grp
+
+ur5e_arm_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - rev_a1
+    - rev_a2
+    - rev_a3
+    - rev_a4
+    - rev_a5
+    - rev_a6
+  # constraints:
+  #   goal_time: 0.6
+  #   stopped_velocity_tolerance: 0.05
+  #   rev_a1: {trajectory: 0.1, goal: 0.1}
+  #   rev_a1: {trajectory: 0.1, goal: 0.1}
+  #   rev_a3: {trajectory: 0.1, goal: 0.1}
+  #   rev_a4: {trajectory: 0.1, goal: 0.1}
+  #   rev_a5: {trajectory: 0.1, goal: 0.1}
+  #   rev_a6: {trajectory: 0.1, goal: 0.1}
+  # stop_trajectory_duration: 0.5
+  # state_publish_rate:  25
+  # action_monitor_rate: 10
+
+gripper_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - rev_grp
+  # constraints:
+  #   goal_time: 0.6
+  #   stopped_velocity_tolerance: 0.05
+  #   rev_grp: {trajectory: 0.1, goal: 0.1}
+  # stop_trajectory_duration: 0.5
+  # state_publish_rate:  25
+  # action_monitor_rate: 10
