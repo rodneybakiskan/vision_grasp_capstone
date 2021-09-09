@@ -535,7 +535,7 @@
   </joint>
 
   <xacro:sensor_d435 name="realsense_d435" topics_ns="realsense_d435" parent="Link6_UR5_1" publish_pointcloud="true">
-    <origin xyz="0 -0.04 0.05" rpy="0 0 -1.57079632679" />
+    <origin xyz="0 -0.0379 0.0495" rpy="0 0 -1.57079632679" />
   </xacro:sensor_d435>
 
 </robot>
