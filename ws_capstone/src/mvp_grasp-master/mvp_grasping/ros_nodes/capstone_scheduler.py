@@ -57,7 +57,7 @@ class OpenLoopGraspController(object):
         print(best_grasp)
         rospy.sleep(1)
         
-        # tfh.publish_pose_as_transform(best_grasp.pose, 'camera_depth_optical_frame', 'GraspPose', 50)
+        tfh.publish_pose_as_transform(best_grasp.pose, 'camera_link', 'GraspPose', 10)
 
         # if input('Continue?') == '0':
         #     return False

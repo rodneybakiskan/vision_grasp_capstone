@@ -124,12 +124,8 @@ class GGCNNService:
             y = ((np.vstack((np.linspace((imh - self.img_crop_size) // 2 - self.img_crop_y_offset, (imh - self.img_crop_size) // 2 + self.img_crop_size -
                  self.img_crop_y_offset, depth_crop.shape[0], np.float), )*depth_crop.shape[1]).T - self.cam_K[1, 2])/self.cam_K[1, 1] * depth_crop).flatten()
 
-            # pos = np.dot(camera_rot, np.stack((x, y, depth_crop.flatten()))
-            #             ).T + np.array([[cam_p.x, cam_p.y, cam_p.z]])
-
-            # maybe its just mm? converting to m
             pos = np.dot(camera_rot, np.stack((x, y, depth_crop.flatten()))
-                         ).T + np.array([[cam_p.x, cam_p.y, cam_p.z]])/1000
+                            ).T + np.array([[cam_p.x, cam_p.y, cam_p.z]])
 
             width_m = width_img / 300.0 * 2.0 * depth_crop * \
                 np.tan(self.cam_fov * self.img_crop_size /
