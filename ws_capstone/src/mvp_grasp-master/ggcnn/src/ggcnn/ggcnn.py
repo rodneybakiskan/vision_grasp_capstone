@@ -23,6 +23,9 @@ sys.path.append(here)
 model = torch.load(path.join(path.dirname(__file__), MODEL_FILE))
 device = torch.device("cuda:0")
 
+# model = torch.load(path.join(path.dirname(__file__), MODEL_FILE), map_location ='cpu')
+# device = torch.device("cpu")
+
 
 def process_depth_image(depth, crop_size, out_size=300, return_mask=False, crop_y_offset=0):
     imh, imw = depth.shape
