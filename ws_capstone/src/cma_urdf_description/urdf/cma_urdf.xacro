@@ -534,7 +534,7 @@
     <mimic joint="rev_grp" multiplier="-1" offset="0" />
   </joint>
 
-  <xacro:sensor_d435 name="realsense_d435" topics_ns="realsense_d435" parent="Link6_UR5_1" publish_pointcloud="true">
+  <xacro:sensor_d435 name="camera" topics_ns="camera" parent="Link6_UR5_1" publish_pointcloud="true">
     <!-- <origin xyz="0 -0.02775 0.062" rpy="0 0 -1.57079632679" /> -->
     <origin xyz="0 -0.0379 0.0495" rpy="0 0 -1.57079632679" />
 
