@@ -8,7 +8,7 @@ from rosgraph.xmlrpc import ThreadingXMLRPCServer
 import rospy
 import moveit_commander
 import moveit_msgs.msg
-import geometry_msgs.msg
+import geometry_msgs
 from math import pi
 from std_msgs.msg import String
 from moveit_commander.conversions import pose_to_list
@@ -35,11 +35,14 @@ display_trajectory_publisher = rospy.Publisher(
 
 #Gets Basic Information
 # We can get the name of the reference frame for this robot:
-planning_frame = move_group.get_planning_frame()
-print ("============ Planning frame: %s" % planning_frame)
+gripper_planning_frame = gripper_move_group.get_planning_frame()
+print ("============ Gripper planning frame: %s" % gripper_planning_frame)
+
+arm_planning_frame = arm_group.get_planning_frame()
+print ("============ Arm planning frame: %s" % arm_planning_frame)
 
 # We can also print the name of the end-effector link for this group:
-eef_link = move_group.get_end_effector_link()
+eef_link = arm_group.get_end_effector_link()
 print ("============ End effector link: %s" % eef_link)
 
 # We can get a list of all the groups in the robot:
@@ -56,18 +59,18 @@ print ("")
 #Sets the robot arm to start postion (gripper not included)
 
 
-def StartingPoint(self):
+def StartingPoint():
     arm_group.set_named_target("home")
     plan1 = arm_group.go()
 
 #Grabs location of item of GCNN(needs location)
-def findposition(self):
+def findposition():
     Graspinglocation = geometry_msgs.msg
     return  Graspinglocation
 
 #heads to the position given by GCNN
-def Movetopose(self):
-    pose_target = geometry_msgs.Pose()
+def Movetopose():
+    pose_target = geometry_msgs.msg.Pose()
     pose_target.orientation.w = 0.5
     pose_target.orientation.x = -0.5
     pose_target.orientation.y = 0.5
@@ -87,7 +90,7 @@ def OpenGripper():
     gripper_move_group.stop()
 
 #Determines which object is in the gripper
-def chosenobject(self):
+def chosenobject():
     selectedname = geometry_msgs.msg.PoseStamped()
     return selectedname
 
@@ -142,6 +145,7 @@ def shutdown():
     moveit_commander.roscpp_shutdown()
 
 if __name__ == "__main__":
+
     StartingPoint()
     raw_input("Press Enter to continue...")
     Movetopose()
