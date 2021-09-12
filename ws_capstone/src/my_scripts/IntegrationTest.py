@@ -20,7 +20,7 @@ timeout =3
 
 #Defines groups
 moveit_commander.roscpp_initialize(sys.argv)
-rospy.init_node('move_group', anonymous = True)
+rospy.init_node('Motion_planner', anonymous = True)
 robot =moveit_commander.RobotCommander()
 scene =moveit_commander.PlanningSceneInterface()
 gripper_move_group = moveit_commander.MoveGroupCommander("gripper")
@@ -46,11 +46,9 @@ print ("============ Printing robot state")
 print (robot.get_current_state())
 print ("")
 
-#Stores the location
-class Graspinglocation:
-    #needs statments to store the positions
 
 #Sets the robot arm to start postion (gripper not included)
+
 
 def StartingPoint(self):
     arm_group.set_named_target("home")
@@ -62,8 +60,17 @@ def findposition(self):
     return  Graspinglocation
 
 #heads to the position given by GCNN
-
-
+def Movetopose(self):
+    pose_target = geometry_msgs.Pose()
+    pose_target.orientation.w = 0.5
+    pose_target.orientation.x = -0.5
+    pose_target.orientation.y = 0.5
+    pose_target.orientation.z = -0.5
+    pose_target.position.x = 0
+    pose_target.position.y =0
+    pose_target.position.z = 0.15
+    arm_group.set_pose_target(pose_target)
+    plan1 = arm_group.go()
 
 #Opens grippper(Writing Directly to the REV26)
 def OpenGripper():
@@ -112,7 +119,8 @@ def CollisionUpdating():
     # Test if we are in the expected state
     if (chosenobject_is_attached == is_attached) and (chosenobject_is_known == is_known):
         return True
-    else return False
+    else:
+        return False
 
 
 
@@ -126,3 +134,12 @@ def shutdown():
     #Shuts down the commannder
     rospy.sleep(5)
     moveit_commander.roscpp_shutdown()
+
+if __name__ == "__main__":
+    StartingPoint()
+    if input('Continue?'):
+        Movetopose()
+    
+
+        OpenGripper()
+    
