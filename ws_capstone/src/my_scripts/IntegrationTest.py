@@ -1,8 +1,8 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2.7
 import sys
 from unicodedata import name
 from moveit_commander import move_group
-from moveit_commander.move_group import MoveGroupCommander
+# from moveit_commander.move_group import MoveGroupCommander
 from rosgraph.names import anonymous_name
 from rosgraph.xmlrpc import ThreadingXMLRPCServer
 import rospy
@@ -25,6 +25,12 @@ robot =moveit_commander.RobotCommander()
 scene =moveit_commander.PlanningSceneInterface()
 gripper_move_group = moveit_commander.MoveGroupCommander("gripper")
 arm_group = moveit_commander.MoveGroupCommander("ur5e_arm")
+
+display_trajectory_publisher = rospy.Publisher(
+    "/move_group/display_planned_path",
+    moveit_msgs.msg.DisplayTrajectory,
+    queue_size=20,
+)
 
 
 #Gets Basic Information
@@ -137,9 +143,8 @@ def shutdown():
 
 if __name__ == "__main__":
     StartingPoint()
-    if input('Continue?'):
-        Movetopose()
-    
-
-        OpenGripper()
+    raw_input("Press Enter to continue...")
+    Movetopose()
+    raw_input("Press Enter to continue...")
+    OpenGripper()
     
