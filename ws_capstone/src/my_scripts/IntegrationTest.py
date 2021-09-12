@@ -16,7 +16,7 @@ from std_msgs.msg import Int16
 from geometry_msgs.msg import Twist
 
 
-timeout =3
+# timeout =3
 
 #Defines groups
 moveit_commander.roscpp_initialize(sys.argv)
@@ -57,8 +57,6 @@ print ("")
 
 
 #Sets the robot arm to start postion (gripper not included)
-
-
 def StartingPoint():
     arm_group.set_named_target("home")
     plan1 = arm_group.go()
@@ -83,11 +81,17 @@ def Movetopose():
 
 #Opens grippper(Writing Directly to the REV26)
 def OpenGripper():
-    pose_goal = gripper_move_group.get_current_link_values()
-    #should be REV26
-    pose_goal[0]= 0
-    gripper_move_group.go(pose_goal, wait= True)
-    gripper_move_group.stop()
+    # pose_goal = gripper_move_group.get_current_link_values()
+    # #should be REV26
+    # pose_goal[0]= 0
+    # gripper_move_group.go(pose_goal, wait= True)
+    # gripper_move_group.stop()
+    gripper_move_group.set_named_target("open")
+    plan1 = gripper_move_group.go()
+
+def CloseGripper():
+    gripper_move_group.set_named_target("close")
+    plan1 = gripper_move_group.go()
 
 #Determines which object is in the gripper
 def chosenobject():
@@ -147,8 +151,10 @@ def shutdown():
 if __name__ == "__main__":
 
     StartingPoint()
-    raw_input("Press Enter to continue...")
+    raw_input("Press Enter to move to position...")
     Movetopose()
-    raw_input("Press Enter to continue...")
+    raw_input("Press Enter to close gripper...")
+    CloseGripper()
+    raw_input("Press Enter to open gripper...")
     OpenGripper()
     
