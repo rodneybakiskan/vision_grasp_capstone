@@ -7,7 +7,7 @@
   <xacro:include filename="$(find cma_urdf_description)/urdf/cma_urdf.gazebo" />
   <xacro:include filename="$(find realsense2_description)/urdf/_d435.urdf.xacro"/>
   
-
+  <link name="world" />
 
   <link name="base_link">
     <!-- <inertial>
@@ -408,6 +408,11 @@
       </geometry>
     </collision>
   </link>
+  
+  <joint name="base_to_world_link" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+  </joint>
 
   <joint name="Rigid10" type="fixed">
     <origin rpy="0 0 0" xyz="0.5842 0.3556 0.016"/>
