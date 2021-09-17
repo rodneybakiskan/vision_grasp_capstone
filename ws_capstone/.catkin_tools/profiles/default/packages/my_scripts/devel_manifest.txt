@@ -1,5 +1,0 @@
-my_scripts
-/home/liam/git/vision_grasp_capstone/ws_capstone/devel/.private/my_scripts/cmake.lock /home/liam/git/vision_grasp_capstone/ws_capstone/devel/./cmake.lock
-/home/liam/git/vision_grasp_capstone/ws_capstone/devel/.private/my_scripts/lib/pkgconfig/my_scripts.pc /home/liam/git/vision_grasp_capstone/ws_capstone/devel/lib/pkgconfig/my_scripts.pc
-/home/liam/git/vision_grasp_capstone/ws_capstone/devel/.private/my_scripts/share/my_scripts/cmake/my_scriptsConfig-version.cmake /home/liam/git/vision_grasp_capstone/ws_capstone/devel/share/my_scripts/cmake/my_scriptsConfig-version.cmake
-/home/liam/git/vision_grasp_capstone/ws_capstone/devel/.private/my_scripts/share/my_scripts/cmake/my_scriptsConfig.cmake /home/liam/git/vision_grasp_capstone/ws_capstone/devel/share/my_scripts/cmake/my_scriptsConfig.cmake

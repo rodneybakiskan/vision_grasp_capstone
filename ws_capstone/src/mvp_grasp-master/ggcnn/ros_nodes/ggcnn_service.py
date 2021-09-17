@@ -67,7 +67,8 @@ class GGCNNService:
         self.curr_img_time = time.time()
         self.last_image_pose = tfh.current_robot_pose(
             self.base_frame, self.camera_frame)
-        print(self.last_image_pose)
+
+
         self.curr_depth_img = bridge.imgmsg_to_cv2(msg)
         self.received = True
         print('Img callback complete...')

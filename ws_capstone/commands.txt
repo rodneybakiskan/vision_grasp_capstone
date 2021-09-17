@@ -17,14 +17,12 @@ roslaunch ggcnn ggcnn_service.launch
 //open loop grasping
 rosrun mvp_grasping capstone_scheduler.py
 
-//observe visualisation topic in rviz
-rosrun rviz rviz
-
 
 //////////////////
-//launch robot/rviz/gaxebo
+//launch robot controllers + rviz + gazebo
 roslaunch moveit_config demo_gazebo.launch
 
-//launch moveit thingy
-rosrun my_scripts IntegrationTest.py
+//launch moveit scripts
+rosrun moveit_scripts moveit_functions.py
+
 

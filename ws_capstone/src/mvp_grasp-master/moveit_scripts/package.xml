@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>my_scripts</name>
+  <name>moveit_scripts</name>
   <version>0.0.0</version>
   <description>The my_scripts package</description>
 
