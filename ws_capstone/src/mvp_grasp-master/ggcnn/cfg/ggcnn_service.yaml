@@ -1,11 +1,11 @@
 ggcnn_service:
   camera:
     info_topic: /camera/depth/camera_info
-    depth_topic: /camera/depth/image_raw
+#    depth_topic: /camera/depth/image_raw
 #    depth_topic: /camera/depth/image_rect_raw
-#    depth_topic: /camera/depth/image_meters
-    # camera_frame: camera_depth_optical_frame
-    camera_frame: Link6_UR5_1
+    depth_topic: /camera/depth/image_meters
+    camera_frame: realsense_d435_depth_optical_frame
+#    camera_frame: Link6_UR5_1
 #    robot_base_frame: camera_frame
     robot_base_frame: base_link
     crop_size: 300

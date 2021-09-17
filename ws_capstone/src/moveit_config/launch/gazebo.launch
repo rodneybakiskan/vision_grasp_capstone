@@ -21,4 +21,16 @@
 
   <include file="$(find moveit_config)/launch/ros_controllers.launch"/>
 
+  <node pkg="tf" type="static_transform_publisher" name="realsense_link_broadcaster"
+        args="0.040 -0.0175 0.066 3.1415 -1.571 0 /Link6_UR5_1 /realsense_d435_link 100" />
+
+  <node pkg="nodelet" type="nodelet" name="standalone_nodelet"  args="manager"/>
+
+  <node pkg="nodelet" type="nodelet" name="convert_depth_to_m"
+        args="load depth_image_proc/convert_metric standalone_nodelet">
+        <remap from="camera_info" to="/camera/depth/camera_info"/>
+        <remap from="image_raw" to="/camera/depth/image_raw"/>
+        <remap from="image" to="/camera/depth/image_meters"/>
+  </node>
+
 </launch>
