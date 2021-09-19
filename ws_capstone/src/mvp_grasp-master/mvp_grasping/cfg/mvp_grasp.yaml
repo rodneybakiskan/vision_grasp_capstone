@@ -18,13 +18,12 @@ grasp_entropy_node:
         z1: 0.55
         z2: 0.40
     camera:
-    camera:
         info_topic: /camera/depth/camera_info
 # simulation
-        depth_topic: /camera/depth/image_raw
+        depth_topic: /camera/depth/image_meters
 # real cam
 #    depth_topic: /camera/depth/image_rect_raw
-        camera_frame: camera_depth_optical_frame
+        camera_frame: realsense_d435_depth_optical_frame
 # real
 #    robot_base_frame: camera_link
         base_frame: base_link

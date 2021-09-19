@@ -9,7 +9,6 @@ from ggcnn.msg import Grasp
 from ggcnn.srv import GraspPrediction
 
 
-
 import sys
 from unicodedata import name
 # from moveit_commander import move_group
@@ -23,23 +22,18 @@ import geometry_msgs
 from math import pi
 from std_msgs.msg import String
 from moveit_commander.conversions import pose_to_list
-from std_msgs.msg import Int16
-from geometry_msgs.msg import Twist
-
 
 
 class OpenLoopGraspController(object):
 
     def __init__(self):
-        ## GGCNN stuff
+        # GGCNN stuff
         ggcnn_service_name = '/ggcnn_service'
         rospy.wait_for_service(ggcnn_service_name + '/predict')
         self.ggcnn_srv = rospy.ServiceProxy(
             ggcnn_service_name + '/predict', GraspPrediction)
 
         self.best_grasp = Grasp()
-
-
 
         # self.pregrasp_pose = [(rospy.get_param('/grasp_entropy_node/histogram/bounds/x2') + rospy.get_param('/grasp_entropy_node/histogram/bounds/x1'))/2 - 0.03,
         #                      (rospy.get_param('/grasp_entropy_node/histogram/bounds/y2') + rospy.get_param('/grasp_entropy_node/histogram/bounds/y1'))/2 + 0.10,
@@ -55,17 +49,15 @@ class OpenLoopGraspController(object):
     #    rospy.logerr('Done')
     #    self.ROBOT_ERROR_DETECTED = False
 
-
-
-
-        ## Moveit stuff
-        self.timeout=1
+        # Moveit stuff
+        self.timeout = 50
         # Defines groups
         moveit_commander.roscpp_initialize(sys.argv)
         #rospy.init_node('Motion_planner', anonymous=True)
         self.robot = moveit_commander.RobotCommander()
         self.scene = moveit_commander.PlanningSceneInterface()
-        self.gripper_move_group = moveit_commander.MoveGroupCommander("gripper")
+        self.gripper_move_group = moveit_commander.MoveGroupCommander(
+            "gripper")
         self.arm_group = moveit_commander.MoveGroupCommander("ur5e_arm")
 
         self.display_trajectory_publisher = rospy.Publisher(
@@ -77,7 +69,8 @@ class OpenLoopGraspController(object):
         # Gets Basic Information
         # We can get the name of the reference frame for this robot:
         self.gripper_planning_frame = self.gripper_move_group.get_planning_frame()
-        print("============ Gripper planning frame: %s" % self.gripper_planning_frame)
+        print("============ Gripper planning frame: %s" %
+              self.gripper_planning_frame)
 
         self.arm_planning_frame = self.arm_group.get_planning_frame()
         print("============ Arm planning frame: %s" % self.arm_planning_frame)
@@ -88,7 +81,8 @@ class OpenLoopGraspController(object):
 
         # We can get a list of all the groups in the robot:
         self.group_names = self.robot.get_group_names()
-        print("============ Available Planning Groups:", self.robot.get_group_names())
+        print("============ Available Planning Groups:",
+              self.robot.get_group_names())
 
         # Sometimes for debugging it is useful to print the entire state of the
         # robot:
@@ -103,20 +97,28 @@ class OpenLoopGraspController(object):
 
     # Grabs location of item of GCNN(needs location)
 
-
     def findposition(self):
         Graspinglocation = geometry_msgs.msg
         return Graspinglocation
 
     # heads to the position given by GCNN
 
-
     def Movetopose(self):
+        # pose_target = geometry_msgs.msg.Pose()
+        # pose_target.position.x = -0.0271481189619
+        # pose_target.position.y = -0.0247678443653
+        # pose_target.position.z = 0.0164586391632
+
+        # pose_target.orientation.x = 0.996936374366
+        # pose_target.orientation.y = 0.078216785069
+        # pose_target.orientation.z = 0
+        # pose_target.orientation.w = 0
+        # self.best_grasp.pose=pose_target
+        print(self.best_grasp.pose)
         self.arm_group.set_pose_target(self.best_grasp.pose)
         plan1 = self.arm_group.go()
 
     # Opens grippper(Writing Directly to the REV26)
-
 
     def OpenGripper(self):
         # pose_goal = gripper_move_group.get_current_link_values()
@@ -127,13 +129,11 @@ class OpenLoopGraspController(object):
         self.gripper_move_group.set_named_target("open")
         plan1 = self.gripper_move_group.go()
 
-
     def CloseGripper(self):
         self.gripper_move_group.set_named_target("close")
         plan1 = self.gripper_move_group.go()
 
     # Determines which object is in the gripper
-
 
     def chosenobject():
         selectedname = geometry_msgs.msg.PoseStamped()
@@ -148,16 +148,14 @@ class OpenLoopGraspController(object):
         # Dimensions needed of item we want to add into planning scene
         #scene.add_box(box_name,box_pose, size=(1,1,1))
 
-
     def Attachitem(self):
         grasping_group = 'gripper'
         touch_links = self.robot.get_link_names(group=grasping_group)
         self.scene.attach_box(self.eef_link, name, touch_links=touch_links)
 
-
     def Removeitem(self):
-        self.scene.remove_attached_object(self.eef_link, name=self.chosenobject())
-
+        self.scene.remove_attached_object(
+            self.eef_link, name=self.chosenobject())
 
     def CollisionUpdating(self):
         # Collision Updates
@@ -165,7 +163,8 @@ class OpenLoopGraspController(object):
         seconds = rospy.get_time()
         while (seconds - start < self.timeout) and not rospy.is_shutdown():
             # Test if the box is in attached objects
-            attached_objects = self.scene.get_attached_objects([self.chosenobject()])
+            attached_objects = self.scene.get_attached_objects(
+                [self.chosenobject()])
             is_attached = len(attached_objects.keys()) > 0
 
         # Test if the box is in the scene.
@@ -178,18 +177,15 @@ class OpenLoopGraspController(object):
         else:
             return False
 
-
     def Rospysleep():
-    # Sleep so that we give other threads time on the processor
+        # Sleep so that we give other threads time on the processor
         rospy.sleep(0.1)
         seconds = rospy.get_time()
-
 
     def shutdown():
         # Shuts down the commannder
         rospy.sleep(5)
         moveit_commander.roscpp_shutdown()
-
 
     def get_grasp(self):
 
@@ -202,22 +198,20 @@ class OpenLoopGraspController(object):
         self.best_grasp = best_grasp
         rospy.sleep(1)
 
-        # tfh.publish_pose_as_transform(best_grasp.pose, 'realsense_d435_link', 'GraspPose', 10)
+        tfh.publish_pose_as_transform(best_grasp.pose, 'base_link', 'GraspPose', 1)
 
         raw_input('Grasp found, continue?')
 
-        print(self.best_grasp.pose)
-        self.Movetopose()
-
-
         # Offset for initial pose.
-    #        initial_offset = 0.10
-    #        LINK_EE_OFFSET = 0.138
+        initial_offset = 0.10
+        LINK_EE_OFFSET = 0.138
 
         # Add some limits, plus a starting offset.
     #        best_grasp.pose.position.z = max(best_grasp.pose.posit
     # ion.z - 0.01, 0.026)  # 0.021 = collision with ground
-    #        best_grasp.pose.position.z += initial_offset + LINK_EE_OFFSET  # Offset from end efector position to
+        best_grasp.pose.position.z += initial_offset + \
+            LINK_EE_OFFSET  # Offset from end efector position to
+        self.Movetopose()
 
     #        self.pc.set_gripper(best_grasp.width, wait=False)
     #        rospy.sleep(0.1)
@@ -232,17 +226,10 @@ class OpenLoopGraspController(object):
         self.pc.stop()
 
     def go(self):
-        self.StartingPoint()
+        # self.StartingPoint()
         raw_input('Press Enter to Start.')
         while not rospy.is_shutdown():
             self.get_grasp()
-
-
-
-
-
-
-
 
 
 if __name__ == '__main__':
