@@ -198,7 +198,7 @@ class OpenLoopGraspController(object):
         self.best_grasp = best_grasp
         rospy.sleep(1)
 
-        tfh.publish_pose_as_transform(best_grasp.pose, 'base_link', 'GraspPose', 1)
+        tfh.publish_pose_as_transform(best_grasp.pose, 'base_link', 'G', 1)
 
         raw_input('Grasp found, continue?')
 

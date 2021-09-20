@@ -68,7 +68,6 @@ class GGCNNService:
         self.last_image_pose = tfh.current_robot_pose(
             self.base_frame, self.camera_frame)
 
-
         self.curr_depth_img = bridge.imgmsg_to_cv2(msg)
         self.received = True
         print('Img callback complete...')
@@ -89,7 +88,7 @@ class GGCNNService:
         while not self.received:
             print('Waiting inside service handler...')
             rospy.sleep(0.01)
-        
+
         self.waiting = False
         self.received = False
 
@@ -107,7 +106,7 @@ class GGCNNService:
 
             # cv2.imshow('image',depth)
             # cv2.waitKey(0)
-            
+
             points, angle, width_img, _ = predict(
                 depth_crop, process_depth=False, depth_nan_mask=depth_nan_mask, filters=(2.0, 2.0, 2.0))
 
@@ -126,7 +125,7 @@ class GGCNNService:
                  self.img_crop_y_offset, depth_crop.shape[0], np.float), )*depth_crop.shape[1]).T - self.cam_K[1, 2])/self.cam_K[1, 1] * depth_crop).flatten()
 
             pos = np.dot(camera_rot, np.stack((x, y, depth_crop.flatten()))
-                            ).T + np.array([[cam_p.x, cam_p.y, cam_p.z]])
+                         ).T + np.array([[cam_p.x, cam_p.y, cam_p.z]])
 
             width_m = width_img / 300.0 * 2.0 * depth_crop * \
                 np.tan(self.cam_fov * self.img_crop_size /

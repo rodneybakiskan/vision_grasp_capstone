@@ -27,6 +27,6 @@ grasp_entropy_node:
 # real
 #    robot_base_frame: camera_link
         base_frame: base_link
-        crop_size: 350
+        crop_size: 300
         crop_y_offset: 40
         fov: 65.5
