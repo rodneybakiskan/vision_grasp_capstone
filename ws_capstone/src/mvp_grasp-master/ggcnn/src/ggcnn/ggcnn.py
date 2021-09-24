@@ -1,4 +1,4 @@
-from os import path
+from os import name, path
 import sys
 
 import cv2
@@ -86,7 +86,10 @@ def predict(depth, process_depth=True, crop_size=300, out_size=300, depth_nan_ma
 
     points_out = pred_out[0].cpu().numpy().squeeze()
     points_out[depth_nan_mask] = 0
-    
+
+
+
+
 
 
     # Calculate the angle map.

@@ -198,9 +198,9 @@ class OpenLoopGraspController(object):
         self.best_grasp = best_grasp
         rospy.sleep(1)
 
-        tfh.publish_pose_as_transform(best_grasp.pose, 'base_link', 'G', 1)
 
-        raw_input('Grasp found, continue?')
+
+
 
         # Offset for initial pose.
         initial_offset = 0.10
@@ -209,10 +209,10 @@ class OpenLoopGraspController(object):
         # Add some limits, plus a starting offset.
     #        best_grasp.pose.position.z = max(best_grasp.pose.posit
     # ion.z - 0.01, 0.026)  # 0.021 = collision with ground
-        best_grasp.pose.position.z += initial_offset + \
-            LINK_EE_OFFSET  # Offset from end efector position to
+        best_grasp.pose.position.z += initial_offset + LINK_EE_OFFSET  # Offset from end efector position to
         self.Movetopose()
-
+        tfh.publish_pose_as_transform(best_grasp.pose, 'base_link', 'G', 2)
+        raw_input('Care to grasp again?')
     #        self.pc.set_gripper(best_grasp.width, wait=False)
     #        rospy.sleep(0.1)
     #        self.pc.goto_pose(best_grasp.pose, velocity=0.1)
