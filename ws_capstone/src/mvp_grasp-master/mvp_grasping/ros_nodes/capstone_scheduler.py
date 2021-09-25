@@ -56,7 +56,7 @@ class OpenLoopGraspController(object):
         #rospy.init_node('Motion_planner', anonymous=True)
         self.robot = moveit_commander.RobotCommander()
         self.scene = moveit_commander.PlanningSceneInterface()
-        self.gripper_group = moveit_commander.MoveGroupCommander(
+        self.gripper_move_group = moveit_commander.MoveGroupCommander(
             "gripper")
         self.arm_group = moveit_commander.MoveGroupCommander("ur5e_arm")
 
@@ -68,7 +68,7 @@ class OpenLoopGraspController(object):
 
         # Gets Basic Information
         # We can get the name of the reference frame for this robot:
-        self.gripper_planning_frame = self.gripper_group.get_planning_frame()
+        self.gripper_planning_frame = self.gripper_move_group.get_planning_frame()
         print("============ Gripper planning frame: %s" %
               self.gripper_planning_frame)
 
@@ -116,23 +116,22 @@ class OpenLoopGraspController(object):
         # self.best_grasp.pose=pose_target
         print(self.best_grasp.pose)
         self.arm_group.set_pose_target(self.best_grasp.pose)
-
         plan1 = self.arm_group.go()
 
     # Opens grippper(Writing Directly to the REV26)
 
     def OpenGripper(self):
-        # pose_goal = gripper_group.get_current_link_values()
+        # pose_goal = gripper_move_group.get_current_link_values()
         # #should be REV26
         # pose_goal[0]= 0
-        # gripper_group.go(pose_goal, wait= True)
-        # gripper_group.stop()
-        self.gripper_group.set_named_target("open")
-        plan1 = self.gripper_group.go()
+        # gripper_move_group.go(pose_goal, wait= True)
+        # gripper_move_group.stop()
+        self.gripper_move_group.set_named_target("open")
+        plan1 = self.gripper_move_group.go()
 
     def CloseGripper(self):
-        self.gripper_group.set_named_target("close")
-        plan1 = self.gripper_group.go()
+        self.gripper_move_group.set_named_target("close")
+        plan1 = self.gripper_move_group.go()
 
     # Determines which object is in the gripper
 
@@ -204,19 +203,16 @@ class OpenLoopGraspController(object):
 
 
         # Offset for initial pose.
-
-
         initial_offset = 0.10
         LINK_EE_OFFSET = 0.138
-        tfh.publish_pose_as_transform(best_grasp.pose, 'base_link', 'Grasp', 5)
+
         # Add some limits, plus a starting offset.
     #        best_grasp.pose.position.z = max(best_grasp.pose.posit
     # ion.z - 0.01, 0.026)  # 0.021 = collision with ground
         best_grasp.pose.position.z += initial_offset + LINK_EE_OFFSET  # Offset from end efector position to
-        tfh.publish_pose_as_transform(best_grasp.pose, 'base_link', 'GraspAfterTransform', 5)
         self.Movetopose()
-
-        raw_input('Grasp object?')
+        tfh.publish_pose_as_transform(best_grasp.pose, 'base_link', 'G', 2)
+        raw_input('Care to grasp again?')
     #        self.pc.set_gripper(best_grasp.width, wait=False)
     #        rospy.sleep(0.1)
     #        self.pc.goto_pose(best_grasp.pose, velocity=0.1)
