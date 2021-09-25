@@ -67,7 +67,7 @@
   </actuator>
 </transmission>
 
-<transmission name="Rev25_tran">
+<!-- <transmission name="Rev25_tran">
   <type>transmission_interface/SimpleTransmission</type>
   <joint name="Rev25">
     <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
@@ -76,9 +76,9 @@
     <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
-</transmission>
+</transmission> -->
 
-<transmission name="rev_grp_tran">
+<!-- <transmission name="rev_grp_tran">
   <type>transmission_interface/SimpleTransmission</type>
   <joint name="rev_grp">
     <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
@@ -87,9 +87,9 @@
     <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
-</transmission>
+</transmission> -->
 
-<transmission name="Rev29_tran">
+<!-- <transmission name="Rev29_tran">
   <type>transmission_interface/SimpleTransmission</type>
   <joint name="Rev29">
     <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
@@ -109,9 +109,9 @@
     <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
-</transmission>
+</transmission> -->
 
-<transmission name="Rev44_tran">
+<!-- <transmission name="Rev44_tran">
   <type>transmission_interface/SimpleTransmission</type>
   <joint name="Rev44">
     <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
@@ -120,9 +120,9 @@
     <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
-</transmission>
+</transmission> -->
 
-<transmission name="Rev45_tran">
+<!-- <transmission name="Rev45_tran">
   <type>transmission_interface/SimpleTransmission</type>
   <joint name="Rev45">
     <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
@@ -131,6 +131,6 @@
     <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
-</transmission>
+</transmission> -->
 
 </robot>
