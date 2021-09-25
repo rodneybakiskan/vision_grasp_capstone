@@ -15,8 +15,7 @@ hardware_interface:
     - rev_a4
     - rev_a5
     - rev_a6
-    # - rev_grp
-    - robotiq_85_left_knuckle_joint
+    - rev_grp
   sim_control_mode: 1  # 0: position, 1: velocity
 # Publish all joint states
 # Creates the /joint_states topic necessary in ROS
@@ -35,18 +34,12 @@ controller_list:
       - rev_a4
       - rev_a5
       - rev_a6
-  # - name: gripper_controller
-  #   action_ns: follow_joint_trajectory
-  #   default: True
-  #   type: FollowJointTrajectory
-  #   joints:
-  #     - rev_grp
-  - name: gripper2_controller
+  - name: gripper_controller
     action_ns: follow_joint_trajectory
     default: True
     type: FollowJointTrajectory
     joints:
-      - robotiq_85_left_knuckle_joint
+      - rev_grp
 
 ur5e_arm_controller:
   type: position_controllers/JointTrajectoryController
@@ -70,26 +63,14 @@ ur5e_arm_controller:
   state_publish_rate:  25
   action_monitor_rate: 10
 
-# gripper_controller:
-#   type: position_controllers/JointTrajectoryController
-#   joints:
-#     - rev_grp
-#   constraints:
-#     goal_time: 0.6
-#     stopped_velocity_tolerance: 0.05
-#     rev_grp: {trajectory: 0.1, goal: 0.1}
-#   stop_trajectory_duration: 0.5
-#   state_publish_rate:  25
-#   action_monitor_rate: 10
-
-gripper2_controller:
+gripper_controller:
   type: position_controllers/JointTrajectoryController
   joints:
-    - robotiq_85_left_knuckle_joint
+    - rev_grp
   constraints:
     goal_time: 0.6
-    stopped_velocity_tolerance: 0.1
-    robotiq_85_left_knuckle_joint: {trajectory: 0.1, goal: 0.1}
+    stopped_velocity_tolerance: 0.05
+    rev_grp: {trajectory: 0.1, goal: 0.1}
   stop_trajectory_duration: 0.5
   state_publish_rate:  25
   action_monitor_rate: 10

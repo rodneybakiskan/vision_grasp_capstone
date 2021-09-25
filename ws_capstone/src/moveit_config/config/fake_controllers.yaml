@@ -1,5 +1,8 @@
 controller_list:
   - name: fake_ur5e_arm_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: true
     joints:
       - rev_a1
       - rev_a2
@@ -10,13 +13,8 @@ controller_list:
   - name: fake_gripper_controller
     joints:
       - rev_grp
-  - name: fake_gripper2_controller
-    joints:
-      - robotiq_85_left_knuckle_joint
 initial:  # Define initial robot poses.
   - group: ur5e_arm
     pose: home
   - group: gripper
-    pose: open
-  - group: gripper2
     pose: open
