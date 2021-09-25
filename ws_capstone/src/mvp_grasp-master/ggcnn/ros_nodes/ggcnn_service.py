@@ -140,8 +140,9 @@ class GGCNNService:
             g.pose.position.x = pos[best_g, 0]
             g.pose.position.y = pos[best_g, 1]
             g.pose.position.z = pos[best_g, 2]
+            ## Changed this order as our wrist may be different rotation to the panda wrist
             g.pose.orientation = tfh.list_to_quaternion(tft.quaternion_from_euler(
-                0, np.pi, (angle[best_g_unr] % np.pi - np.pi/2)))
+                np.pi/2, 0, (angle[best_g_unr] % np.pi)))
             g.width = width_m[best_g_unr]
             g.quality = points[best_g_unr]
 
