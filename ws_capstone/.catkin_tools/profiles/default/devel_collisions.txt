@@ -1,8 +1,5 @@
-<<<<<<< Updated upstream
 /home/liam/git/vision_grasp_capstone/ws_capstone/devel/lib/python2.7/dist-packages/ggcnn/__init__.py 1
 /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/./cmake.lock 17
-=======
 /home/josh/Documents/GitHub/vision_grasp_capstone/ws_capstone/devel/./cmake.lock 35
->>>>>>> Stashed changes
 /home/nuwan/git/vision_grasp_capstone/ws_capstone/devel/./cmake.lock 9
 /home/liam/git/vision_grasp_capstone/ws_capstone/devel/./cmake.lock 174
