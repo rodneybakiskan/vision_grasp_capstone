@@ -73,21 +73,21 @@
   <selfCollide>true</selfCollide>
 </gazebo>
 
-<gazebo reference="Defeatured_2F-85_PAD_OPEN_finger4m_1">
+<!-- <gazebo reference="Defeatured_2F-85_PAD_OPEN_finger4m_1">
   <material>Gazebo/FlatBlack</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
-</gazebo>
+</gazebo> -->
 
-<gazebo reference="Defeatured_2F-85_PAD_OPEN_Finger1m_1">
+<!-- <gazebo reference="Defeatured_2F-85_PAD_OPEN_Finger1m_1">
   <material>Gazebo/FlatBlack</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
-</gazebo>
+</gazebo> -->
 
-<gazebo reference="Defeatured_2F-85_PAD_OPEN_Finger1_1">
+<!-- <gazebo reference="Defeatured_2F-85_PAD_OPEN_Finger1_1">
   <material>Gazebo/FlatBlack</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
@@ -106,14 +106,14 @@
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
-</gazebo>
+</gazebo> -->
 
-<gazebo reference="urdf_Intel_RealSense_Depth_Camera_D435_v2_1">
+<!-- <gazebo reference="urdf_Intel_RealSense_Depth_Camera_D435_v2_1">
   <material>Gazebo/capstone_aluminum</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
-</gazebo>
+</gazebo> -->
 
 <gazebo reference="camera_mount_1">
   <material>Gazebo/Green</material>
@@ -129,18 +129,20 @@
   <selfCollide>true</selfCollide>
 </gazebo>
 
-<gazebo reference="Defeatured_2F-85_PAD_OPEN_finger3m_1">
+<!-- <gazebo reference="Defeatured_2F-85_PAD_OPEN_finger3m_1">
   <material>Gazebo/FlatBlack</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
-</gazebo>
+</gazebo> -->
 
-<gazebo reference="Defeatured_2F-85_PAD_OPEN_finger3_1">
+<!-- <gazebo reference="Defeatured_2F-85_PAD_OPEN_finger3_1">
   <material>Gazebo/FlatBlack</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
-</gazebo>
+</gazebo> -->
+
+<!-- 2nd gripper -->
 
 </robot>

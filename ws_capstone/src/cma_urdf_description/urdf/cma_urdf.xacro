@@ -6,7 +6,9 @@
   <xacro:include filename="$(find cma_urdf_description)/urdf/cma_urdf.trans" />
   <xacro:include filename="$(find cma_urdf_description)/urdf/cma_urdf.gazebo" />
   <xacro:include filename="$(find realsense2_description)/urdf/_d435.urdf.xacro"/>
-  
+  <!-- <xacro:include filename="$(find robotiq_2f_85_gripper_visualization)/urdf/robotiq_arg2f_85_model.xacro"/> -->
+  <xacro:include filename="$(find robotiq_85_description)/urdf/robotiq_85_gripper.xacro"/>
+
   <link name="world" />
 
   <link name="base_link">
@@ -198,7 +200,7 @@
     </collision>
   </link>
 
-  <link name="Defeatured_2F-85_PAD_OPEN_finger4m_1">
+  <!-- <link name="Defeatured_2F-85_PAD_OPEN_finger4m_1">
     <inertial>
       <origin rpy="0 0 0" xyz="0.014583483806780984 -0.01646459714685118 -0.009099999695404204"/>
       <mass value="0.11326339019031978"/>
@@ -217,9 +219,9 @@
         <mesh filename="package://cma_urdf_description/meshes/Defeatured_2F-85_PAD_OPEN_finger4m_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
-  </link>
+  </link> -->
 
-  <link name="Defeatured_2F-85_PAD_OPEN_Finger1m_1">
+  <!-- <link name="Defeatured_2F-85_PAD_OPEN_Finger1m_1">
     <inertial>
       <origin rpy="0 0 0" xyz="-0.029386708258091532 -0.011108198902811152 -0.0046933996965830005"/>
       <mass value="0.1509168112436001"/>
@@ -238,9 +240,9 @@
         <mesh filename="package://cma_urdf_description/meshes/Defeatured_2F-85_PAD_OPEN_Finger1m_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
-  </link>
+  </link> -->
 
-  <link name="Defeatured_2F-85_PAD_OPEN_Finger1_1">
+  <!-- <link name="Defeatured_2F-85_PAD_OPEN_Finger1_1">
     <inertial>
       <origin rpy="0 0 0" xyz="0.029385642646017285 -0.011115663221872393 -0.004687336323244029"/>
       <mass value="0.1508407345691058"/>
@@ -259,9 +261,9 @@
         <mesh filename="package://cma_urdf_description/meshes/Defeatured_2F-85_PAD_OPEN_Finger1_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
-  </link>
+  </link> -->
 
-  <link name="Defeatured_2F-85_PAD_OPEN_finger4_1">
+  <!-- <link name="Defeatured_2F-85_PAD_OPEN_finger4_1">
     <inertial>
       <origin rpy="0 0 0" xyz="-0.01458343021231212 -0.01646455128417476 -0.009100000304597122"/>
       <mass value="0.11326339019032722"/>
@@ -280,9 +282,9 @@
         <mesh filename="package://cma_urdf_description/meshes/Defeatured_2F-85_PAD_OPEN_finger4_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
-  </link>
+  </link> -->
 
-  <link name="Defeatured_2F-85_PAD_OPEN_base_1">
+  <!-- <link name="Defeatured_2F-85_PAD_OPEN_base_1">
     <inertial>
       <origin rpy="0 0 0" xyz="0.02700117071233238 -0.032289625793831815 -0.015976537109387845"/>
       <mass value="1.7710616874239076"/>
@@ -301,11 +303,11 @@
         <mesh filename="package://cma_urdf_description/meshes/Defeatured_2F-85_PAD_OPEN_base_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
-  </link>
+  </link> -->
 
 
-  <link name="urdf_Intel_RealSense_Depth_Camera_D435_v2_1">
-    <!-- <inertial>
+  <!-- <link name="urdf_Intel_RealSense_Depth_Camera_D435_v2_1">
+    <inertial>
       <origin rpy="0 0 0" xyz="0.02101336009113891 -0.010035295733690969 6.117083960499592e-05"/>
       <mass value="0.17091204023764017"/>
       <inertia ixx="2e-05" ixy="1e-06" ixz="-0.0" iyy="0.000115" iyz="0.0" izz="0.000115"/>
@@ -322,8 +324,8 @@
       <geometry>
         <mesh filename="package://cma_urdf_description/meshes/urdf_Intel_RealSense_Depth_Camera_D435_v2_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-    </collision> -->
-  </link>
+    </collision>
+  </link> -->
 
   <link name="camera_mount_1">
     <inertial>
@@ -367,7 +369,7 @@
     </collision>
   </link>
 
-  <link name="Defeatured_2F-85_PAD_OPEN_finger3m_1">
+  <!-- <link name="Defeatured_2F-85_PAD_OPEN_finger3m_1">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0178887760737792 0.02120021807228656 -0.009100000000000552"/>
       <mass value="0.07939275206386531"/>
@@ -386,9 +388,9 @@
         <mesh filename="package://cma_urdf_description/meshes/Defeatured_2F-85_PAD_OPEN_finger3m_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
-  </link>
+  </link> -->
 
-  <link name="Defeatured_2F-85_PAD_OPEN_finger3_1">
+  <!-- <link name="Defeatured_2F-85_PAD_OPEN_finger3_1">
     <inertial>
       <origin rpy="0 0 0" xyz="-0.01818100035908876 0.020951006921311924 -0.009100000000000552"/>
       <mass value="0.07939275206386531"/>
@@ -407,8 +409,8 @@
         <mesh filename="package://cma_urdf_description/meshes/Defeatured_2F-85_PAD_OPEN_finger3_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
-  </link>
-  
+  </link> -->
+
   <joint name="base_to_world_link" type="fixed">
     <parent link="world"/>
     <child link="base_link"/>
@@ -468,48 +470,70 @@
     <axis xyz="0.0 -1.0 -0.0"/>
   </joint>
 
-  <joint name="Rev25" type="continuous">
+  <!-- <joint name="rev_grp" type="revolute">
+    <origin rpy="0 0 0" xyz="-0.003601 -0.054905 -0.0113"/>
+    <parent link="Defeatured_2F-85_PAD_OPEN_base_1"/>
+    <child link="Defeatured_2F-85_PAD_OPEN_Finger1m_1"/>
+    <axis xyz="0.0 0.0 -1.0"/>
+    <limit lower="-0.8" upper="0" velocity="2.0" effort="1000" />
+  </joint> -->
+
+  <!-- <joint name="Rev25" type="revolute">
     <origin rpy="0 0 0" xyz="-0.037158 -0.043421 0.00435"/>
     <parent link="Defeatured_2F-85_PAD_OPEN_Finger1m_1"/>
     <child link="Defeatured_2F-85_PAD_OPEN_finger4m_1"/>
     <axis xyz="0.0 0.0 1.0"/>
     <mimic joint="rev_grp" multiplier="1" offset="0" />
-  </joint>
+    <limit lower="-1.5" upper="1.5" velocity="2.0" effort="1000" />
+  </joint> -->
 
-  <joint name="rev_grp" type="continuous">
-    <origin rpy="0 0 0" xyz="-0.003601 -0.054905 -0.0113"/>
-    <parent link="Defeatured_2F-85_PAD_OPEN_base_1"/>
-    <child link="Defeatured_2F-85_PAD_OPEN_Finger1m_1"/>
-    <axis xyz="0.0 0.0 -1.0"/>
-  </joint>
+  <!-- <joint name="Rev44" type="revolute">
+    <origin rpy="0 0 0" xyz="0.017902 -0.006516 0.0"/>
+    <parent link="Defeatured_2F-85_PAD_OPEN_finger4m_1"/>
+    <child link="Defeatured_2F-85_PAD_OPEN_finger3m_1"/>
+    <axis xyz="-0.0 0.0 -1.0"/>
+    <mimic joint="Rev25" multiplier="1" offset="0" />
+    <limit lower="-1.5" upper="1.5" velocity="2.0" effort="1000" />
+  </joint> -->
 
-  <joint name="Rev29" type="continuous">
+  <!-- <joint name="Rev29" type="revolute">
     <origin rpy="0 0 0" xyz="0.057601 -0.054905 -0.0113"/>
     <parent link="Defeatured_2F-85_PAD_OPEN_base_1"/>
     <child link="Defeatured_2F-85_PAD_OPEN_Finger1_1"/>
     <axis xyz="0.0 0.0 -1.0"/>
     <mimic joint="rev_grp" multiplier="-1" offset="0" />
-  </joint>
+    <limit lower="-1.5" upper="1.5" velocity="2.0" effort="1000" />
+  </joint> -->
 
-  <joint name="Rev31" type="continuous">
+  <!-- <joint name="Rev31" type="revolute">
     <origin rpy="0 0 0" xyz="0.037158 -0.043421 0.00435"/>
     <parent link="Defeatured_2F-85_PAD_OPEN_Finger1_1"/>
     <child link="Defeatured_2F-85_PAD_OPEN_finger4_1"/>
     <axis xyz="-0.0 -0.0 1.0"/>
-    <mimic joint="rev_grp" multiplier="-1" offset="0" />
-  </joint>
+    <mimic joint="Rev29" multiplier="1" offset="0" />
+    <limit lower="-1.5" upper="1.5" velocity="2.0" effort="1000" />
+  </joint> -->
 
-  <joint name="Rigid40" type="fixed">
+  <!-- <joint name="Rev45" type="revolute">
+    <origin rpy="0 0 0" xyz="-0.017901 -0.006516 0.0"/>
+    <parent link="Defeatured_2F-85_PAD_OPEN_finger4_1"/>
+    <child link="Defeatured_2F-85_PAD_OPEN_finger3_1"/>
+    <axis xyz="0.0 0.0 -1.0"/>
+    <mimic joint="Rev31" multiplier="1" offset="0" />
+    <limit lower="-1.5" upper="1.5" velocity="2.0" effort="1000" />
+  </joint> -->
+
+  <!-- <joint name="Rigid40" type="fixed">
     <origin rpy="0 0 0" xyz="-0.009322 -0.0135 -0.001678"/>
     <parent link="WRIST_CAMERA_20171116_v2_1"/>
     <child link="Defeatured_2F-85_PAD_OPEN_base_1"/>
-  </joint>
+  </joint> -->
 
-  <joint name="Rigid41" type="fixed">
+  <!-- <joint name="Rigid41" type="fixed">
     <origin rpy="0 0 0" xyz="-0.0225 0.0 0.062"/>
     <parent link="camera_mount_1"/>
     <child link="urdf_Intel_RealSense_Depth_Camera_D435_v2_1"/>
-  </joint>
+  </joint> -->
 
   <joint name="Rigid42" type="fixed">
     <origin rpy="0 0 0" xyz="0.0 -0.02775 0.0"/>
@@ -523,27 +547,19 @@
     <child link="WRIST_CAMERA_20171116_v2_1"/>
   </joint>
 
-  <joint name="Rev44" type="continuous">
-    <origin rpy="0 0 0" xyz="0.017902 -0.006516 0.0"/>
-    <parent link="Defeatured_2F-85_PAD_OPEN_finger4m_1"/>
-    <child link="Defeatured_2F-85_PAD_OPEN_finger3m_1"/>
-    <axis xyz="-0.0 0.0 -1.0"/>
-    <mimic joint="rev_grp" multiplier="1" offset="0" />
-  </joint>
-
-  <joint name="Rev45" type="continuous">
-    <origin rpy="0 0 0" xyz="-0.017901 -0.006516 0.0"/>
-    <parent link="Defeatured_2F-85_PAD_OPEN_finger4_1"/>
-    <child link="Defeatured_2F-85_PAD_OPEN_finger3_1"/>
-    <axis xyz="0.0 0.0 -1.0"/>
-    <mimic joint="rev_grp" multiplier="-1" offset="0" />
-  </joint>
-
   <xacro:sensor_d435 name="realsense_d435" topics_ns="camera" parent="Link6_UR5_1" publish_pointcloud="true">
     <!-- <origin xyz="0 -0.02775 0.062" rpy="0 0 -1.57079632679" /> -->
     <origin xyz="0 -0.0379 0.0495" rpy="0 0 -1.57079632679" />
 
   </xacro:sensor_d435>
+
+  <!-- <xacro:robotiq_arg2f_base_link_parent parent="Link6_UR5_1">
+    <origin xyz="0 -0.0668 0.2" rpy="1.57079632679 1.57079632679 0" />
+  </xacro:robotiq_arg2f_base_link_parent> -->
+
+  <xacro:robotiq_85_gripper parent="Link6_UR5_1" prefix="">
+    <origin xyz="0 -0.0668 0" rpy="0 0 -1.57079632679" />
+  </xacro:robotiq_85_gripper>
 
 </robot>
 
