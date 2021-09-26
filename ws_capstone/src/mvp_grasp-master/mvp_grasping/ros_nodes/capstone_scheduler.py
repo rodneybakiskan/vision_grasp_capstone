@@ -215,7 +215,6 @@ class OpenLoopGraspController(object):
         tfh.publish_pose_as_transform(
             best_grasp.pose, 'base_link', 'GraspAfterTransform', 5)
         print(self.best_grasp.pose)
-        self.moveToGrasp()
 
         raw_input('Grasp object?')
         #        self.pc.set_gripper(best_grasp.width, wait=False)
@@ -231,7 +230,7 @@ class OpenLoopGraspController(object):
 
     def moveToGrasp(self):
 
-        print(self.best_grasp.pose)
+        print("moving to grasp pose")
         self.arm_group.set_pose_target(self.best_grasp.pose)
 
         plan1 = self.arm_group.go()
