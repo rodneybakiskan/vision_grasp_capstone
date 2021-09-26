@@ -43,11 +43,11 @@ class OpenLoopGraspController(object):
         # self.last_weight = 0
         # self.__weight_increase_check()
 
-    # def __recover_robot_from_error(self):
-    #    rospy.logerr('Recovering')
-    #    self.pc.recover()
-    #    rospy.logerr('Done')
-    #    self.ROBOT_ERROR_DETECTED = False
+        # def __recover_robot_from_error(self):
+        #    rospy.logerr('Recovering')
+        #    self.pc.recover()
+        #    rospy.logerr('Done')
+        #    self.ROBOT_ERROR_DETECTED = False
 
         # Moveit stuff
         self.timeout = 50
@@ -56,8 +56,7 @@ class OpenLoopGraspController(object):
         #rospy.init_node('Motion_planner', anonymous=True)
         self.robot = moveit_commander.RobotCommander()
         self.scene = moveit_commander.PlanningSceneInterface()
-        self.gripper_group = moveit_commander.MoveGroupCommander(
-            "gripper")
+        self.gripper_group = moveit_commander.MoveGroupCommander("gripper2")
         self.arm_group = moveit_commander.MoveGroupCommander("ur5e_arm")
 
         self.display_trajectory_publisher = rospy.Publisher(
@@ -91,35 +90,40 @@ class OpenLoopGraspController(object):
         print("")
 
     # Sets the robot arm to start postion (gripper not included)
-    def StartingPoint(self):
+
+    def moveToHome(self):
         self.arm_group.set_named_target("home")
         plan1 = self.arm_group.go()
 
-    # Grabs location of item of GCNN(needs location)
+    # Sets the robot arm to overlook postion
+
+    def moveToOverlook(self):
+        self.arm_group.set_named_target("overlook")
+        plan1 = self.arm_group.go()
+
+    # Grabs location of item of GGCNN(needs location)
 
     def findposition(self):
         Graspinglocation = geometry_msgs.msg
         return Graspinglocation
 
-    # heads to the position given by GCNN
+    def moveToPose(self):
+        pose_target = geometry_msgs.msg.Pose()
+        pose_target.position.x = -0.0271481189619
+        pose_target.position.y = -0.0247678443653
+        pose_target.position.z = 0.0164586391632
 
-    def Movetopose(self):
-        # pose_target = geometry_msgs.msg.Pose()
-        # pose_target.position.x = -0.0271481189619
-        # pose_target.position.y = -0.0247678443653
-        # pose_target.position.z = 0.0164586391632
+        pose_target.orientation.x = 0.996936374366
+        pose_target.orientation.y = 0.078216785069
+        pose_target.orientation.z = 0
+        pose_target.orientation.w = 0
 
-        # pose_target.orientation.x = 0.996936374366
-        # pose_target.orientation.y = 0.078216785069
-        # pose_target.orientation.z = 0
-        # pose_target.orientation.w = 0
-        # self.best_grasp.pose=pose_target
-        print(self.best_grasp.pose)
-        self.arm_group.set_pose_target(self.best_grasp.pose)
+        print(pose_target)
+        self.arm_group.set_pose_target(pose_target)
 
         plan1 = self.arm_group.go()
 
-    # Opens grippper(Writing Directly to the REV26)
+    # Opens gripper
 
     def OpenGripper(self):
         # pose_goal = gripper_group.get_current_link_values()
@@ -199,44 +203,76 @@ class OpenLoopGraspController(object):
         self.best_grasp = best_grasp
         rospy.sleep(1)
 
-
-
-
-
         # Offset for initial pose.
-
 
         initial_offset = 0.10
         LINK_EE_OFFSET = 0.138
         tfh.publish_pose_as_transform(best_grasp.pose, 'base_link', 'Grasp', 5)
         # Add some limits, plus a starting offset.
-    #        best_grasp.pose.position.z = max(best_grasp.pose.posit
-    # ion.z - 0.01, 0.026)  # 0.021 = collision with ground
-        best_grasp.pose.position.z += initial_offset + LINK_EE_OFFSET  # Offset from end efector position to
-        tfh.publish_pose_as_transform(best_grasp.pose, 'base_link', 'GraspAfterTransform', 5)
-        self.Movetopose()
+        # best_grasp.pose.position.z = max(best_grasp.pose.position.z - 0.01, 0.026)  # 0.021 = collision with ground
+        best_grasp.pose.position.z += initial_offset + \
+            LINK_EE_OFFSET  # Offset from end efector position to
+        tfh.publish_pose_as_transform(
+            best_grasp.pose, 'base_link', 'GraspAfterTransform', 5)
+        print(self.best_grasp.pose)
+        self.moveToGrasp()
 
         raw_input('Grasp object?')
-    #        self.pc.set_gripper(best_grasp.width, wait=False)
-    #        rospy.sleep(0.1)
-    #        self.pc.goto_pose(best_grasp.pose, velocity=0.1)
+        #        self.pc.set_gripper(best_grasp.width, wait=False)
+        #        rospy.sleep(0.1)
+        #        self.pc.goto_pose(best_grasp.pose, velocity=0.1)
 
         # Reset the position
-    #        best_grasp.pose.position.z -= initial_offset + LINK_EE_OFFSET
+        #        best_grasp.pose.position.z -= initial_offset + LINK_EE_OFFSET
 
         return True
+
+    # heads to the position given by GGCNN
+
+    def moveToGrasp(self):
+
+        print(self.best_grasp.pose)
+        self.arm_group.set_pose_target(self.best_grasp.pose)
+
+        plan1 = self.arm_group.go()
 
     def stop(self):
         self.pc.stop()
 
+    #GGCNN testing
+    def goGGTest(self):
+        while not rospy.is_shutdown():
+            raw_input('Press Enter to get GGCNN grasp.')
+            self.get_grasp()
+            raw_input('Press Enter to move to GGCNN grasp.')
+            self.moveToGrasp()
+
+    #gripper testing
+    def goGripperTest(self):
+        while not rospy.is_shutdown():
+            raw_input('Press Enter to close gripper.')
+            self.CloseGripper()
+            raw_input('Press Enter to open gripper.')
+            self.OpenGripper()
+            raw_input('Press Enter to move to overlook position.')
+            self.moveToOverlook()
+            raw_input('Press Enter to close gripper.')
+            self.CloseGripper()
+            raw_input('Press Enter to open gripper.')
+            self.OpenGripper()
+
+    #main
     def go(self):
-        # self.StartingPoint()
+        # self.moveToHome()
         raw_input('Press Enter to Start.')
         while not rospy.is_shutdown():
+            self.moveToOverlook()
             self.get_grasp()
-
+            self.moveToGrasp()
 
 if __name__ == '__main__':
     rospy.init_node('panda_open_loop_grasp')
     pg = OpenLoopGraspController()
-    pg.go()
+    # pg.goGGtest()
+    pg.goGripperTest()
+    # pg.go()
