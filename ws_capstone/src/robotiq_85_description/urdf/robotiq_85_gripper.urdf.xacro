@@ -105,7 +105,7 @@
             <parent link="${prefix}robotiq_85_right_knuckle_link"/>
             <child link="${prefix}robotiq_85_right_finger_link"/>
             <!-- added -->
-            <axis xyz="0 1 0"/>
+            <axis xyz="0 0 1"/>
             <!-- added -->
             <origin xyz="-0.00408552455 -0.03148604435 0.0" rpy="0 0 0" />
         </joint>

@@ -36,9 +36,9 @@
                      iyx = "0.000000" iyy = "0.000001" iyz = "0.000000"
                      izx = "0.000000" izy = "0.000000" izz = "0.000001" />
         </inertial>
-    </link> -->
+    </link>
     
-    <!-- <xacro:robotiq_85_gripper prefix="" parent="gripper_root_link" >
+    <xacro:robotiq_85_gripper prefix="" parent="gripper_root_link" >
         <origin xyz="0.05 0 0.85" rpy="0 0 0"/>
     </xacro:robotiq_85_gripper> -->
     
