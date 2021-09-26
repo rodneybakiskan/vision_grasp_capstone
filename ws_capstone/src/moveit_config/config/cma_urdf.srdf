@@ -32,6 +32,14 @@
         <joint name="rev_a5" value="0" />
         <joint name="rev_a6" value="0" />
     </group_state>
+    <group_state name="overlook" group="ur5e_arm">
+        <joint name="rev_a1" value="2.53073" />
+        <joint name="rev_a2" value="0.10472" />
+        <joint name="rev_a3" value="0.942478" />
+        <joint name="rev_a4" value="-0.506145" />
+        <joint name="rev_a5" value="1.6057" />
+        <joint name="rev_a6" value="-0.959931" />
+    </group_state>
     <!-- <group_state name="open" group="gripper">
         <joint name="rev_grp" value="0" />
     </group_state>
