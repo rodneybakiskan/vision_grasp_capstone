@@ -241,6 +241,8 @@ class OpenLoopGraspController(object):
     #GGCNN testing
     def goGGTest(self):
         while not rospy.is_shutdown():
+            raw_input('Press Enter to move to overlook position.')
+            self.moveToOverlook()
             raw_input('Press Enter to get GGCNN grasp.')
             self.get_grasp()
             raw_input('Press Enter to move to GGCNN grasp.')
@@ -272,6 +274,6 @@ class OpenLoopGraspController(object):
 if __name__ == '__main__':
     rospy.init_node('panda_open_loop_grasp')
     pg = OpenLoopGraspController()
-    # pg.goGGtest()
-    pg.goGripperTest()
+    pg.goGGtest()
+    # pg.goGripperTest()
     # pg.go()
