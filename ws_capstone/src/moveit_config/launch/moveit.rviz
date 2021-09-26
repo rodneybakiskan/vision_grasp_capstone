@@ -4,18 +4,14 @@ Panels:
     Name: Displays
     Property Tree Widget:
       Expanded:
-        - /Global Options1
         - /Status1
-        - /Grid1
-        - /MotionPlanning1
         - /MotionPlanning1/Scene Geometry1
         - /MotionPlanning1/Scene Robot1
         - /MotionPlanning1/Planning Request1
-        - /Camera1
         - /Camera1/Visibility1
-        - /PointCloud21
+        - /TF1/Frames1
       Splitter Ratio: 0.7425600290298462
-    Tree Height: 247
+    Tree Height: 159
   - Class: rviz/Help
     Name: Help
   - Class: rviz/Views
@@ -56,7 +52,6 @@ Visualization Manager:
       MoveIt_Allow_External_Program: false
       MoveIt_Allow_Replanning: false
       MoveIt_Allow_Sensor_Positioning: false
-      MoveIt_Goal_Tolerance: 0
       MoveIt_Planning_Attempts: 10
       MoveIt_Planning_Time: 5
       MoveIt_Use_Cartesian_Path: false
@@ -433,6 +428,7 @@ Visualization Manager:
       Unreliable: false
       Value: false
       Visibility:
+        "": true
         Grid: true
         Image: true
         MotionPlanning: true
@@ -442,8 +438,8 @@ Visualization Manager:
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
-        Max Value: -0.061685800552368164
-        Min Value: -0.8383669853210449
+        Max Value: 0.12770503759384155
+        Min Value: -4.172325134277344e-7
         Value: true
       Axis: Z
       Channel Name: intensity
@@ -481,6 +477,142 @@ Visualization Manager:
       Transport Hint: raw
       Unreliable: false
       Value: false
+    - Class: rviz/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        All Enabled: false
+        Base_UR5_1:
+          Value: false
+        Grasp:
+          Value: true
+        GraspAfterTransform:
+          Value: true
+        Link1_UR5_1:
+          Value: false
+        Link2_UR5_1:
+          Value: false
+        Link3_UR5_1:
+          Value: false
+        Link4_UR5_1:
+          Value: false
+        Link5_UR5_1:
+          Value: false
+        Link6_UR5_1:
+          Value: false
+        WRIST_CAMERA_20171116_v2_1:
+          Value: false
+        base_link:
+          Value: false
+        camera_mount_1:
+          Value: false
+        realsense_d435_bottom_screw_frame:
+          Value: false
+        realsense_d435_color_frame:
+          Value: false
+        realsense_d435_color_optical_frame:
+          Value: false
+        realsense_d435_depth_frame:
+          Value: false
+        realsense_d435_depth_optical_frame:
+          Value: false
+        realsense_d435_left_ir_frame:
+          Value: false
+        realsense_d435_left_ir_optical_frame:
+          Value: false
+        realsense_d435_link:
+          Value: false
+        realsense_d435_right_ir_frame:
+          Value: false
+        realsense_d435_right_ir_optical_frame:
+          Value: false
+        robot_to_table_adp_1:
+          Value: false
+        robotiq_85_base_link:
+          Value: false
+        robotiq_85_left_finger_link:
+          Value: false
+        robotiq_85_left_finger_tip_link:
+          Value: false
+        robotiq_85_left_inner_knuckle_link:
+          Value: false
+        robotiq_85_left_knuckle_link:
+          Value: false
+        robotiq_85_right_finger_link:
+          Value: false
+        robotiq_85_right_finger_tip_link:
+          Value: false
+        robotiq_85_right_inner_knuckle_link:
+          Value: false
+        robotiq_85_right_knuckle_link:
+          Value: false
+        world:
+          Value: false
+      Marker Scale: 1
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree:
+        world:
+          base_link:
+            Grasp:
+              {}
+            GraspAfterTransform:
+              {}
+            robot_to_table_adp_1:
+              Base_UR5_1:
+                Link1_UR5_1:
+                  Link2_UR5_1:
+                    Link3_UR5_1:
+                      Link4_UR5_1:
+                        Link5_UR5_1:
+                          Link6_UR5_1:
+                            WRIST_CAMERA_20171116_v2_1:
+                              {}
+                            camera_mount_1:
+                              {}
+                            realsense_d435_bottom_screw_frame:
+                              realsense_d435_link:
+                                realsense_d435_depth_frame:
+                                  realsense_d435_color_frame:
+                                    realsense_d435_color_optical_frame:
+                                      {}
+                                  realsense_d435_depth_optical_frame:
+                                    {}
+                                  realsense_d435_left_ir_frame:
+                                    realsense_d435_left_ir_optical_frame:
+                                      {}
+                                  realsense_d435_right_ir_frame:
+                                    realsense_d435_right_ir_optical_frame:
+                                      {}
+                            robotiq_85_base_link:
+                              robotiq_85_left_inner_knuckle_link:
+                                robotiq_85_left_finger_tip_link:
+                                  {}
+                              robotiq_85_left_knuckle_link:
+                                robotiq_85_left_finger_link:
+                                  {}
+                              robotiq_85_right_inner_knuckle_link:
+                                robotiq_85_right_finger_tip_link:
+                                  {}
+                              robotiq_85_right_knuckle_link:
+                                robotiq_85_right_finger_link:
+                                  {}
+      Update Interval: 0
+      Value: true
+    - Class: rviz/Image
+      Enabled: true
+      Image Topic: /camera/depth/image_rect_raw
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: Image
+      Normalize Range: true
+      Queue Size: 2
+      Transport Hint: raw
+      Unreliable: false
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -497,7 +629,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/XYOrbit
-      Distance: 2.14392352104187
+      Distance: 1.398812174797058
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -512,10 +644,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.7047979235649109
+      Pitch: -0.33020150661468506
       Target Frame: base_link
       Value: XYOrbit (rviz)
-      Yaw: 3.923105001449585
+      Yaw: 4.858104705810547
     Saved: ~
 Window Geometry:
   Camera:
@@ -533,9 +665,9 @@ Window Geometry:
     collapsed: false
   MotionPlanning - Trajectory Slider:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd0000000100000000000002a2000003a7fc0200000008fb000000100044006900730070006c006100790073010000003d00000188000000c900fffffffb0000000c00430061006d00650072006102000002b10000003800000280000001e0fb0000000800480065006c00700000000342000000bb0000006e00fffffffb0000000a0056006900650077007300000003b0000000b0000000a400fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e00670100000374000001890000000000000000fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000004100fffffffc000001cb000002190000019b00fffffffa000000010100000002fb0000000a0049006d00610067006502000002170000022a00000280000001e0fb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e00670100000000000002a20000029500ffffff00000495000003a700000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000100000000000002a2000003a7fc0200000009fb000000100044006900730070006c006100790073010000003d00000130000000c900fffffffb0000000c00430061006d00650072006102000002b10000003800000280000001e0fb0000000800480065006c00700000000342000000bb0000006e00fffffffb0000000a0056006900650077007300000003b0000000b0000000a400fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e00670100000374000001890000000000000000fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000001600000016fc00000173000001a00000017d00fffffffa000000010100000002fb0000000a0049006d00610067006502000002170000022a00000280000001e0fb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e00670100000000000002a2000001f300fffffffb0000000a0049006d0061006700650100000319000000cb0000001600ffffff0000049f000003a700000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Views:
     collapsed: false
-  Width: 1853
-  X: 67
+  Width: 1863
+  X: 57
   Y: 27
