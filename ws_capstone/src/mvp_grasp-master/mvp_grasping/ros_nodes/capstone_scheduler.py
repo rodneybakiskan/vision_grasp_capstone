@@ -277,5 +277,5 @@ if __name__ == '__main__':
     rospy.init_node('panda_open_loop_grasp')
     pg = OpenLoopGraspController()
     # pg.goGGTest()
-    pg.goGripperTest()
-    # pg.go()
+    # pg.goGripperTest()
+    pg.go()
