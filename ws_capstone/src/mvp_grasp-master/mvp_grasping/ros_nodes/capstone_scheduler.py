@@ -271,6 +271,7 @@ class OpenLoopGraspController(object):
             self.moveToOverlook()
             self.get_grasp()
             self.moveToGrasp()
+            self.CloseGripper()
 
 if __name__ == '__main__':
     rospy.init_node('panda_open_loop_grasp')
