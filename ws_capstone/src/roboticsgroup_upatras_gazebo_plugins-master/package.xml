@@ -19,8 +19,8 @@ DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVI
 INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. -->
 <package format="2">>
-  <name>roboticsgroup_gazebo_plugins</name>
-  <version>0.1.0</version>
+  <name>roboticsgroup_upatras_gazebo_plugins</name>
+  <version>0.2.0</version>
   <description>Collection of gazebo plugins</description>
 
   <author email="costashatz@gmail.com">Konstantinos Chatzilygeroudis</author>
@@ -29,20 +29,21 @@ OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISE
 
   <license>BSD</license>
 
-  <url type="repository">https://github.com/roboticsgroup/roboticsgroup_gazebo_plugins</url>
+  <url type="repository">https://github.com/roboticsgroup/roboticsgroup_upatras_gazebo_plugins</url>
+  <url type="bugtracker">https://github.com/roboticsgroup/roboticsgroup_upatras_gazebo_plugins/issues</url>
 
   <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>control_toolbox</build_depend>
   <build_depend>gazebo_ros</build_depend>
   <build_depend>roscpp</build_depend>
-  <build_depend>control_toolbox</build_depend>
+  <build_export_depend>control_toolbox</build_export_depend>
   <build_export_depend>gazebo_ros</build_export_depend>
   <build_export_depend>roscpp</build_export_depend>
-  <build_export_depend>control_toolbox</build_export_depend>
+  <exec_depend>control_toolbox</exec_depend>
   <exec_depend>gazebo_ros</exec_depend>
   <exec_depend>roscpp</exec_depend>
-  <exec_depend>control_toolbox</exec_depend>
 
   <export>
-    <gazebo_ros plugin_path="${prefix}/lib" gazebo_media_path="${prefix}" />
+    <gazebo_ros plugin_path="${prefix}/lib" />
   </export>
 </package>

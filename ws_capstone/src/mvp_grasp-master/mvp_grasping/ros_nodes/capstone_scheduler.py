@@ -257,10 +257,11 @@ class OpenLoopGraspController(object):
             self.OpenGripper()
             raw_input('Press Enter to move to overlook position.')
             self.moveToOverlook()
-            raw_input('Press Enter to close gripper.')
-            self.CloseGripper()
-            raw_input('Press Enter to open gripper.')
-            self.OpenGripper()
+            while (True):
+                print('closing gripper.')
+                self.CloseGripper()
+                print('opening gripper.')
+                self.OpenGripper()
 
     #main
     def go(self):
@@ -274,6 +275,6 @@ class OpenLoopGraspController(object):
 if __name__ == '__main__':
     rospy.init_node('panda_open_loop_grasp')
     pg = OpenLoopGraspController()
-    pg.goGGTest()
-    # pg.goGripperTest()
+    # pg.goGGTest()
+    pg.goGripperTest()
     # pg.go()

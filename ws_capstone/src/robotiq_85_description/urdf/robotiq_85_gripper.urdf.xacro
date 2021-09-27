@@ -96,7 +96,7 @@
             <parent link="${prefix}robotiq_85_left_knuckle_link"/>
             <child link="${prefix}robotiq_85_left_finger_link"/>
             <!-- added -->
-            <axis xyz="0 0 1"/>
+            <axis xyz="0 1 0"/>
             <!-- added -->
             <origin xyz="-0.00408552455 -0.03148604435 0.0" rpy="0 0 0" />
         </joint>
@@ -105,7 +105,7 @@
             <parent link="${prefix}robotiq_85_right_knuckle_link"/>
             <child link="${prefix}robotiq_85_right_finger_link"/>
             <!-- added -->
-            <axis xyz="0 0 1"/>
+            <axis xyz="0 1 0"/>
             <!-- added -->
             <origin xyz="-0.00408552455 -0.03148604435 0.0" rpy="0 0 0" />
         </joint>
@@ -122,6 +122,12 @@
                 </geometry>
             </collision>
             <inertial>
+                <!-- <mass value="0" />
+                <origin xyz="0.0 0.0 0.0" />
+                <inertia ixx = "0" ixy = "0" ixz = "0"
+                         iyx = "0" iyy = "0" iyz = "0"
+                         izx = "0" izy = "0" izz = "0" />
+            </inertial> -->
                 <mass value="0.027309" />
                 <origin xyz="0.0 0.0 0.0" />
                 <inertia ixx = "0.000003" ixy = "-0.000002" ixz = "0.000000"
@@ -142,7 +148,13 @@
                 </geometry>
             </collision>
             <inertial>
-                <mass value="0.027309" />
+                <!-- <mass value="0" />
+                <origin xyz="0.0 0.0 0.0" />
+                <inertia ixx = "0" ixy = "0" ixz = "0"
+                         iyx = "0" iyy = "0" iyz = "0"
+                         izx = "0" izy = "0" izz = "0" />
+            </inertial> -->
+            <mass value="0.027309" />
                 <origin xyz="0.0 0.0 0.0" />
                 <inertia ixx = "0.000003" ixy = "-0.000002" ixz = "0.000000"
                          iyx = "-0.000002" iyy = "0.000021" iyz = "0.000000"
