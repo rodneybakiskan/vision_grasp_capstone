@@ -10,6 +10,8 @@ roslaunch mvp_grasping wrist_realsense.launch
 //world + sim camera
 roslaunch main view_d435_model_rviz_gazebo.launch
 
+catkin build darknet_ros -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER=/usr/bin/gcc-6
+
 
 
 

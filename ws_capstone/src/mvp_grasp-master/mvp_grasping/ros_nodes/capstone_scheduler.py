@@ -123,6 +123,14 @@ class OpenLoopGraspController(object):
 
         plan1 = self.arm_group.go()
 
+    def lowerGripper(self):
+        self.best_grasp.pose.position.z -= 0.1
+        self.moveToGrasp()
+
+    def raiseGripper(self):
+        self.best_grasp.pose.position.z += 0.1
+        self.moveToGrasp()
+
     # Opens gripper
 
     def OpenGripper(self):
@@ -205,24 +213,16 @@ class OpenLoopGraspController(object):
 
         # Offset for initial pose.
 
-        initial_offset = 0.10
-        LINK_EE_OFFSET = 0.138
-        tfh.publish_pose_as_transform(best_grasp.pose, 'base_link', 'Grasp', 5)
+        EE_offset = 0.10
+        Z_offset = 0.2
+        tfh.publish_pose_as_transform(best_grasp.pose, 'base_link', 'Grasp', 0.5)
         # Add some limits, plus a starting offset.
         # best_grasp.pose.position.z = max(best_grasp.pose.position.z - 0.01, 0.026)  # 0.021 = collision with ground
-        best_grasp.pose.position.z += initial_offset + \
-            LINK_EE_OFFSET  # Offset from end efector position to
-        tfh.publish_pose_as_transform(
-            best_grasp.pose, 'base_link', 'GraspAfterTransform', 5)
+        best_grasp.pose.position.z += EE_offset + \
+            Z_offset  # Offset from end efector position to
         print(self.best_grasp.pose)
 
-        raw_input('Grasp object?')
-        #        self.pc.set_gripper(best_grasp.width, wait=False)
-        #        rospy.sleep(0.1)
-        #        self.pc.goto_pose(best_grasp.pose, velocity=0.1)
 
-        # Reset the position
-        #        best_grasp.pose.position.z -= initial_offset + LINK_EE_OFFSET
 
         return True
 
@@ -272,7 +272,9 @@ class OpenLoopGraspController(object):
             raw_input('Press Enter to attempt to grasp object')
             self.get_grasp()
             self.moveToGrasp()
+            self.lowerGripper()
             self.CloseGripper()
+            self.raiseGripper()
             raw_input('Press Enter to move back to overlook position')
 
 if __name__ == '__main__':
