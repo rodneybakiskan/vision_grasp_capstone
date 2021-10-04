@@ -23,6 +23,8 @@ from math import pi
 from std_msgs.msg import String
 from moveit_commander.conversions import pose_to_list
 
+from gazebo_msgs.srv import SpawnModel, SpawnModelRequest, SpawnModelResponse, DeleteModel
+from spawn_models import create_cube_request
 
 class OpenLoopGraspController(object):
 
@@ -262,14 +264,34 @@ class OpenLoopGraspController(object):
                 self.CloseGripper()
                 print('opening gripper.')
                 self.OpenGripper()
+    def spawningObject(self):
+        spawn_srv = rospy.ServiceProxy('/gazebo/spawn_sdf_model', SpawnModel)
+        rospy.loginfo("Waiting for /gazebo/spawn_sdf_model service...")
+        spawn_srv.wait_for_service()
+        rospy.loginfo("Connected to service!")
+        # Spawn object 1
+        rospy.loginfo("Spawning cube1")
+        req1 = create_cube_request("cube1",
+                    0.0, 0.0, 0.12,  # position
+                    0.0, 0.0, 0.0,  # rotation
+                    0.05, 0.05, 0.05)  # size
+        spawn_srv.call(req1)
+        rospy.sleep(1.0)
+    def deleteObject(self):
+        delete_model = rospy.ServiceProxy('/gazebo/delete_model', DeleteModel)
+        resp_delete = delete_model("cube1")
 
     #main
     def go(self):
         # self.moveToHome()
         raw_input('Press Enter to Start.')
         while not rospy.is_shutdown():
+            self.deleteObject()
             self.OpenGripper()
             self.moveToOverlook()
+            
+            self.spawningObject()
+
             raw_input('Press Enter to attempt to grasp object')
             self.get_grasp()
             self.moveToGrasp()
