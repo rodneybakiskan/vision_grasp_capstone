@@ -130,14 +130,14 @@
 </gazebo>
 
 
-<!-- PLugin test -->
+<!-- Plugin test Gazebo Grasping -->
  <gazebo>
   <plugin name = "gazebo_grasp_fix" filename = "libgazebo_grasp_fix.so">
     <arm>
       <arm_name>ur5e_arm</arm_name>
-      <palm_link></palm_link>
-      <gripper_link></gripper_link>
-      <gripper_link></gripper_link>
+      <palm_link>robotiq_85_base_link</palm_link>
+      <gripper_link>robotiq_85_left_finger_tip_link</gripper_link>
+      <gripper_link>robotiq_85_right_finger_tip_link</gripper_link>
     </arm>
     <force_angle_tolerance>100</force_angle_tolerance>
     <update_rate>4</update_rate>
