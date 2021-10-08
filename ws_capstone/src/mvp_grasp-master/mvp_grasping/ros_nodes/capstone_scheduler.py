@@ -22,6 +22,7 @@ import geometry_msgs
 from math import pi
 from std_msgs.msg import String
 from moveit_commander.conversions import pose_to_list
+from tf.transformations import quaternion_from_euler
 
 from gazebo_msgs.srv import SpawnModel, SpawnModelRequest, SpawnModelResponse, DeleteModel
 from spawn_models import create_cube_request
@@ -40,9 +41,9 @@ class OpenLoopGraspController(object):
             ggcnn_service_name + '/predict', GraspPrediction)
 
         self.best_grasp = Grasp()
-
         ##
         # 
+
         # Moveit stuff
 
         self.timeout = 50
@@ -84,7 +85,6 @@ class OpenLoopGraspController(object):
         print(self.robot.get_current_state())
         print("")
 
-
     ## 
     # 
     # Member functions
@@ -122,12 +122,36 @@ class OpenLoopGraspController(object):
         plan1 = self.arm_group.go()
 
     def lowerGripper(self):
-        self.best_grasp.pose.position.z -= 0.1
-        self.moveToGrasp()
+        waypoints = []
+        waypoints.append(self.arm_group.get_current_pose().pose)
+        pose_target = geometry_msgs.msg.Pose()
+        pose_target.position.x = waypoints[0].position.x 
+        pose_target.position.y = waypoints[0].position.y
+        pose_target.position.z = waypoints[0].position.z - 0.1
+        pose_target.orientation.x = waypoints[0].orientation.x 
+        pose_target.orientation.y = waypoints[0].orientation.y 
+        pose_target.orientation.z = waypoints[0].orientation.z 
+        pose_target.orientation.w = waypoints[0].orientation.w 
+        
+        print(pose_target)
+        self.arm_group.set_pose_target(pose_target)
+        plan1 = self.arm_group.go()
 
     def raiseGripper(self):
-        self.best_grasp.pose.position.z += 0.1
-        self.moveToGrasp()
+        waypoints = []
+        waypoints.append(self.arm_group.get_current_pose().pose)
+        pose_target = geometry_msgs.msg.Pose()
+        pose_target.position.x = waypoints[0].position.x 
+        pose_target.position.y = waypoints[0].position.y
+        pose_target.position.z = waypoints[0].position.z + 0.1
+        pose_target.orientation.x = waypoints[0].orientation.x 
+        pose_target.orientation.y = waypoints[0].orientation.y 
+        pose_target.orientation.z = waypoints[0].orientation.z 
+        pose_target.orientation.w = waypoints[0].orientation.w 
+        
+        print(pose_target)
+        self.arm_group.set_pose_target(pose_target)
+        plan1 = self.arm_group.go()
 
     # Opens gripper
 
@@ -228,6 +252,24 @@ class OpenLoopGraspController(object):
 
         plan1 = self.arm_group.go()
 
+    def moveToFakeGrasp(self):
+        pose_target = geometry_msgs.msg.Pose()
+        pose_target.position.x = 0
+        pose_target.position.y = 0
+        pose_target.position.z = 0.35
+
+        quaternion = quaternion_from_euler(1.57079632679, 0, 0)
+
+        pose_target.orientation.x = quaternion[0]
+        pose_target.orientation.y = quaternion[1]
+        pose_target.orientation.z = quaternion[2]
+        pose_target.orientation.w = quaternion[3]
+
+        print(pose_target)
+        self.arm_group.set_pose_target(pose_target)
+
+        plan1 = self.arm_group.go()
+
     def stop(self):
         self.pc.stop()
 
@@ -244,6 +286,7 @@ class OpenLoopGraspController(object):
                     0.05, 0.05, 0.05)  # size
         spawn_srv.call(req1)
         rospy.sleep(1.0)
+    
     def deleteObject(self):
         delete_model = rospy.ServiceProxy('/gazebo/delete_model', DeleteModel)
         resp_delete = delete_model("cube1")
@@ -259,14 +302,15 @@ class OpenLoopGraspController(object):
             
             self.spawningObject()
 
-            raw_input('Press Enter to attempt to grasp object')
-            self.get_grasp()
-            self.moveToGrasp()
+            # raw_input('Press Enter to attempt to grasp object')
+            # self.get_grasp()
+            # self.moveToGrasp()
+            self.moveToFakeGrasp()
             self.lowerGripper()
             self.CloseGripper()
             self.raiseGripper()
             raw_input('Press Enter to move back to overlook position')
-    
+
 
 
 if __name__ == '__main__':
