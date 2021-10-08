@@ -29,7 +29,11 @@ from spawn_models import create_cube_request
 class OpenLoopGraspController(object):
 
     def __init__(self):
-        # GGCNN stuff
+        ##
+        # 
+        #  GGCNN stuff
+
+
         ggcnn_service_name = '/ggcnn_service'
         rospy.wait_for_service(ggcnn_service_name + '/predict')
         self.ggcnn_srv = rospy.ServiceProxy(
@@ -37,21 +41,10 @@ class OpenLoopGraspController(object):
 
         self.best_grasp = Grasp()
 
-        # self.pregrasp_pose = [(rospy.get_param('/grasp_entropy_node/histogram/bounds/x2') + rospy.get_param('/grasp_entropy_node/histogram/bounds/x1'))/2 - 0.03,
-        #                      (rospy.get_param('/grasp_entropy_node/histogram/bounds/y2') + rospy.get_param('/grasp_entropy_node/histogram/bounds/y1'))/2 + 0.10,
-        #                      rospy.get_param('/grasp_entropy_node/height/z1') + 0.05,
-        #                      2**0.5/2, -2**0.5/2, 0, 0]
-
-        # self.last_weight = 0
-        # self.__weight_increase_check()
-
-        # def __recover_robot_from_error(self):
-        #    rospy.logerr('Recovering')
-        #    self.pc.recover()
-        #    rospy.logerr('Done')
-        #    self.ROBOT_ERROR_DETECTED = False
-
+        ##
+        # 
         # Moveit stuff
+
         self.timeout = 50
         # Defines groups
         moveit_commander.roscpp_initialize(sys.argv)
@@ -91,7 +84,10 @@ class OpenLoopGraspController(object):
         print(self.robot.get_current_state())
         print("")
 
-    # Sets the robot arm to start postion (gripper not included)
+
+    ## 
+    # 
+    # Member functions
 
     def moveToHome(self):
         self.arm_group.set_named_target("home")
@@ -203,7 +199,6 @@ class OpenLoopGraspController(object):
         moveit_commander.roscpp_shutdown()
 
     def get_grasp(self):
-
         ret = self.ggcnn_srv.call()
         if not ret.success:
             print("Failed grasp")
@@ -214,7 +209,6 @@ class OpenLoopGraspController(object):
         rospy.sleep(1)
 
         # Offset for initial pose.
-
         EE_offset = 0.10
         Z_offset = 0.2
         tfh.publish_pose_as_transform(best_grasp.pose, 'base_link', 'Grasp', 0.5)
@@ -223,9 +217,6 @@ class OpenLoopGraspController(object):
         best_grasp.pose.position.z += EE_offset + \
             Z_offset  # Offset from end efector position to
         print(self.best_grasp.pose)
-
-
-
         return True
 
     # heads to the position given by GGCNN
@@ -240,30 +231,6 @@ class OpenLoopGraspController(object):
     def stop(self):
         self.pc.stop()
 
-    #GGCNN testing
-    def goGGTest(self):
-        while not rospy.is_shutdown():
-            raw_input('Press Enter to move to overlook position.')
-            self.moveToOverlook()
-            raw_input('Press Enter to get GGCNN grasp.')
-            self.get_grasp()
-            raw_input('Press Enter to move to GGCNN grasp.')
-            self.moveToGrasp()
-
-    #gripper testing
-    def goGripperTest(self):
-        while not rospy.is_shutdown():
-            raw_input('Press Enter to close gripper.')
-            self.CloseGripper()
-            raw_input('Press Enter to open gripper.')
-            self.OpenGripper()
-            raw_input('Press Enter to move to overlook position.')
-            self.moveToOverlook()
-            while (True):
-                print('closing gripper.')
-                self.CloseGripper()
-                print('opening gripper.')
-                self.OpenGripper()
     def spawningObject(self):
         spawn_srv = rospy.ServiceProxy('/gazebo/spawn_sdf_model', SpawnModel)
         rospy.loginfo("Waiting for /gazebo/spawn_sdf_model service...")
@@ -299,10 +266,10 @@ class OpenLoopGraspController(object):
             self.CloseGripper()
             self.raiseGripper()
             raw_input('Press Enter to move back to overlook position')
+    
+
 
 if __name__ == '__main__':
     rospy.init_node('panda_open_loop_grasp')
     pg = OpenLoopGraspController()
-    # pg.goGGTest()
-    # pg.goGripperTest()
     pg.go()

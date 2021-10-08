@@ -26,5 +26,9 @@ roslaunch ggcnn ggcnn_service.launch
 
 rosrun mvp_grasping capstone_scheduler.py
 
+roslaunch yolov3_pytorch_ros detector.launch
+
+
+
 
 

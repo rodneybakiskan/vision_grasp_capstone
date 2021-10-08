@@ -98,8 +98,24 @@ class DetectorManager():
 
     def imageCb(self, data):
         # Convert the image to OpenCV
+
         try:
+
             self.cv_image = self.bridge.imgmsg_to_cv2(data, "rgb8")
+                
+            # save imgs
+            # raw_input("Press enter to take pic")
+            # filename = raw_input("Object+number: ")
+            # filename += ".png"
+            # filename = "imgs/" + filename
+            # print(filename)
+            # # Using cv2.imwrite() method
+            # # Saving the image
+            # print(cv2.imwrite(filename, self.cv_image))
+
+            
+
+
         except CvBridgeError as e:
             print(e)
 
@@ -226,6 +242,8 @@ class DetectorManager():
         # Publish visualization image
         image_msg = self.bridge.cv2_to_imgmsg(imgOut, "rgb8")
         self.pub_viz_.publish(image_msg)
+
+
 
 
 if __name__=="__main__":
