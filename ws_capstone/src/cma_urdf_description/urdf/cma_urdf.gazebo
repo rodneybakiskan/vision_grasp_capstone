@@ -139,7 +139,7 @@
       <gripper_link>robotiq_85_left_finger_tip_link</gripper_link>
       <gripper_link>robotiq_85_right_finger_tip_link</gripper_link>
     </arm>
-    <force_angle_tolerance>5</force_angle_tolerance>
+    <force_angle_tolerance>100</force_angle_tolerance>
     <update_rate>4</update_rate>
     <grip_count_threshold>1</grip_count_threshold>
     <max_grip_count>1</max_grip_count>

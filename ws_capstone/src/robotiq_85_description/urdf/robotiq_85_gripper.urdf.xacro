@@ -40,7 +40,7 @@
             <child link="${prefix}robotiq_85_left_knuckle_link"/>
             <axis xyz="0 0 1"/>
             <origin rpy="${pi} 0.0 0.0" xyz="0.05490451627 0.03060114443 0.0"/>
-            <limit lower="0.0" upper="0.8" velocity="2.0" effort="1000"/>
+            <limit lower="0.0" upper="0.8" velocity="2.0" effort="10"/>
         </joint>
 
         <joint name="${prefix}robotiq_85_right_knuckle_joint" type="continuous">
@@ -96,7 +96,7 @@
             <parent link="${prefix}robotiq_85_left_knuckle_link"/>
             <child link="${prefix}robotiq_85_left_finger_link"/>
             <!-- added -->
-            <axis xyz="0 1 0"/>
+            <!-- <axis xyz="0 1 0"/> -->
             <!-- added -->
             <origin xyz="-0.00408552455 -0.03148604435 0.0" rpy="0 0 0" />
         </joint>
@@ -105,7 +105,7 @@
             <parent link="${prefix}robotiq_85_right_knuckle_link"/>
             <child link="${prefix}robotiq_85_right_finger_link"/>
             <!-- added -->
-            <axis xyz="0 1 0"/>
+            <!-- <axis xyz="0 1 0"/> -->
             <!-- added -->
             <origin xyz="-0.00408552455 -0.03148604435 0.0" rpy="0 0 0" />
         </joint>

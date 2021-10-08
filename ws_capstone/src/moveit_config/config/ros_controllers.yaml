@@ -15,7 +15,6 @@ hardware_interface:
     - rev_a4
     - rev_a5
     - rev_a6
-    # - rev_grp
     - robotiq_85_left_knuckle_joint
   sim_control_mode: 1  # 0: position, 1: velocity
 # Publish all joint states
@@ -35,19 +34,12 @@ controller_list:
       - rev_a4
       - rev_a5
       - rev_a6
-  # - name: gripper_controller
-  #   action_ns: follow_joint_trajectory
-  #   default: True
-  #   type: FollowJointTrajectory
-  #   joints:
-  #     - rev_grp
   - name: gripper2_controller
     action_ns: follow_joint_trajectory
     default: True
     type: FollowJointTrajectory
     joints:
       - robotiq_85_left_knuckle_joint
-
 ur5e_arm_controller:
   type: position_controllers/JointTrajectoryController
   joints:
@@ -69,27 +61,51 @@ ur5e_arm_controller:
   stop_trajectory_duration: 0.5
   state_publish_rate:  25
   action_monitor_rate: 10
-
-# gripper_controller:
-#   type: position_controllers/JointTrajectoryController
-#   joints:
-#     - rev_grp
-#   constraints:
-#     goal_time: 0.6
-#     stopped_velocity_tolerance: 0.05
-#     rev_grp: {trajectory: 0.1, goal: 0.1}
-#   stop_trajectory_duration: 0.5
-#   state_publish_rate:  25
-#   action_monitor_rate: 10
-
+  gains:
+    rev_a1:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    rev_a2:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    rev_a3:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    rev_a4:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    rev_a5:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    rev_a6:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
 gripper2_controller:
   type: position_controllers/JointTrajectoryController
   joints:
     - robotiq_85_left_knuckle_joint
-  constraints:
-    goal_time: 0.6
-    stopped_velocity_tolerance: 0.1
-    robotiq_85_left_knuckle_joint: {trajectory: 0.1, goal: 0.1}
-  stop_trajectory_duration: 0.5
-  state_publish_rate:  25
-  action_monitor_rate: 10
+  # constraints:
+  #   goal_time: 0.6
+  #   stopped_velocity_tolerance: 0.1
+  #   robotiq_85_left_knuckle_joint: {trajectory: 0.1, goal: 0.1}
+  #   stop_trajectory_duration: 0.5
+  #   state_publish_rate:  25
+  #   action_monitor_rate: 10
+  gains:
+    robotiq_85_left_knuckle_joint:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1

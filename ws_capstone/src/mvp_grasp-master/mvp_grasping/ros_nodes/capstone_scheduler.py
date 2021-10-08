@@ -184,7 +184,7 @@ class OpenLoopGraspController(object):
         #scene.add_box(box_name,box_pose, size=(1,1,1))
 
     def Attachitem(self):
-        grasping_group = 'gripper'
+        grasping_group = 'gripper2'
         touch_links = self.robot.get_link_names(group=grasping_group)
         self.scene.attach_box(self.eef_link, name, touch_links=touch_links)
 
