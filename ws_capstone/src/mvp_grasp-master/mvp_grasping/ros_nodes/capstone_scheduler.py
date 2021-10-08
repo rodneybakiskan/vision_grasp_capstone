@@ -296,11 +296,11 @@ class OpenLoopGraspController(object):
         # self.moveToHome()
         raw_input('Press Enter to Start.')
         while not rospy.is_shutdown():
-            self.deleteObject()
+            # self.deleteObject()
             self.OpenGripper()
             self.moveToOverlook()
             
-            self.spawningObject()
+            # self.spawningObject()
 
             # raw_input('Press Enter to attempt to grasp object')
             # self.get_grasp()
