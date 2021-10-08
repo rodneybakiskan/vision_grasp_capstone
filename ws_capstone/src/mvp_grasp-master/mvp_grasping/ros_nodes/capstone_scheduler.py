@@ -256,7 +256,7 @@ class OpenLoopGraspController(object):
         pose_target = geometry_msgs.msg.Pose()
         pose_target.position.x = 0
         pose_target.position.y = 0
-        pose_target.position.z = 0.35
+        pose_target.position.z = 0.36
 
         quaternion = quaternion_from_euler(1.57079632679, 0, 0)
 
@@ -296,11 +296,11 @@ class OpenLoopGraspController(object):
         # self.moveToHome()
         raw_input('Press Enter to Start.')
         while not rospy.is_shutdown():
-            # self.deleteObject()
             self.OpenGripper()
             self.moveToOverlook()
-            
-            # self.spawningObject()
+
+            self.deleteObject()
+            self.spawningObject()
 
             # raw_input('Press Enter to attempt to grasp object')
             # self.get_grasp()
@@ -309,7 +309,7 @@ class OpenLoopGraspController(object):
             self.lowerGripper()
             self.CloseGripper()
             self.raiseGripper()
-            raw_input('Press Enter to move back to overlook position')
+            # raw_input('Press Enter to move back to overlook position')
 
 
 

@@ -6,11 +6,11 @@
         <transmission name="${prefix}robotiq_85_left_knuckle_trans">
             <type>transmission_interface/SimpleTransmission</type>
             <joint name="${prefix}robotiq_85_left_knuckle_joint">
-                <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+                <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
             </joint>
             <actuator name="${prefix}robotiq_85_left_knuckle_motor">
                 <mechanicalReduction>1</mechanicalReduction>
-                <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+                <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
             </actuator>
         </transmission>
 
@@ -120,50 +120,58 @@
             <mu1>0.2</mu1>
             <mu2>0.2</mu2>
             <selfCollide>false</selfCollide>
+            <!-- <dynamics damping="0.7" friction="100.0" /> -->
         </gazebo>
 
         <gazebo reference="${prefix}robotiq_85_left_finger_tip_link">
             <mu1>0.2</mu1>
             <mu2>0.2</mu2>
-            <selfCollide>true</selfCollide>
+            <selfCollide>false</selfCollide>
+            <!-- <dynamics damping="0.7" friction="100.0" /> -->
         </gazebo>
 
         <gazebo reference="${prefix}robotiq_85_left_knuckle_link">
             <mu1>0.2</mu1>
             <mu2>0.2</mu2>
             <selfCollide>false</selfCollide>
+            <!-- <dynamics damping="0.7" friction="2.0" /> -->
         </gazebo>
 
         <gazebo reference="${prefix}robotiq_85_left_finger_link">
             <mu1>0.2</mu1>
             <mu2>0.2</mu2>
             <selfCollide>false</selfCollide>
+            <!-- <dynamics damping="0.7" friction="100.0" /> -->
         </gazebo>
 
         <gazebo reference="${prefix}robotiq_85_right_inner_knuckle_link">
             <mu1>0.2</mu1>
             <mu2>0.2</mu2>
             <selfCollide>false</selfCollide>
+            <!-- <dynamics damping="0.7" friction="100.0" /> -->
         </gazebo>
 
         <gazebo reference="${prefix}robotiq_85_right_finger_tip_link">
             <mu1>0.2</mu1>
             <mu2>0.2</mu2>
-            <selfCollide>true</selfCollide>
+            <selfCollide>false</selfCollide>
+            <!-- <dynamics damping="0.7" friction="100.0" /> -->
         </gazebo>
 
         <gazebo reference="${prefix}robotiq_85_right_knuckle_link">
             <mu1>0.2</mu1>
             <mu2>0.2</mu2>
             <selfCollide>false</selfCollide>
+            <!-- <dynamics damping="0.7" friction="100.0" /> -->
         </gazebo>
 
         <gazebo reference="${prefix}robotiq_85_right_finger_link">
             <mu1>0.2</mu1>
             <mu2>0.2</mu2>
             <selfCollide>false</selfCollide>
+            <!-- <dynamics damping="0.7" friction="100.0" /> -->
         </gazebo>
-
+        
 
     </xacro:macro>
 

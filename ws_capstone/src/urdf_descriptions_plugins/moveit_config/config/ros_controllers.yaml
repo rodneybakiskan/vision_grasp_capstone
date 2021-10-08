@@ -93,7 +93,7 @@ ur5e_arm_controller:
       i: 1
       i_clamp: 1
 gripper2_controller:
-  type: position_controllers/JointTrajectoryController
+  type: effort_controllers/JointTrajectoryController
   joints:
     - robotiq_85_left_knuckle_joint
   # constraints:
