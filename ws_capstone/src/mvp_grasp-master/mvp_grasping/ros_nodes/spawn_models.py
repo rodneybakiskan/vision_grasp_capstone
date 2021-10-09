@@ -73,7 +73,43 @@ sdf_cube = """<?xml version="1.0" ?>
   </model>
 </sdf>
 """
-
+sdf_bowl= """<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="bowl">
+    <link name="link">
+      <inertial>
+      <pose>0 0 0.0175 0 0 0</pose>
+        <mass>0.1</mass>
+	  <inertia>
+	    <ixx>0.000250308</ixx>
+	    <ixy>0.0</ixy>
+	    <ixz>0.0</ixz>
+	    <iyy>0.000250308</iyy>
+	    <iyz>0.0</iyz>
+	    <izz>0.0004802</izz>
+	  </inertia>
+      </inertial>
+      <collision name="collision">
+        <pose>0 0 0.0175 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.098</radius>
+            <length>0.035</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+          <mesh filename="package://cma_urdf_description/meshes/Link5_UR5_1.stl" scale="0.001 0.001 0.001"/>
+            <uri>model://meshes/bowl.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>
+"""
 
 def create_cube_request(modelname, px, py, pz, rr, rp, ry, sx, sy, sz):
     """Create a SpawnModelRequest with the parameters of the cube given.
@@ -104,6 +140,35 @@ def create_cube_request(modelname, px, py, pz, rr, rp, ry, sx, sy, sz):
 
     return req
 
+def create_bowl_request(modelname, px, py, pz, rr, rp, ry, sx, sy, sz):
+    """Create a SpawnModelRequest with the parameters of the cube given.
+    modelname: name of the model for gazebo
+    px py pz: position of the cube (and it's collision cube)
+    rr rp ry: rotation (roll, pitch, yaw) of the model
+    sx sy sz: size of the cube"""
+    bowl = deepcopy(sdf_bowl)
+    # Replace size of model
+    size_str = str(round(sx, 3)) + " " + \
+        str(round(sy, 3)) + " " + str(round(sz, 3))
+    bowl = bowl.replace('SIZEXYZ', size_str)
+    # Replace modelname
+    bowl = bowl.replace('MODELNAME', str(modelname))
+
+    req = SpawnModelRequest()
+    req.model_name = modelname
+    req.model_xml = bowl
+    req.initial_pose.position.x = px
+    req.initial_pose.position.y = py
+    req.initial_pose.position.z = pz
+
+    q = quaternion_from_euler(rr, rp, ry)
+    req.initial_pose.orientation.x = q[0]
+    req.initial_pose.orientation.y = q[1]
+    req.initial_pose.orientation.z = q[2]
+    req.initial_pose.orientation.w = q[3]
+
+    return req
+
 
 if __name__ == '__main__':
     rospy.init_node('spawn_models')
@@ -114,24 +179,24 @@ if __name__ == '__main__':
     x1= random.uniform(-0.5,0.2)
     y1= random.uniform(-0.37,0.2)
     # Spawn object 1
-    rospy.loginfo("Spawning cube1")
-    rospy.loginfo(x1)
-    rospy.loginfo(y1)
-    req1 = create_cube_request("cube1",
-                              0.15, 0.1, 0.12,  # position
-                              0.0, 0.0, 0.0,  # rotation
-                              0.05, 0.05, 0.05)  # size
-    spawn_srv.call(req1)
-    rospy.sleep(1.0)
+    # rospy.loginfo("Spawning cube1")
+    # rospy.loginfo(x1)
+    # rospy.loginfo(y1)
+    # req1 = create_cube_request("cube1",
+    #                           x1, y1, 0.12,  # position
+    #                           0.0, 0.0, 0.0,  # rotation
+    #                           0.05, 0.05, 0.05)  # size
+    # spawn_srv.call(req1)
+    # rospy.sleep(1.0)
 
     # # Spawn object 2
-    # rospy.loginfo("Spawning cube2")
-    # req2 = create_cube_request("cube2",
-    #                           0.0, 1.1, 0.41,  # position
-    #                           0.0, 0.0, 0.0,  # rotation
-    #                           0.8, 0.8, 0.8)  # size
-    # spawn_srv.call(req2)
-    # rospy.sleep(1.0)
+    rospy.loginfo("Spawning bowl1")
+    req2 = create_bowl_request("bowl1",
+                              0.0, 0.0, 0.12,  # position
+                              0.0, 0.0, 0.0,  # rotation
+                              0.8, 0.8, 0.8)  # size
+    spawn_srv.call(req2)
+    rospy.sleep(1.0)
 
     # # Spawn object 3
     # rospy.loginfo("Spawning cube3")

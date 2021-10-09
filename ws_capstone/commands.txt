@@ -30,5 +30,9 @@ roslaunch yolov3_pytorch_ros detector.launch
 
 
 
+////////////////// Spawning and deleting objects//////////////////
 
+rosrun mvp_grasping spawn_models.py
+
+rosrun mvp_grasping delete_models.py
 
