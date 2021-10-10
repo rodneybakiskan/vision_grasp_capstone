@@ -22,34 +22,30 @@ import geometry_msgs
 from math import pi
 from std_msgs.msg import String
 from moveit_commander.conversions import pose_to_list
+from tf.transformations import quaternion_from_euler
 
+from gazebo_msgs.srv import SpawnModel, SpawnModelRequest, SpawnModelResponse, DeleteModel
+from spawn_models import create_cube_request
 
 class OpenLoopGraspController(object):
 
     def __init__(self):
-        # GGCNN stuff
+        ##
+        # 
+        #  GGCNN stuff
+
+
         ggcnn_service_name = '/ggcnn_service'
         rospy.wait_for_service(ggcnn_service_name + '/predict')
         self.ggcnn_srv = rospy.ServiceProxy(
             ggcnn_service_name + '/predict', GraspPrediction)
 
         self.best_grasp = Grasp()
-
-        # self.pregrasp_pose = [(rospy.get_param('/grasp_entropy_node/histogram/bounds/x2') + rospy.get_param('/grasp_entropy_node/histogram/bounds/x1'))/2 - 0.03,
-        #                      (rospy.get_param('/grasp_entropy_node/histogram/bounds/y2') + rospy.get_param('/grasp_entropy_node/histogram/bounds/y1'))/2 + 0.10,
-        #                      rospy.get_param('/grasp_entropy_node/height/z1') + 0.05,
-        #                      2**0.5/2, -2**0.5/2, 0, 0]
-
-        # self.last_weight = 0
-        # self.__weight_increase_check()
-
-        # def __recover_robot_from_error(self):
-        #    rospy.logerr('Recovering')
-        #    self.pc.recover()
-        #    rospy.logerr('Done')
-        #    self.ROBOT_ERROR_DETECTED = False
+        ##
+        # 
 
         # Moveit stuff
+
         self.timeout = 50
         # Defines groups
         moveit_commander.roscpp_initialize(sys.argv)
@@ -89,7 +85,9 @@ class OpenLoopGraspController(object):
         print(self.robot.get_current_state())
         print("")
 
-    # Sets the robot arm to start postion (gripper not included)
+    ## 
+    # 
+    # Member functions
 
     def moveToHome(self):
         self.arm_group.set_named_target("home")
@@ -123,6 +121,38 @@ class OpenLoopGraspController(object):
 
         plan1 = self.arm_group.go()
 
+    def lowerGripper(self):
+        waypoints = []
+        waypoints.append(self.arm_group.get_current_pose().pose)
+        pose_target = geometry_msgs.msg.Pose()
+        pose_target.position.x = waypoints[0].position.x 
+        pose_target.position.y = waypoints[0].position.y
+        pose_target.position.z = waypoints[0].position.z - 0.1
+        pose_target.orientation.x = waypoints[0].orientation.x 
+        pose_target.orientation.y = waypoints[0].orientation.y 
+        pose_target.orientation.z = waypoints[0].orientation.z 
+        pose_target.orientation.w = waypoints[0].orientation.w 
+        
+        print(pose_target)
+        self.arm_group.set_pose_target(pose_target)
+        plan1 = self.arm_group.go()
+
+    def raiseGripper(self):
+        waypoints = []
+        waypoints.append(self.arm_group.get_current_pose().pose)
+        pose_target = geometry_msgs.msg.Pose()
+        pose_target.position.x = waypoints[0].position.x 
+        pose_target.position.y = waypoints[0].position.y
+        pose_target.position.z = waypoints[0].position.z + 0.1
+        pose_target.orientation.x = waypoints[0].orientation.x 
+        pose_target.orientation.y = waypoints[0].orientation.y 
+        pose_target.orientation.z = waypoints[0].orientation.z 
+        pose_target.orientation.w = waypoints[0].orientation.w 
+        
+        print(pose_target)
+        self.arm_group.set_pose_target(pose_target)
+        plan1 = self.arm_group.go()
+
     # Opens gripper
 
     def OpenGripper(self):
@@ -154,7 +184,7 @@ class OpenLoopGraspController(object):
         #scene.add_box(box_name,box_pose, size=(1,1,1))
 
     def Attachitem(self):
-        grasping_group = 'gripper'
+        grasping_group = 'gripper2'
         touch_links = self.robot.get_link_names(group=grasping_group)
         self.scene.attach_box(self.eef_link, name, touch_links=touch_links)
 
@@ -193,7 +223,6 @@ class OpenLoopGraspController(object):
         moveit_commander.roscpp_shutdown()
 
     def get_grasp(self):
-
         ret = self.ggcnn_srv.call()
         if not ret.success:
             print("Failed grasp")
@@ -204,26 +233,14 @@ class OpenLoopGraspController(object):
         rospy.sleep(1)
 
         # Offset for initial pose.
-
-        initial_offset = 0.10
-        LINK_EE_OFFSET = 0.138
-        tfh.publish_pose_as_transform(best_grasp.pose, 'base_link', 'Grasp', 5)
+        EE_offset = 0.10
+        Z_offset = 0.19
+        tfh.publish_pose_as_transform(best_grasp.pose, 'base_link', 'Grasp', 0.5)
         # Add some limits, plus a starting offset.
         # best_grasp.pose.position.z = max(best_grasp.pose.position.z - 0.01, 0.026)  # 0.021 = collision with ground
-        best_grasp.pose.position.z += initial_offset + \
-            LINK_EE_OFFSET  # Offset from end efector position to
-        tfh.publish_pose_as_transform(
-            best_grasp.pose, 'base_link', 'GraspAfterTransform', 5)
+        best_grasp.pose.position.z += EE_offset + \
+            Z_offset  # Offset from end efector position
         print(self.best_grasp.pose)
-
-        raw_input('Grasp object?')
-        #        self.pc.set_gripper(best_grasp.width, wait=False)
-        #        rospy.sleep(0.1)
-        #        self.pc.goto_pose(best_grasp.pose, velocity=0.1)
-
-        # Reset the position
-        #        best_grasp.pose.position.z -= initial_offset + LINK_EE_OFFSET
-
         return True
 
     # heads to the position given by GGCNN
@@ -235,49 +252,68 @@ class OpenLoopGraspController(object):
 
         plan1 = self.arm_group.go()
 
+    def moveToFakeGrasp(self):
+        pose_target = geometry_msgs.msg.Pose()
+        pose_target.position.x = 0
+        pose_target.position.y = 0
+        pose_target.position.z = 0.36
+
+        quaternion = quaternion_from_euler(1.57079632679, 0, 0)
+
+        pose_target.orientation.x = quaternion[0]
+        pose_target.orientation.y = quaternion[1]
+        pose_target.orientation.z = quaternion[2]
+        pose_target.orientation.w = quaternion[3]
+
+        print(pose_target)
+        self.arm_group.set_pose_target(pose_target)
+
+        plan1 = self.arm_group.go()
+
     def stop(self):
         self.pc.stop()
 
-    #GGCNN testing
-    def goGGTest(self):
-        while not rospy.is_shutdown():
-            raw_input('Press Enter to move to overlook position.')
-            self.moveToOverlook()
-            raw_input('Press Enter to get GGCNN grasp.')
-            self.get_grasp()
-            raw_input('Press Enter to move to GGCNN grasp.')
-            self.moveToGrasp()
-
-    #gripper testing
-    def goGripperTest(self):
-        while not rospy.is_shutdown():
-            raw_input('Press Enter to close gripper.')
-            self.CloseGripper()
-            raw_input('Press Enter to open gripper.')
-            self.OpenGripper()
-            raw_input('Press Enter to move to overlook position.')
-            self.moveToOverlook()
-            while (True):
-                print('closing gripper.')
-                self.CloseGripper()
-                print('opening gripper.')
-                self.OpenGripper()
+    def spawningObject(self):
+        spawn_srv = rospy.ServiceProxy('/gazebo/spawn_sdf_model', SpawnModel)
+        rospy.loginfo("Waiting for /gazebo/spawn_sdf_model service...")
+        spawn_srv.wait_for_service()
+        rospy.loginfo("Connected to service!")
+        # Spawn object 1
+        rospy.loginfo("Spawning cube1")
+        req1 = create_cube_request("cube1",
+                    0.0, 0.0, 0.12,  # position
+                    0.0, 0.0, 0.0,  # rotation
+                    0.05, 0.05, 0.05)  # size
+        spawn_srv.call(req1)
+        rospy.sleep(1.0)
+    
+    def deleteObject(self):
+        delete_model = rospy.ServiceProxy('/gazebo/delete_model', DeleteModel)
+        resp_delete = delete_model("cube1")
 
     #main
     def go(self):
         # self.moveToHome()
         raw_input('Press Enter to Start.')
         while not rospy.is_shutdown():
+            self.OpenGripper()
             self.moveToOverlook()
+
+            # self.deleteObject()
+            # self.spawningObject()
+
             raw_input('Press Enter to attempt to grasp object')
             self.get_grasp()
             self.moveToGrasp()
+            # self.moveToFakeGrasp()
+            self.lowerGripper()
             self.CloseGripper()
-            raw_input('Press Enter to move back to overlook position')
+            self.raiseGripper()
+            # raw_input('Press Enter to move back to overlook position')
+
+
 
 if __name__ == '__main__':
     rospy.init_node('panda_open_loop_grasp')
     pg = OpenLoopGraspController()
-    # pg.goGGTest()
-    # pg.goGripperTest()
     pg.go()

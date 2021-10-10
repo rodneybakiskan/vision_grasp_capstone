@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: cma_urdf_description
+    relative_path: urdf/cma_urdf.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/cma_urdf.srdf
+  CONFIG:
+    author_name: weeeeeee
+    author_email: 123@123.com
+    generated_timestamp: 1633680808

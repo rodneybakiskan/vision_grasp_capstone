@@ -1,4 +1,4 @@
-realsense2_description
+urdf_descriptions_plugins/realsense2_description
 /home/liam/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense2_description/cmake.lock /home/liam/git/vision_grasp_capstone/ws_capstone/devel/./cmake.lock
 /home/liam/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense2_description/lib/pkgconfig/realsense2_description.pc /home/liam/git/vision_grasp_capstone/ws_capstone/devel/lib/pkgconfig/realsense2_description.pc
 /home/liam/git/vision_grasp_capstone/ws_capstone/devel/.private/realsense2_description/share/realsense2_description/cmake/realsense2_descriptionConfig-version.cmake /home/liam/git/vision_grasp_capstone/ws_capstone/devel/share/realsense2_description/cmake/realsense2_descriptionConfig-version.cmake
