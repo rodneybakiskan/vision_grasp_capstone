@@ -234,12 +234,12 @@ class OpenLoopGraspController(object):
 
         # Offset for initial pose.
         EE_offset = 0.10
-        Z_offset = 0.2
+        Z_offset = 0.19
         tfh.publish_pose_as_transform(best_grasp.pose, 'base_link', 'Grasp', 0.5)
         # Add some limits, plus a starting offset.
         # best_grasp.pose.position.z = max(best_grasp.pose.position.z - 0.01, 0.026)  # 0.021 = collision with ground
         best_grasp.pose.position.z += EE_offset + \
-            Z_offset  # Offset from end efector position to
+            Z_offset  # Offset from end efector position
         print(self.best_grasp.pose)
         return True
 
