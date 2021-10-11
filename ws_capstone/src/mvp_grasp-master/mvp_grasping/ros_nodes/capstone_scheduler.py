@@ -26,6 +26,7 @@ from tf.transformations import quaternion_from_euler
 
 from gazebo_msgs.srv import SpawnModel, SpawnModelRequest, SpawnModelResponse, DeleteModel
 from spawn_models import create_cube_request
+from delete_models import delete_object
 
 class OpenLoopGraspController(object):
 
@@ -254,10 +255,7 @@ class OpenLoopGraspController(object):
                     0.05, 0.05, 0.05)  # size
         spawn_srv.call(req1)
         rospy.sleep(1.0)
-    
-    def deleteObject(self):
-        delete_model = rospy.ServiceProxy('/gazebo/delete_model', DeleteModel)
-        resp_delete = delete_model("cube1")
+
 
     #main
     def go(self):
@@ -265,7 +263,7 @@ class OpenLoopGraspController(object):
         raw_input('Press Enter to Start.')
         while not rospy.is_shutdown():
             self.OpenGripper()
-            self.deleteObject()
+            delete_object("cube1")
             self.spawningObject()
 
             self.moveToPosition(-0.3,0,0.5,1.57079632679,0,0) #overlook 1 in the form (x,y,z,thetaX,thetaY,thetaZ)
