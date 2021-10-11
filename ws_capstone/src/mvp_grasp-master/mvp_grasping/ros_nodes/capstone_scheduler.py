@@ -105,54 +105,6 @@ class OpenLoopGraspController(object):
         Graspinglocation = geometry_msgs.msg
         return Graspinglocation
 
-    def moveToPose(self):
-        pose_target = geometry_msgs.msg.Pose()
-        pose_target.position.x = -0.0271481189619
-        pose_target.position.y = -0.0247678443653
-        pose_target.position.z = 0.0164586391632
-
-        pose_target.orientation.x = 0.996936374366
-        pose_target.orientation.y = 0.078216785069
-        pose_target.orientation.z = 0
-        pose_target.orientation.w = 0
-
-        print(pose_target)
-        self.arm_group.set_pose_target(pose_target)
-
-        plan1 = self.arm_group.go()
-
-    def lowerGripper(self):
-        waypoints = []
-        waypoints.append(self.arm_group.get_current_pose().pose)
-        pose_target = geometry_msgs.msg.Pose()
-        pose_target.position.x = waypoints[0].position.x 
-        pose_target.position.y = waypoints[0].position.y
-        pose_target.position.z = waypoints[0].position.z - 0.1
-        pose_target.orientation.x = waypoints[0].orientation.x 
-        pose_target.orientation.y = waypoints[0].orientation.y 
-        pose_target.orientation.z = waypoints[0].orientation.z 
-        pose_target.orientation.w = waypoints[0].orientation.w 
-        
-        print(pose_target)
-        self.arm_group.set_pose_target(pose_target)
-        plan1 = self.arm_group.go()
-
-    def raiseGripper(self):
-        waypoints = []
-        waypoints.append(self.arm_group.get_current_pose().pose)
-        pose_target = geometry_msgs.msg.Pose()
-        pose_target.position.x = waypoints[0].position.x 
-        pose_target.position.y = waypoints[0].position.y
-        pose_target.position.z = waypoints[0].position.z + 0.1
-        pose_target.orientation.x = waypoints[0].orientation.x 
-        pose_target.orientation.y = waypoints[0].orientation.y 
-        pose_target.orientation.z = waypoints[0].orientation.z 
-        pose_target.orientation.w = waypoints[0].orientation.w 
-        
-        print(pose_target)
-        self.arm_group.set_pose_target(pose_target)
-        plan1 = self.arm_group.go()
-
     # Opens gripper
 
     def OpenGripper(self):
@@ -252,13 +204,13 @@ class OpenLoopGraspController(object):
 
         plan1 = self.arm_group.go()
 
-    def moveToFakeGrasp(self):
+    def moveToPosition(self,x,y,z,xt,yt,zt):
         pose_target = geometry_msgs.msg.Pose()
-        pose_target.position.x = 0
-        pose_target.position.y = 0
-        pose_target.position.z = 0.36
+        pose_target.position.x = x
+        pose_target.position.y = y
+        pose_target.position.z = z
 
-        quaternion = quaternion_from_euler(1.57079632679, 0, 0)
+        quaternion = quaternion_from_euler(xt, yt, zt)
 
         pose_target.orientation.x = quaternion[0]
         pose_target.orientation.y = quaternion[1]
@@ -268,6 +220,22 @@ class OpenLoopGraspController(object):
         print(pose_target)
         self.arm_group.set_pose_target(pose_target)
 
+        plan1 = self.arm_group.go()
+
+    def displaceToPosition(self,x,y,z):
+        waypoints = []
+        waypoints.append(self.arm_group.get_current_pose().pose)
+        pose_target = geometry_msgs.msg.Pose()
+        pose_target.position.x = waypoints[0].position.x + x
+        pose_target.position.y = waypoints[0].position.y + y
+        pose_target.position.z = waypoints[0].position.z + z
+        pose_target.orientation.x = waypoints[0].orientation.x 
+        pose_target.orientation.y = waypoints[0].orientation.y 
+        pose_target.orientation.z = waypoints[0].orientation.z 
+        pose_target.orientation.w = waypoints[0].orientation.w 
+        
+        print(pose_target)
+        self.arm_group.set_pose_target(pose_target)
         plan1 = self.arm_group.go()
 
     def stop(self):
@@ -297,18 +265,20 @@ class OpenLoopGraspController(object):
         raw_input('Press Enter to Start.')
         while not rospy.is_shutdown():
             self.OpenGripper()
-            self.moveToOverlook()
+            self.deleteObject()
+            self.moveToPosition(0,0,0.8,1.57079632679,0,0) #overlook
+            
+            self.spawningObject()
 
-            # self.deleteObject()
-            # self.spawningObject()
-
-            raw_input('Press Enter to attempt to grasp object')
-            self.get_grasp()
-            self.moveToGrasp()
-            # self.moveToFakeGrasp()
-            self.lowerGripper()
+            # raw_input('Press Enter to attempt to grasp object')
+            # self.get_grasp()
+            # self.moveToGrasp()
+            self.moveToPosition(0,0,0.36,1.57079632679,0,0) #fake grasp
+            self.displaceToPosition(0,0,-0.1) #lower by 0.1
             self.CloseGripper()
-            self.raiseGripper()
+            self.displaceToPosition(0,0,0.1) #raise by 0.1
+            self.moveToPosition(0,0.5,0.36,1.57079632679,0,0) #drop off location
+            self.displaceToPosition(0,0,-0.1) #lower by 0.1
             # raw_input('Press Enter to move back to overlook position')
 
 
