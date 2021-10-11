@@ -433,7 +433,7 @@
     <parent link="Base_UR5_1"/>
     <child link="Link1_UR5_1"/>
     <axis xyz="-0.0 0.0 -1.0"/>
-    <limit lower="-3.1415" upper="3.1415" velocity="5" effort="1000"/>
+    <limit lower="0" upper="6.28318530718" velocity="5" effort="1000"/>
   </joint>
 
   <joint name="rev_a2" type="revolute">
@@ -441,7 +441,7 @@
     <parent link="Link1_UR5_1"/>
     <child link="Link2_UR5_1"/>
     <axis xyz="-0.0 1.0 0.0"/>
-    <limit lower="0" upper="3.1415" velocity="5" effort="1000"/>
+    <limit lower="-1.57079632679" upper="3.1415" velocity="5" effort="1000"/>
   </joint>
 
   <joint name="rev_a3" type="revolute">
@@ -465,7 +465,7 @@
     <parent link="Link4_UR5_1"/>
     <child link="Link5_UR5_1"/>
     <axis xyz="-0.0 -0.0 1.0"/>
-    <limit lower="-3.1415" upper="3.1415" velocity="5" effort="1000"/>
+    <limit lower="0" upper="3.1415" velocity="5" effort="1000"/>
   </joint>
 
   <joint name="rev_a6" type="revolute">

@@ -266,7 +266,9 @@ class OpenLoopGraspController(object):
         while not rospy.is_shutdown():
             self.OpenGripper()
             self.deleteObject()
-            self.moveToPosition(0,0,0.8,1.57079632679,0,0) #overlook
+            self.moveToPosition(-0.3,0,0.5,1.57079632679,0,0) #overlook 1
+            self.moveToPosition(0.3,0,0.6,1.57079632679,0,0) #overlook 3
+            self.moveToPosition(0,0,0.6,1.57079632679,0,0) #overlook 2
             
             self.spawningObject()
 
