@@ -20,14 +20,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://cma_urdf_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://cma_urdf_description/meshes/table2.dae" scale="0.01 0.01 0.01"/>
       </geometry>
       <material name="silver"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://cma_urdf_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://cma_urdf_description/meshes/table.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -428,46 +428,52 @@
     <child link="Base_UR5_1"/>
   </joint>
 
-  <joint name="rev_a1" type="continuous">
+  <joint name="rev_a1" type="revolute">
     <origin rpy="0 0 0" xyz="0.0 0.0 0.0991"/>
     <parent link="Base_UR5_1"/>
     <child link="Link1_UR5_1"/>
     <axis xyz="-0.0 0.0 -1.0"/>
+    <limit lower="-3.1415" upper="3.1415" velocity="5" effort="1000"/>
   </joint>
 
-  <joint name="rev_a2" type="continuous">
+  <joint name="rev_a2" type="revolute">
     <origin rpy="0 0 0" xyz="0.0 -0.0744 0.0634"/>
     <parent link="Link1_UR5_1"/>
     <child link="Link2_UR5_1"/>
     <axis xyz="-0.0 1.0 0.0"/>
+    <limit lower="0" upper="3.1415" velocity="5" effort="1000"/>
   </joint>
 
-  <joint name="rev_a3" type="continuous">
+  <joint name="rev_a3" type="revolute">
     <origin rpy="0 0 0" xyz="0.0 0.0 0.425"/>
     <parent link="Link2_UR5_1"/>
     <child link="Link3_UR5_1"/>
     <axis xyz="0.0 1.0 -0.0"/>
+    <limit lower="0.0" upper="3.1415" velocity="5" effort="1000"/>
   </joint>
 
-  <joint name="rev_a4" type="continuous">
+  <joint name="rev_a4" type="revolute">
     <origin rpy="0 0 0" xyz="0.0 0.0215 0.39225"/>
     <parent link="Link3_UR5_1"/>
     <child link="Link4_UR5_1"/>
     <axis xyz="-0.0 -1.0 -0.0"/>
+    <limit lower="-3.1415" upper="3.1415" velocity="5" effort="1000"/>
   </joint>
 
-  <joint name="rev_a5" type="continuous">
+  <joint name="rev_a5" type="revolute">
     <origin rpy="0 0 0" xyz="0.0 -0.0804 0.0463"/>
     <parent link="Link4_UR5_1"/>
     <child link="Link5_UR5_1"/>
     <axis xyz="-0.0 -0.0 1.0"/>
+    <limit lower="-3.1415" upper="3.1415" velocity="5" effort="1000"/>
   </joint>
 
-  <joint name="rev_a6" type="continuous">
+  <joint name="rev_a6" type="revolute">
     <origin rpy="0 0 0" xyz="0.0 -0.0463 0.0534"/>
     <parent link="Link5_UR5_1"/>
     <child link="Link6_UR5_1"/>
     <axis xyz="0.0 -1.0 -0.0"/>
+    <limit lower="-3.1415" upper="3.1415" velocity="5" effort="1000"/>
   </joint>
 
   <!-- <joint name="rev_grp" type="revolute">

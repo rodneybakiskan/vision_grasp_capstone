@@ -147,11 +147,11 @@
       <!-- <gripper_link>robotiq_85_left_finger_link</gripper_link>
       <gripper_link>robotiq_85_right_finger_link</gripper_link> -->
     </arm>
-    <forces_angle_tolerance>100</forces_angle_tolerance>
+    <forces_angle_tolerance>90</forces_angle_tolerance>
     <update_rate>4</update_rate>
     <grip_count_threshold>1</grip_count_threshold>
     <max_grip_count>8</max_grip_count>
-    <release_tolerance>0.01</release_tolerance>
+    <release_tolerance>0.015</release_tolerance>
     <disable_collisions_on_attach>true</disable_collisions_on_attach>
     <contact_topic>__default_topic__</contact_topic>
   </plugin>
