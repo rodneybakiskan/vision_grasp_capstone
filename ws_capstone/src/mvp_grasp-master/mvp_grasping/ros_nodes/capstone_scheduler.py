@@ -266,21 +266,25 @@ class OpenLoopGraspController(object):
         while not rospy.is_shutdown():
             self.OpenGripper()
             self.deleteObject()
-            self.moveToPosition(-0.3,0,0.5,1.57079632679,0,0) #overlook 1
+            self.spawningObject()
+
+            self.moveToPosition(-0.3,0,0.5,1.57079632679,0,0) #overlook 1 in the form (x,y,z,thetaX,thetaY,thetaZ)
             self.moveToPosition(0.3,0,0.6,1.57079632679,0,0) #overlook 3
             self.moveToPosition(0,0,0.6,1.57079632679,0,0) #overlook 2
-            
-            self.spawningObject()
 
             # raw_input('Press Enter to attempt to grasp object')
             # self.get_grasp()
             # self.moveToGrasp()
+
             self.moveToPosition(0,0,0.36,1.57079632679,0,0) #fake grasp
+
             self.displaceToPosition(0,0,-0.1) #lower by 0.1
             self.CloseGripper()
             self.displaceToPosition(0,0,0.1) #raise by 0.1
+
             self.moveToPosition(0,0.5,0.36,1.57079632679,0,0) #drop off location
             self.displaceToPosition(0,0,-0.1) #lower by 0.1
+            
             # raw_input('Press Enter to move back to overlook position')
 
 
