@@ -40,7 +40,7 @@
             <child link="${prefix}robotiq_85_left_knuckle_link"/>
             <axis xyz="0 0 1"/>
             <origin rpy="${pi} 0.0 0.0" xyz="0.05490451627 0.03060114443 0.0"/>
-            <limit lower="0.0" upper="0.8" velocity="2.0" effort="9.01"/>
+            <limit lower="0.0" upper="0.8" velocity="2.0" effort="20.01"/>
             <dynamics friction="9"/>
         </joint>
 
@@ -49,7 +49,7 @@
             <child link="${prefix}robotiq_85_right_knuckle_link"/>
             <axis xyz="0 0 1"/>
             <origin rpy="0.0 0.0 0.0" xyz="0.05490451627 -0.03060114443 0.0"/>
-            <limit lower="-3.14" upper="3.14" velocity="2" effort="9.01"/>
+            <limit lower="-3.14" upper="3.14" velocity="2" effort="20.01"/>
             <mimic joint="${prefix}robotiq_85_left_knuckle_joint"/>
             <!-- <dynamics damping="0.7"/> -->
             <dynamics friction="9"/>
@@ -162,7 +162,7 @@
             <child link="${prefix}robotiq_85_left_inner_knuckle_link"/>
             <axis xyz="0 0 1"/>
             <origin xyz="0.06142 0.0127 0" rpy="${pi} 0.0 0.0" />
-            <limit lower="-3.14" upper="3.14" velocity="2" effort="9.01"/>
+            <limit lower="-3.14" upper="3.14" velocity="2" effort="20.01"/>
             <mimic joint="${prefix}robotiq_85_left_knuckle_joint" offset="0"/>
             <!-- <dynamics damping="0.7"/> -->
             <dynamics friction="9"/>
@@ -173,7 +173,7 @@
             <child link="${prefix}robotiq_85_right_inner_knuckle_link"/>
             <axis xyz="0 0 1"/>
             <origin xyz="0.06142 -0.0127 0" rpy="0 0 0"/>
-            <limit lower="-3.14" upper="3.14" velocity="2" effort="9.01"/>
+            <limit lower="-3.14" upper="3.14" velocity="2" effort="20.01"/>
             <mimic joint="${prefix}robotiq_85_left_knuckle_joint" offset="0"/>
             <!-- <dynamics damping="0.7"/> -->
             <dynamics friction="9"/>
@@ -223,7 +223,7 @@
             <child link="${prefix}robotiq_85_left_finger_tip_link"/>
             <axis xyz="0 0 1"/>
             <origin xyz="0.04303959807 -0.03759940821 0.0" rpy="0.0 0.0 0.0"/>
-            <limit lower="-3.14" upper="3.14" velocity="2" effort="9.01"/>
+            <limit lower="-3.14" upper="3.14" velocity="2" effort="20.01"/>
             <mimic joint="${prefix}robotiq_85_left_knuckle_joint" multiplier="-1"/>
             <!-- <dynamics damping="0.7"/> -->
             <dynamics friction="9"/>
@@ -234,7 +234,7 @@
             <child link="${prefix}robotiq_85_right_finger_tip_link"/>
             <axis xyz="0 0 1"/>
             <origin rpy="0.0 0.0 0.0" xyz="0.04303959807 -0.03759940821  0.0"/>
-            <limit lower="-3.14" upper="3.14" velocity="2" effort="9.01"/>
+            <limit lower="-3.14" upper="3.14" velocity="2" effort="20.01"/>
             <mimic joint="${prefix}robotiq_85_left_knuckle_joint" multiplier="-1"/>
             <!-- <dynamics damping="0.7"/> -->
             <dynamics friction="9"/>
