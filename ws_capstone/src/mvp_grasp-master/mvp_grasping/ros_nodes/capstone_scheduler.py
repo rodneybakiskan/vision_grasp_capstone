@@ -190,7 +190,7 @@ class OpenLoopGraspController(object):
 
         # Offset for initial pose.
         EE_offset = 0.10
-        Z_offset = 0.16
+        Z_offset = 0.20
         tfh.publish_pose_as_transform(
             best_grasp.pose, 'base_link', 'Grasp', 0.5)
         # Add some limits, plus a starting offset.
