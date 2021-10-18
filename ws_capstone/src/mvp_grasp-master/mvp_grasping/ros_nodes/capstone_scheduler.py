@@ -201,7 +201,7 @@ class OpenLoopGraspController(object):
         return True
 
     # invoke YOLO
-    def getObjectsFromYOLO(self, bb):
+    def getObjectsFromYOLO(self, bb):#change to append current yolo output to [0]----------------------------------------------------------
         if self.scanning:
             length = len(bb.bounding_boxes)
             if (length > 0):
@@ -238,22 +238,22 @@ class OpenLoopGraspController(object):
 
         x=1
         y=1
-        i=0
+        # i=0
         self.scanning = True
         while abs(x)>0.03 and abs(y)>0.03:
             x, y = self.getMidPoint(self.latest_scene[i])
             y = y * -1 
-            i+=5
+            # i+=1
             print(x,y)
             if x > 0:
-                self.displaceToPosition(-0.005,0,0)
+                self.displaceToPosition(-0.005,0,0,False)
                 
             if x < 0:
-                self.displaceToPosition(-0.005,0,0)
+                self.displaceToPosition(-0.005,0,0,False)
             if y > 0:
-                self.displaceToPosition(0,-0.005,0)
+                self.displaceToPosition(0,-0.005,0,False)
             if y < 0:
-                self.displaceToPosition(0,-0.005,0)
+                self.displaceToPosition(0,-0.005,0,False)
         self.scanning = False
 
 
@@ -262,7 +262,7 @@ class OpenLoopGraspController(object):
         self.arm_group.set_pose_target(self.best_grasp.pose)
         plan1 = self.arm_group.go()
 
-    def moveToPosition(self, x, y, z, xt, yt, zt):
+    def moveToPosition(self, x, y, z, xt, yt, zt, waitArg = True):
         pose_target = geometry_msgs.msg.Pose()
         pose_target.position.x = x
         pose_target.position.y = y
@@ -277,9 +277,9 @@ class OpenLoopGraspController(object):
 
         # print(pose_target)
         self.arm_group.set_pose_target(pose_target)
-        plan1 = self.arm_group.go()
+        plan1 = self.arm_group.go(wait = waitArg)
 
-    def displaceToPosition(self, x, y, z):
+    def displaceToPosition(self, x, y, z, waitArg = True):
         waypoints = []
         waypoints.append(self.arm_group.get_current_pose().pose)
         pose_target = geometry_msgs.msg.Pose()
@@ -293,7 +293,7 @@ class OpenLoopGraspController(object):
 
         # print(pose_target)
         self.arm_group.set_pose_target(pose_target)
-        plan1 = self.arm_group.go()
+        plan1 = self.arm_group.go(wait = waitArg)
 
     def stop(self):
         self.pc.stop()
@@ -340,13 +340,13 @@ class OpenLoopGraspController(object):
             gg=str(self.latest_scene[0].Class)
             print("gg:",gg,sep='')
             if gg == "cup":
-                self.moveToPosition(0, 0.5, 0.36, 1.57079632679,
+                self.moveToPosition(0, 0.5, 0.36, pi/2,
                                     0, 0)  # drop off location
                 self.displaceToPosition(0, 0, -0.1)  # lower by 0.1
                 self.OpenGripper()
                 delete_object("plastic_cup1")
             elif gg == "coke":
-                self.moveToPosition(-0.2, 0.5, 0.36, 1.57079632679,
+                self.moveToPosition(-0.2, 0.5, 0.36, pi/2,
                                     0, 0)  # drop off location
                 self.displaceToPosition(0, 0, -0.1)  # lower by 0.1
                 self.OpenGripper()
