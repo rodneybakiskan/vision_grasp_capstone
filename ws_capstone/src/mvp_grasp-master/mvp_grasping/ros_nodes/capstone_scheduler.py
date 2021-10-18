@@ -282,8 +282,8 @@ class OpenLoopGraspController(object):
         raw_input('Press Enter to Start.')
         while not rospy.is_shutdown():
             self.OpenGripper()
-            delete_object("cube1")
-            self.spawningObject()
+            # delete_object("cube1")
+            # self.spawningObject()
 
             self.scanObjects()
 
