@@ -28,13 +28,16 @@ from gazebo_msgs.srv import SpawnModel, SpawnModelRequest, SpawnModelResponse, D
 from spawn_models import create_cube_request
 from delete_models import delete_object
 
+from yolov3_pytorch_ros.msg import BoundingBoxes, BoundingBox
+
+
 class OpenLoopGraspController(object):
 
     def __init__(self):
-        ##
-        # 
-        #  GGCNN stuff
+        ## Initialises the OpenLoopGraspController object
 
+        ##
+        #  GGCNN stuff
 
         ggcnn_service_name = '/ggcnn_service'
         rospy.wait_for_service(ggcnn_service_name + '/predict')
@@ -42,9 +45,19 @@ class OpenLoopGraspController(object):
             ggcnn_service_name + '/predict', GraspPrediction)
 
         self.best_grasp = Grasp()
-        ##
-        # 
 
+        ##
+        # YOLO
+
+        yolo_service_name = '/detected_objects_in_image'
+        self.yolo_srv = rospy.Subscriber(
+            yolo_service_name, BoundingBoxes, self.getObjectsFromYOLO)
+
+        self.latest_scanned_objects = []
+        self.latest_scene = []
+
+
+        ##
         # Moveit stuff
 
         self.timeout = 50
@@ -86,8 +99,8 @@ class OpenLoopGraspController(object):
         print(self.robot.get_current_state())
         print("")
 
-    ## 
-    # 
+    ##
+    #
     # Member functions
 
     def moveToHome(self):
@@ -99,12 +112,6 @@ class OpenLoopGraspController(object):
     def moveToOverlook(self):
         self.arm_group.set_named_target("overlook")
         plan1 = self.arm_group.go()
-
-    # Grabs location of item of GGCNN(needs location)
-
-    def findposition(self):
-        Graspinglocation = geometry_msgs.msg
-        return Graspinglocation
 
     # Opens gripper
 
@@ -120,12 +127,6 @@ class OpenLoopGraspController(object):
     def CloseGripper(self):
         self.gripper_group.set_named_target("close")
         plan1 = self.gripper_group.go()
-
-    # Determines which object is in the gripper
-
-    def chosenobject():
-        selectedname = geometry_msgs.msg.PoseStamped()
-        return selectedname
 
     # Adding Object(box) into the Plannning Scene
     #   box_pose = geometry_msgs.msg.PoseStamped()
@@ -175,6 +176,8 @@ class OpenLoopGraspController(object):
         rospy.sleep(5)
         moveit_commander.roscpp_shutdown()
 
+
+    ## invoke GGCNN
     def get_grasp(self):
         ret = self.ggcnn_srv.call()
         if not ret.success:
@@ -188,7 +191,8 @@ class OpenLoopGraspController(object):
         # Offset for initial pose.
         EE_offset = 0.10
         Z_offset = 0.19
-        tfh.publish_pose_as_transform(best_grasp.pose, 'base_link', 'Grasp', 0.5)
+        tfh.publish_pose_as_transform(
+            best_grasp.pose, 'base_link', 'Grasp', 0.5)
         # Add some limits, plus a starting offset.
         # best_grasp.pose.position.z = max(best_grasp.pose.position.z - 0.01, 0.026)  # 0.021 = collision with ground
         best_grasp.pose.position.z += EE_offset + \
@@ -196,7 +200,24 @@ class OpenLoopGraspController(object):
         print(self.best_grasp.pose)
         return True
 
-    # heads to the position given by GGCNN
+    ## invoke YOLO
+    def getObjectsFromYOLO(self, bb):
+        length = len(bb.bounding_boxes)
+        ret = [length]
+        for i in range(0,length-1):
+            ret[i]=bb.bounding_boxes[i]
+        self.latest_scanned_objects = ret
+            
+    def scanObjects(self):
+        # Move to scan positions and save objects in list
+        self.moveToPosition(-0.3, 0, 0.5, 1.57079632679, 0, 0)
+        self.latest_scene.append(self.latest_scanned_objects)
+        self.moveToPosition(0.3, 0, 0.6, 1.57079632679, 0, 0)
+        self.latest_scene.append(self.latest_scanned_objects)
+        self.moveToPosition(0, 0, 0.6, 1.57079632679, 0, 0)  
+        self.latest_scene.append(self.latest_scanned_objects)
+        print(self.latest_scene)
+
 
     def moveToGrasp(self):
 
@@ -205,7 +226,7 @@ class OpenLoopGraspController(object):
 
         plan1 = self.arm_group.go()
 
-    def moveToPosition(self,x,y,z,xt,yt,zt):
+    def moveToPosition(self, x, y, z, xt, yt, zt):
         pose_target = geometry_msgs.msg.Pose()
         pose_target.position.x = x
         pose_target.position.y = y
@@ -218,24 +239,23 @@ class OpenLoopGraspController(object):
         pose_target.orientation.z = quaternion[2]
         pose_target.orientation.w = quaternion[3]
 
-        print(pose_target)
+        # print(pose_target)
         self.arm_group.set_pose_target(pose_target)
-
         plan1 = self.arm_group.go()
 
-    def displaceToPosition(self,x,y,z):
+    def displaceToPosition(self, x, y, z):
         waypoints = []
         waypoints.append(self.arm_group.get_current_pose().pose)
         pose_target = geometry_msgs.msg.Pose()
         pose_target.position.x = waypoints[0].position.x + x
         pose_target.position.y = waypoints[0].position.y + y
         pose_target.position.z = waypoints[0].position.z + z
-        pose_target.orientation.x = waypoints[0].orientation.x 
-        pose_target.orientation.y = waypoints[0].orientation.y 
-        pose_target.orientation.z = waypoints[0].orientation.z 
-        pose_target.orientation.w = waypoints[0].orientation.w 
-        
-        print(pose_target)
+        pose_target.orientation.x = waypoints[0].orientation.x
+        pose_target.orientation.y = waypoints[0].orientation.y
+        pose_target.orientation.z = waypoints[0].orientation.z
+        pose_target.orientation.w = waypoints[0].orientation.w
+
+        # print(pose_target)
         self.arm_group.set_pose_target(pose_target)
         plan1 = self.arm_group.go()
 
@@ -250,14 +270,13 @@ class OpenLoopGraspController(object):
         # Spawn object 1
         rospy.loginfo("Spawning cube1")
         req1 = create_cube_request("cube1",
-                    0.0, 0.0, 0.12,  # position
-                    0.0, 0.0, 0.0,  # rotation
-                    0.05, 0.05, 0.05)  # size
+                                   0.0, 0.0, 0.12,  # position
+                                   0.0, 0.0, 0.0,  # rotation
+                                   0.05, 0.05, 0.05)  # size
         spawn_srv.call(req1)
         rospy.sleep(1.0)
 
-
-    #main
+    # main
     def go(self):
         # self.moveToHome()
         raw_input('Press Enter to Start.')
@@ -266,25 +285,22 @@ class OpenLoopGraspController(object):
             delete_object("cube1")
             self.spawningObject()
 
-            self.moveToPosition(-0.3,0,0.5,1.57079632679,0,0) #overlook 1 in the form (x,y,z,thetaX,thetaY,thetaZ)
-            self.moveToPosition(0.3,0,0.6,1.57079632679,0,0) #overlook 3
-            self.moveToPosition(0,0,0.6,1.57079632679,0,0) #overlook 2
+            self.scanObjects()
 
-            # raw_input('Press Enter to attempt to grasp object')
-            # self.get_grasp()
-            # self.moveToGrasp()
+            raw_input('Press Enter to attempt to grasp object')
+            self.get_grasp()
+            self.moveToGrasp()
 
-            self.moveToPosition(0,0,0.36,1.57079632679,0,0) #fake grasp
+            # self.moveToPosition(0,0,0.36,1.57079632679,0,0) #fake grasp
 
-            self.displaceToPosition(0,0,-0.1) #lower by 0.1
+            self.displaceToPosition(0, 0, -0.1)  # lower by 0.1
             self.CloseGripper()
-            self.displaceToPosition(0,0,0.1) #raise by 0.1
+            self.displaceToPosition(0, 0, 0.1)  # raise by 0.1
 
-            self.moveToPosition(0,0.5,0.36,1.57079632679,0,0) #drop off location
-            self.displaceToPosition(0,0,-0.1) #lower by 0.1
-            
-            # raw_input('Press Enter to move back to overlook position')
-
+            self.moveToPosition(0, 0.5, 0.36, 1.57079632679,
+                                0, 0)  # drop off location
+            self.displaceToPosition(0, 0, -0.1)  # lower by 0.1
+            raw_input('Press Enter to move back to overlook position')
 
 
 if __name__ == '__main__':
