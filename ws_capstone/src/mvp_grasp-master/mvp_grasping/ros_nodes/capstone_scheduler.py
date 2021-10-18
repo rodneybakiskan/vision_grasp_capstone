@@ -230,10 +230,31 @@ class OpenLoopGraspController(object):
 
     def goToObj(self):
 
-        x, y = self.getMidPoint(self.latest_scene[0])
+        # x, y = self.getMidPoint(self.latest_scene[0])
+        # yoffset=0.25
+        # rospy.loginfo(x)
+        # rospy.loginfo(y)
+        # self.moveToPosition(x, y + yoffset, 0.4, pi/2, 0, 0)   
 
-        yoffset=0.15
-        self.moveToPosition(x, y + yoffset, 0.4, pi/2, 0, 0)         
+        x=1
+        y=1
+        i=0
+        self.scanning = True
+        while abs(x)>0.03 and abs(y)>0.03:
+            x, y = self.getMidPoint(self.latest_scene[i])
+            y = y * -1 
+            i+=5
+            print(x,y)
+            if x > 0:
+                self.displaceToPosition(-0.005,0,0)
+                
+            if x < 0:
+                self.displaceToPosition(-0.005,0,0)
+            if y > 0:
+                self.displaceToPosition(0,-0.005,0)
+            if y < 0:
+                self.displaceToPosition(0,-0.005,0)
+        self.scanning = False
 
 
     def moveToGrasp(self):
@@ -297,11 +318,12 @@ class OpenLoopGraspController(object):
         raw_input('Press Enter to go to start.')
         while not rospy.is_shutdown():
             self.OpenGripper()
-            self.spawningObject()
+            # self.spawningObject()
             raw_input('Press Enter to scan table')
             # scan table for objects from yolo, storing them in a list self.latest_scene
             self.scanObjects()
             print(self.latest_scene[0].Class)
+            # print(type(self.latest_scene[0].Class))
             raw_input('Press Enter to go to grasp view position')
             self.goToObj()
 
@@ -314,13 +336,27 @@ class OpenLoopGraspController(object):
             self.displaceToPosition(0, 0, -0.1)  # lower by 0.1
             self.CloseGripper()
             self.displaceToPosition(0, 0, 0.1)  # raise by 0.1
+            print(self.latest_scene[0].Class)
+            gg=str(self.latest_scene[0].Class)
+            print("gg:",gg,sep='')
+            if gg == "cup":
+                self.moveToPosition(0, 0.5, 0.36, 1.57079632679,
+                                    0, 0)  # drop off location
+                self.displaceToPosition(0, 0, -0.1)  # lower by 0.1
+                self.OpenGripper()
+                delete_object("plastic_cup1")
+            elif gg == "coke":
+                self.moveToPosition(-0.2, 0.5, 0.36, 1.57079632679,
+                                    0, 0)  # drop off location
+                self.displaceToPosition(0, 0, -0.1)  # lower by 0.1
+                self.OpenGripper()
+                delete_object("coke_can1")
+            else:
+                rospy.loginfo("Nothing found!")
 
-            self.moveToPosition(0, 0.5, 0.36, 1.57079632679,
-                                0, 0)  # drop off location
-            self.displaceToPosition(0, 0, -0.1)  # lower by 0.1
-            self.OpenGripper()
+
             self.displaceToPosition(0, 0, 0.1)  # raise by 0.1
-            delete_object("cube1")
+
             raw_input('Press Enter to move back to overlook position')
 
 

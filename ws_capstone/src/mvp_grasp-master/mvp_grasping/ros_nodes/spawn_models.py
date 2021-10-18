@@ -305,8 +305,7 @@ sdf_wooden_peg = """<?xml version="1.0" ?>
 sdf_hammer = """<?xml version="1.0"?>
 <sdf version="1.4">
   <model name="hammer">
-    <static>true</static>
-    <gravity>1</gravity>
+    <static>false</static>
     <link name="link">
       <!--
       <pose>0 0 0 0 0 0</pose>
@@ -344,6 +343,7 @@ sdf_hammer = """<?xml version="1.0"?>
           </mesh>
         </geometry>
       </visual>
+      <gravity>1</gravity>
     </link>
   </model>
 </sdf>"""
@@ -436,6 +436,8 @@ sdf_plastic_cup = """<?xml version="1.0" ?>
 """
 
 
+
+
 def create_cube_request(modelname, px, py, pz, rr, rp, ry, sx, sy, sz):
     """Create a SpawnModelRequest with the parameters of the cube given.
     modelname: name of the model for gazebo
@@ -466,11 +468,11 @@ def create_cube_request(modelname, px, py, pz, rr, rp, ry, sx, sy, sz):
     return req
 
 def create_bowl_request(modelname, px, py, pz, rr, rp, ry, sx, sy, sz):
-    """Create a SpawnModelRequest with the parameters of the cube given.
+    """Create a SpawnModelRequest with the parameters of the bowl given.
     modelname: name of the model for gazebo
-    px py pz: position of the cube (and it's collision cube)
+    px py pz: position of the bowl (and it's collision bowl)
     rr rp ry: rotation (roll, pitch, yaw) of the model
-    sx sy sz: size of the cube"""
+    sx sy sz: size of the bowl"""
     bowl = deepcopy(sdf_bowl)
     # Replace size of model
     size_str = str(round(sx, 3)) + " " + \
@@ -495,11 +497,11 @@ def create_bowl_request(modelname, px, py, pz, rr, rp, ry, sx, sy, sz):
     return req
 
 def create_coke_can_request(modelname, px, py, pz, rr, rp, ry, sx, sy, sz):
-    """Create a SpawnModelRequest with the parameters of the cube given.
+    """Create a SpawnModelRequest with the parameters of the Can given.
     modelname: name of the model for gazebo
-    px py pz: position of the cube (and it's collision cube)
+    px py pz: position of the Can (and it's collision Can)
     rr rp ry: rotation (roll, pitch, yaw) of the model
-    sx sy sz: size of the cube"""
+    sx sy sz: size of the Can"""
     coke = deepcopy(sdf_coke_can)
     # Replace size of model
     size_str = str(round(sx, 3)) + " " + \
@@ -524,11 +526,11 @@ def create_coke_can_request(modelname, px, py, pz, rr, rp, ry, sx, sy, sz):
     return req
 
 def create_cricket_ball_request(modelname, px, py, pz, rr, rp, ry, sx, sy, sz):
-    """Create a SpawnModelRequest with the parameters of the cube given.
+    """Create a SpawnModelRequest with the parameters of the ball given.
     modelname: name of the model for gazebo
-    px py pz: position of the cube (and it's collision cube)
+    px py pz: position of the ball (and it's collision ball)
     rr rp ry: rotation (roll, pitch, yaw) of the model
-    sx sy sz: size of the cube"""
+    sx sy sz: size of the ball"""
     ball = deepcopy(sdf_cricket_ball)
     # Replace size of model
     size_str = str(round(sx, 3)) + " " + \
@@ -553,11 +555,11 @@ def create_cricket_ball_request(modelname, px, py, pz, rr, rp, ry, sx, sy, sz):
     return req
 
 def create_door_handle_request(modelname, px, py, pz, rr, rp, ry, sx, sy, sz):
-    """Create a SpawnModelRequest with the parameters of the cube given.
+    """Create a SpawnModelRequest with the parameters of the handle given.
     modelname: name of the model for gazebo
-    px py pz: position of the cube (and it's collision cube)
+    px py pz: position of the handle (and it's collision handle)
     rr rp ry: rotation (roll, pitch, yaw) of the model
-    sx sy sz: size of the cube"""
+    sx sy sz: size of the handle"""
     handle = deepcopy(sdf_door_handle)
     # Replace size of model
     size_str = str(round(sx, 3)) + " " + \
@@ -582,11 +584,11 @@ def create_door_handle_request(modelname, px, py, pz, rr, rp, ry, sx, sy, sz):
     return req
 
 def create_hammer_request(modelname, px, py, pz, rr, rp, ry, sx, sy, sz):
-    """Create a SpawnModelRequest with the parameters of the cube given.
+    """Create a SpawnModelRequest with the parameters of the hammer given.
     modelname: name of the model for gazebo
-    px py pz: position of the cube (and it's collision cube)
+    px py pz: position of the hammer (and it's collision hammer)
     rr rp ry: rotation (roll, pitch, yaw) of the model
-    sx sy sz: size of the cube"""
+    sx sy sz: size of the hammer"""
     hammer = deepcopy(sdf_hammer)
     # Replace size of model
     size_str = str(round(sx, 3)) + " " + \
@@ -611,11 +613,11 @@ def create_hammer_request(modelname, px, py, pz, rr, rp, ry, sx, sy, sz):
     return req
 
 def create_plastic_cup_request(modelname, px, py, pz, rr, rp, ry, sx, sy, sz):
-    """Create a SpawnModelRequest with the parameters of the cube given.
+    """Create a SpawnModelRequest with the parameters of the cup given.
     modelname: name of the model for gazebo
-    px py pz: position of the cube (and it's collision cube)
+    px py pz: position of the cup (and it's collision cup)
     rr rp ry: rotation (roll, pitch, yaw) of the model
-    sx sy sz: size of the cube"""
+    sx sy sz: size of the cup"""
     cup = deepcopy(sdf_plastic_cup)
     # Replace size of model
     size_str = str(round(sx, 3)) + " " + \
@@ -640,11 +642,11 @@ def create_plastic_cup_request(modelname, px, py, pz, rr, rp, ry, sx, sy, sz):
     return req
 
 def create_wooden_peg_request(modelname, px, py, pz, rr, rp, ry, sx, sy, sz):
-    """Create a SpawnModelRequest with the parameters of the cube given.
+    """Create a SpawnModelRequest with the parameters of the peg given.
     modelname: name of the model for gazebo
-    px py pz: position of the cube (and it's collision cube)
+    px py pz: position of the peg (and it's collision peg)
     rr rp ry: rotation (roll, pitch, yaw) of the model
-    sx sy sz: size of the cube"""
+    sx sy sz: size of the peg"""
     peg = deepcopy(sdf_wooden_peg)
     # Replace size of model
     size_str = str(round(sx, 3)) + " " + \
@@ -675,52 +677,52 @@ if __name__ == '__main__':
     spawn_srv.wait_for_service()
     rospy.loginfo("Connected to service!")
 
-    x1= random.uniform(-0.5,0.2)
+    x1= random.uniform(-0.4,0.2)
     y1= random.uniform(-0.37,0.2)
 
-    x2= random.uniform(-0.5,0.2)
+    x2= random.uniform(-0.4,0.2)
     y2= random.uniform(-0.37,0.2)
 
-    x3= random.uniform(-0.5,0.2)
+    x3= random.uniform(-0.4,0.2)
     y3= random.uniform(-0.37,0.2)
 
-    x4= random.uniform(-0.5,0.2)
+    x4= random.uniform(-0.4,0.2)
     y4= random.uniform(-0.37,0.2)
 
-    x5= random.uniform(-0.5,0.2)
+    x5= random.uniform(-0.4,0.2)
     y5= random.uniform(-0.37,0.2)
 
-    x6= random.uniform(-0.5,0.2)
+    x6= random.uniform(-0.4,0.2)
     y6= random.uniform(-0.37,0.2)
 
-    x7= random.uniform(-0.5,0.2)
+    x7= random.uniform(-0.4,0.2)
     y7= random.uniform(-0.37,0.2)
 
-    x8= random.uniform(-0.5,0.2)
+    x8= random.uniform(-0.4,0.2)
     y8= random.uniform(-0.37,0.2)
 
     
     # # Spawn Cube
 
-    rospy.loginfo("Spawning Cube")
-    rospy.loginfo(x1)
-    rospy.loginfo(y1)
-    req1 = create_cube_request("cube1",
-                              x1, y1, 0.05,  # position
-                              0.0, 0.0, 0.0,  # rotation
-                              0.05, 0.05, 0.05)  # size
-    spawn_srv.call(req1)
-    rospy.sleep(1.0)
+    # rospy.loginfo("Spawning Cube")
+    # rospy.loginfo(x1)
+    # rospy.loginfo(y1)
+    # req1 = create_cube_request("cube1",
+    #                           0, 0, 0.05,  # position
+    #                           0.0, 0.0, 0.0,  # rotation
+    #                           0.05, 0.05, 0.05)  # size
+    # spawn_srv.call(req1)
+    # rospy.sleep(1.0)
 
     # # Spawn Bowl
 
-    rospy.loginfo("Spawning Bowl")
-    req2 = create_bowl_request("bowl1",
-                              x2, y2, 0.05,  # position
-                              0.0, 0.0, 0.0,  # rotation
-                              0.8, 0.8, 0.8)  # size
-    spawn_srv.call(req2)
-    rospy.sleep(1.0)
+    # rospy.loginfo("Spawning Bowl")
+    # req2 = create_bowl_request("bowl1",
+    #                           0, 0, 0.05,  # position
+    #                           0.0, 0.0, 0.0,  # rotation
+    #                           0.8, 0.8, 0.8)  # size
+    # spawn_srv.call(req2)
+    # rospy.sleep(1.0)
 
     # # Spawn Coke can
 
@@ -734,49 +736,49 @@ if __name__ == '__main__':
 
     # # Spawn Cricket ball
 
-    rospy.loginfo("Spawning Cricket ball")
-    req2 = create_cricket_ball_request("cricket_ball1",
-                              x4, y4, 0.05,  # position
-                              0.0, 0.0, 0.0,  # rotation
-                              0.8, 0.8, 0.8)  # size
-    spawn_srv.call(req2)
-    rospy.sleep(1.0)
+    # rospy.loginfo("Spawning Cricket ball")
+    # req2 = create_cricket_ball_request("cricket_ball1",
+    #                           x4, y4, 0.05,  # position
+    #                           0.0, 0.0, 0.0,  # rotation
+    #                           0.8, 0.8, 0.8)  # size
+    # spawn_srv.call(req2)
+    # rospy.sleep(1.0)
 
     # # Spawn Door handle
 
-    rospy.loginfo("Spawning Door handle")
-    req2 = create_door_handle_request("door_handle1",
-                              x5, y5, 0.05,  # position
-                              0.0, 0.0, 0.0,  # rotation
-                              0.8, 0.8, 0.8)  # size
-    spawn_srv.call(req2)
-    rospy.sleep(1.0)
+    # rospy.loginfo("Spawning Door handle")
+    # req2 = create_door_handle_request("door_handle1",
+    #                           x5, y5, 0.05,  # position
+    #                           0.0, 0.0, 0.0,  # rotation
+    #                           0.8, 0.8, 0.8)  # size
+    # spawn_srv.call(req2)
+    # rospy.sleep(1.0)
 
     # # Spawn Hammer
 
-    rospy.loginfo("Spawning Hammer")
-    req2 = create_hammer_request("hammer1",
-                              x6, y6, 0.05,  # position
-                              0.0, 0.0, 0.0,  # rotation
-                              0.8, 0.8, 0.8)  # size
-    spawn_srv.call(req2)
-    rospy.sleep(1.0)
+    # rospy.loginfo("Spawning Hammer")
+    # req2 = create_hammer_request("hammer1",
+    #                           x6, y6, 0.05,  # position
+    #                           0.0, 0.0, 0.0,  # rotation
+    #                           0.8, 0.8, 0.8)  # size
+    # spawn_srv.call(req2)
+    # rospy.sleep(1.0)
 
     # # Spawn Wooden peg
 
-    rospy.loginfo("Spawning Wooden peg")
-    req2 = create_wooden_peg_request("wooden_peg1",
-                              x7, y7, 0.05,  # position
-                              0.0, 0.0, 0.0,  # rotation
-                              0.8, 0.8, 0.8)  # size
-    spawn_srv.call(req2)
-    rospy.sleep(1.0)
+    # rospy.loginfo("Spawning Wooden peg")
+    # req2 = create_wooden_peg_request("wooden_peg1",
+    #                           x7, y7, 0.05,  # position
+    #                           0.0, 0.0, 0.0,  # rotation
+    #                           0.8, 0.8, 0.8)  # size
+    # spawn_srv.call(req2)
+    # rospy.sleep(1.0)
 
     # # Plastic cup
 
     rospy.loginfo("Spawning Plastic cup")
     req2 = create_plastic_cup_request("plastic_cup1",
-                              x8, y8, 0.05,  # position
+                              x8, x8, 0.05,  # position
                               0.0, 0.0, 0.0,  # rotation
                               0.8, 0.8, 0.8)  # size
     spawn_srv.call(req2)
