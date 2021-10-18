@@ -32,12 +32,6 @@ package = RosPack()
 package_path = package.get_path('yolov3_pytorch_ros')
 
 # Deep learning imports
-import torch
-from torch.utils.data import DataLoader
-from torchvision import datasets
-from torch.autograd import Variable
-
-from utils.utils import *
 
 
 # Detector manager class for YOLO
