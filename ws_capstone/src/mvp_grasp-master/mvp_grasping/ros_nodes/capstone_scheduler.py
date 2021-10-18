@@ -241,7 +241,7 @@ class OpenLoopGraspController(object):
         # i=0
         self.scanning = True
         while abs(x)>0.03 and abs(y)>0.03:
-            x, y = self.getMidPoint(self.latest_scene[i])
+            x, y = self.getMidPoint(self.latest_scene[0])
             y = y * -1 
             # i+=1
             print(x,y)
