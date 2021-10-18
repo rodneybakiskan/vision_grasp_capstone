@@ -219,19 +219,24 @@ class OpenLoopGraspController(object):
         # Move to scan positions 
         self.moveToPosition(-0.3, 0, 0.5, pi/2, 0, 0)
         self.scanning = True
-        self.moveToPosition(0, 0, 0.5, pi/2, 0, 0)
-        self.moveToPosition(0.3, 0, 0.5, pi/2, 0, 0)
+        self.displaceToPosition(0.1, 0, 0)
+        self.displaceToPosition(0.1, 0, 0)
+        self.displaceToPosition(0.1, 0, 0)
+        self.displaceToPosition(0.1, 0, 0)
+        self.displaceToPosition(0.1, 0, 0)
+        self.displaceToPosition(0.1, 0, 0)
         self.scanning = False
         self.moveToPosition(0, 0, 0.5, pi/2, 0, 0)
 
     def goToObj(self):
-        print(self.latest_scene[0][0])
-        x, y = self.getMidPoint(self.latest_scene[0][0])
-        self.moveToPosition(x, y+0.3, 0.4, pi/2, 0, 0)         
+
+        x, y = self.getMidPoint(self.latest_scene[0])
+
+        yoffset=0.15
+        self.moveToPosition(x, y + yoffset, 0.4, pi/2, 0, 0)         
 
 
     def moveToGrasp(self):
-
         print("moving to grasp pose")
         self.arm_group.set_pose_target(self.best_grasp.pose)
         plan1 = self.arm_group.go()
@@ -296,7 +301,7 @@ class OpenLoopGraspController(object):
             raw_input('Press Enter to scan table')
             # scan table for objects from yolo, storing them in a list self.latest_scene
             self.scanObjects()
-
+            print(self.latest_scene[0].Class)
             raw_input('Press Enter to go to grasp view position')
             self.goToObj()
 
