@@ -34,7 +34,7 @@ from yolov3_pytorch_ros.msg import BoundingBoxes, BoundingBox
 class OpenLoopGraspController(object):
 
     def __init__(self):
-        ## Initialises the OpenLoopGraspController object
+        # Initialises the OpenLoopGraspController object
 
         ##
         #  GGCNN stuff
@@ -55,8 +55,8 @@ class OpenLoopGraspController(object):
 
         self.latest_scanned_objects = []
         self.latest_scene = []
-
-
+        self.scanning = False
+        self.target = geometry_msgs.msg.Pose()
         ##
         # Moveit stuff
 
@@ -176,8 +176,8 @@ class OpenLoopGraspController(object):
         rospy.sleep(5)
         moveit_commander.roscpp_shutdown()
 
+    # invoke GGCNN
 
-    ## invoke GGCNN
     def get_grasp(self):
         ret = self.ggcnn_srv.call()
         if not ret.success:
@@ -190,7 +190,7 @@ class OpenLoopGraspController(object):
 
         # Offset for initial pose.
         EE_offset = 0.10
-        Z_offset = 0.19
+        Z_offset = 0.16
         tfh.publish_pose_as_transform(
             best_grasp.pose, 'base_link', 'Grasp', 0.5)
         # Add some limits, plus a starting offset.
@@ -200,30 +200,40 @@ class OpenLoopGraspController(object):
         print(self.best_grasp.pose)
         return True
 
-    ## invoke YOLO
+    # invoke YOLO
     def getObjectsFromYOLO(self, bb):
-        length = len(bb.bounding_boxes)
-        ret = [length]
-        for i in range(0,length-1):
-            ret[i]=bb.bounding_boxes[i]
-        self.latest_scanned_objects = ret
-            
+        if self.scanning:
+            length = len(bb.bounding_boxes)
+            if (length > 0):
+                if length > 1:
+                    for i in range(0, length-1):
+                        self.latest_scene.append(bb.bounding_boxes[i])
+                else:
+                    self.latest_scene.append(bb.bounding_boxes)
+
+    def getMidPoint(self, obj):
+        return (obj.xmin + obj.xmax)/2, (obj.ymin + obj.ymax)/2
+
     def scanObjects(self):
-        # Move to scan positions and save objects in list
-        self.moveToPosition(-0.3, 0, 0.5, 1.57079632679, 0, 0)
-        self.latest_scene.append(self.latest_scanned_objects)
-        self.moveToPosition(0.3, 0, 0.6, 1.57079632679, 0, 0)
-        self.latest_scene.append(self.latest_scanned_objects)
-        self.moveToPosition(0, 0, 0.6, 1.57079632679, 0, 0)  
-        self.latest_scene.append(self.latest_scanned_objects)
-        print(self.latest_scene)
+        self.latest_scene = []
+        # Move to scan positions 
+        self.moveToPosition(-0.3, 0, 0.5, pi/2, 0, 0)
+        self.scanning = True
+        self.moveToPosition(0, 0, 0.5, pi/2, 0, 0)
+        self.moveToPosition(0.3, 0, 0.5, pi/2, 0, 0)
+        self.scanning = False
+        self.moveToPosition(0, 0, 0.5, pi/2, 0, 0)
+
+    def goToObj(self):
+        print(self.latest_scene[0][0])
+        x, y = self.getMidPoint(self.latest_scene[0][0])
+        self.moveToPosition(x, y+0.3, 0.4, pi/2, 0, 0)         
 
 
     def moveToGrasp(self):
 
         print("moving to grasp pose")
         self.arm_group.set_pose_target(self.best_grasp.pose)
-
         plan1 = self.arm_group.go()
 
     def moveToPosition(self, x, y, z, xt, yt, zt):
@@ -279,13 +289,16 @@ class OpenLoopGraspController(object):
     # main
     def go(self):
         # self.moveToHome()
-        raw_input('Press Enter to Start.')
+        raw_input('Press Enter to go to start.')
         while not rospy.is_shutdown():
             self.OpenGripper()
-            delete_object("cube1")
             self.spawningObject()
-
+            raw_input('Press Enter to scan table')
+            # scan table for objects from yolo, storing them in a list self.latest_scene
             self.scanObjects()
+
+            raw_input('Press Enter to go to grasp view position')
+            self.goToObj()
 
             raw_input('Press Enter to attempt to grasp object')
             self.get_grasp()
@@ -300,6 +313,9 @@ class OpenLoopGraspController(object):
             self.moveToPosition(0, 0.5, 0.36, 1.57079632679,
                                 0, 0)  # drop off location
             self.displaceToPosition(0, 0, -0.1)  # lower by 0.1
+            self.OpenGripper()
+            self.displaceToPosition(0, 0, 0.1)  # raise by 0.1
+            delete_object("cube1")
             raw_input('Press Enter to move back to overlook position')
 
 

@@ -18,7 +18,7 @@ from sensor_msgs.msg import Image
 from geometry_msgs.msg import Polygon, Point32
 from yolov3_pytorch_ros.msg import BoundingBox, BoundingBoxes
 from cv_bridge import CvBridge, CvBridgeError
-
+import dougsm_helpers.tf_helpers as tfh
 package = RosPack()
 package_path = package.get_path('yolov3_pytorch_ros')
 
@@ -30,7 +30,7 @@ from torch.autograd import Variable
 
 from models.models import Darknet
 from utils.utils import *
-from yolov3_pytorch_ros.msg import BoundingBoxes, BoundingBox
+
 
 # Detector manager class for YOLO
 class DetectorManager():
@@ -48,6 +48,7 @@ class DetectorManager():
         self.image_topic = rospy.get_param('~image_topic', '/camera/rgb/image_raw')
         self.confidence_th = rospy.get_param('~confidence', 0.7)
         self.nms_th = rospy.get_param('~nms_th', 0.3)
+        
 
         # Load publisher topics
         self.detected_objects_topic = rospy.get_param('~detected_objects_topic')
@@ -62,6 +63,8 @@ class DetectorManager():
         self.network_img_size = rospy.get_param('~img_size', 416)
         self.publish_image = rospy.get_param('~publish_image')
         
+
+
         # Initialize width and height
         self.h = 0
         self.w = 0
@@ -102,7 +105,7 @@ class DetectorManager():
         try:
 
             self.cv_image = self.bridge.imgmsg_to_cv2(data, "rgb8")
-                
+            self.last_image_pose = tfh.current_robot_pose('base_link', 'realsense_d435_color_optical_frame')
             # save imgs
             # raw_input("Press enter to take pic")
             # filename = raw_input("Object+number: ")
@@ -123,7 +126,7 @@ class DetectorManager():
         detection_results = BoundingBoxes()
         detection_results.header = data.header
         detection_results.image_header = data.header
-
+        orig_detection_results = detection_results
         # Configure input
         input_img = self.imagePreProcessing(self.cv_image)
 
@@ -154,19 +157,20 @@ class DetectorManager():
 
                 # Populate darknet message
                 detection_msg = BoundingBox()
-                detection_msg.xmin = xmin_unpad
-                detection_msg.xmax = xmax_unpad
-                detection_msg.ymin = ymin_unpad
-                detection_msg.ymax = ymax_unpad
-                detection_msg.probability = conf
-                detection_msg.Class = self.classes[int(det_class)]
 
-                # Append in overall detection message
-                detection_results.bounding_boxes.append(detection_msg)
+                detection_msg.xmin = xmin_unpad
+                detection_msg.ymin = ymin_unpad
+                detection_msg.xmax = xmax_unpad
+                detection_msg.ymax = ymax_unpad
+                ret = self.transform(detection_msg)
+                
+                ret.probability = conf
+                ret.Class = self.classes[int(det_class)]
+
+                detection_results.bounding_boxes.append(ret)
 
             # Publish detection results
             self.pub_.publish(detection_results)
-
             # Visualize detection results
             if (self.publish_image):
                 self.visualizeAndPublish(detection_results, self.cv_image)
@@ -243,8 +247,28 @@ class DetectorManager():
         image_msg = self.bridge.cv2_to_imgmsg(imgOut, "rgb8")
         self.pub_viz_.publish(image_msg)
 
+    def transform(self, bb):
+        # centre to camera frame and flip x and y
+        bb.xmin = -(bb.xmin - self.w/2)
+        bb.ymin = -(bb.ymin - self.h/2)
+        bb.xmax = -(bb.xmax - self.w/2)
+        bb.ymax = -(bb.ymax - self.h/2)
 
+        # apply scaling factor
+        scale = (self.w/2)/0.286
+        bb.xmin = bb.xmin/scale
+        bb.ymin = bb.ymin/scale
+        bb.xmax = bb.xmax/scale
+        bb.ymax = bb.ymax/scale  
 
+        # offset for camera position
+        bb.xmin = bb.xmin + self.last_image_pose.position.x
+        bb.ymin = bb.ymin + self.last_image_pose.position.y
+        bb.xmax = bb.xmax + self.last_image_pose.position.x
+        bb.ymax = bb.ymax + self.last_image_pose.position.y
+    
+
+        return bb
 
 if __name__=="__main__":
     # Initialize node
