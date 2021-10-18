@@ -47,11 +47,15 @@ y4= random.uniform(-0.37,0.2)
 
 if (abs(x4-x2) and abs(y4-y2) <0.05) or (abs(x1-x4) and abs(y1-y4) <0.05) or (abs(x4-x3) and abs(y4-y3) <0.05):
     condition_met = 0
+    counter = 0
     while not condition_met:
         rospy.loginfo('position of 4 is changed')
         x4= random.uniform(-0.5,0.2)
         y4= random.uniform(-0.37,0.2)
+        counter+=1
         if not((abs(x4-x2) and abs(y4-y2) <0.05) or (abs(x1-x4) and abs(y1-y4) <0.05) or (abs(x4-x3) and abs(y4-y3) <0.05)):
+            condition_met = 1
+        if counter > 7:
             condition_met = 1
 
 
@@ -60,11 +64,14 @@ y5= random.uniform(-0.37,0.2)
 
 if (abs(x5-x1) and abs(y5-y1) <0.1) or (abs(x5-x2) and abs(y5-y2) <0.1) or (abs(x5-x3) and abs(y5-y3) <0.1)or (abs(x5-x4) and abs(y5-y4) <0.1):
     condition_met = 0
+    counter = 0
     while not condition_met:
         rospy.loginfo('position of 5 is changed')
         x5= random.uniform(-0.5,0.2)
         y5= random.uniform(-0.37,0.2)
         if not((abs(x5-x1) and abs(y5-y1) <0.1) or (abs(x5-x2) and abs(y5-y2) <0.1) or (abs(x5-x3) and abs(y5-y3) <0.1)or (abs(x5-x4) and abs(y5-y4) <0.1)):
+            condition_met = 1
+        if counter > 7:
             condition_met = 1
 
 
