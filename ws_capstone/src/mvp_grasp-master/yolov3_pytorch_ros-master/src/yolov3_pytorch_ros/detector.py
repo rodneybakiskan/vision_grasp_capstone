@@ -168,12 +168,11 @@ class DetectorManager():
                 detection_msg.ymin = ymin_unpad
                 detection_msg.xmax = xmax_unpad
                 detection_msg.ymax = ymax_unpad
-
-
                 detection_msg.probability = conf
                 detection_msg.Class = self.classes[int(det_class)]
-                ret = self.transform(detection_msg)
                 orig_detection_results.bounding_boxes.append(detection_msg)
+                ret = self.transform(detection_msg)
+
                 detection_results.bounding_boxes.append(ret)
 
             # Publish detection results
@@ -260,9 +259,9 @@ class DetectorManager():
     def transform(self, bb):
         # centre to camera frame and flip x and y
         bb.xmin = -(bb.xmin - self.w/2)
-        bb.ymin = -(bb.ymin - self.h/2)
+        bb.ymin = -(-bb.ymin + self.h/2)
         bb.xmax = -(bb.xmax - self.w/2)
-        bb.ymax = -(bb.ymax - self.h/2)
+        bb.ymax = -(-bb.ymax + self.h/2)
 
         # apply scaling factor
         scale = (self.w/2)/0.286

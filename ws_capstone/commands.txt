@@ -36,3 +36,7 @@ rosrun mvp_grasping spawn_models.py
 
 rosrun mvp_grasping delete_models.py
 
+
+rosrun mvp_grasping objects_task1.py
+rosrun mvp_grasping objects_task2.py
+

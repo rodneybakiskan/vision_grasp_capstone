@@ -57,6 +57,11 @@ class OpenLoopGraspController(object):
         self.latest_scene = []
         self.scanning = False
         self.target = geometry_msgs.msg.Pose()
+        self.moving = False
+        self.targetx = 0
+        self.targety = 0
+        self.conf = 0.7
+        self.targetname=''
         ##
         # Moveit stuff
 
@@ -211,6 +216,57 @@ class OpenLoopGraspController(object):
                 else:
                     self.latest_scene.append(bb.bounding_boxes)
 
+        if self.moving:
+            pass
+
+    def getNames(self):
+        names = []
+        for object in self.latest_scene:
+            if object.Class not in names: 
+                names.append(object.Class)
+        return names
+
+    def getTargetLoc(self, selection):
+
+    # 1 - Cube
+    # 2 - Coke can 
+    # 3 - plastic cup 
+    # 4 - cricket ball
+    # 5 - door handle
+    # 6 - wooden peg
+    # 7 - hammer
+    # 8 - bowl
+
+        if selection == 1:
+            self.targetname = "cube\r"
+        elif selection ==  2:
+            self.targetname = "coke\r"
+        elif selection == 3:
+            self.targetname = "cup\r"
+        elif selection == 4:
+            self.targetname = "ball\r"
+        elif selection == 5:
+            self.targetname = "handle\r"
+        elif selection == 6:
+            self.targetname = "peg\r"
+        elif selection == 7:
+            self.targetname = "hammer\r"
+        elif selection == 8:
+            self.targetname = "bowl\r"
+        else:
+            self.targetname=False
+
+        if self.targetname:
+            highest_prob = 0
+            for object in self.latest_scene:
+                if (object.Class == self.targetname) & (object.probability > highest_prob):
+                    highest_prob = object.probability
+                    mid = self.getMidPoint(object)
+            return mid
+        else:
+            return False
+
+
     def getMidPoint(self, obj):
         return (obj.xmin + obj.xmax)/2, (obj.ymin + obj.ymax)/2
 
@@ -228,33 +284,35 @@ class OpenLoopGraspController(object):
         self.scanning = False
         self.moveToPosition(0, 0, 0.5, pi/2, 0, 0)
 
-    def goToObj(self):
 
-        # x, y = self.getMidPoint(self.latest_scene[0])
-        # yoffset=0.25
-        # rospy.loginfo(x)
-        # rospy.loginfo(y)
-        # self.moveToPosition(x, y + yoffset, 0.4, pi/2, 0, 0)   
+    def goToObj(self, midpoint):
+        yoffset=0.06
+        xoffset=0.03
+        x = midpoint[0]
+        y = midpoint[1]
+        rospy.loginfo(x)
+        rospy.loginfo(y)
+        self.moveToPosition(x + xoffset, y + yoffset, 0.45, pi/2, 0, 0)   
 
-        x=1
-        y=1
-        # i=0
-        self.scanning = True
-        while abs(x)>0.03 and abs(y)>0.03:
-            x, y = self.getMidPoint(self.latest_scene[0])
-            y = y * -1 
-            # i+=1
-            print(x,y)
-            if x > 0:
-                self.displaceToPosition(-0.005,0,0,False)
+        # x=1
+        # y=1
+        # # i=0
+        # self.moving = True
+        # while abs(x)>0.03 and abs(y)>0.03:
+        #     x, y = self.getMidPoint(self.latest_scene[0])
+        #     y = y * -1 
+        #     # i+=1
+        #     print(x,y)
+        #     if x > 0:
+        #         self.displaceToPosition(-0.005,0,0,False)
                 
-            if x < 0:
-                self.displaceToPosition(-0.005,0,0,False)
-            if y > 0:
-                self.displaceToPosition(0,-0.005,0,False)
-            if y < 0:
-                self.displaceToPosition(0,-0.005,0,False)
-        self.scanning = False
+        #     if x < 0:
+        #         self.displaceToPosition(-0.005,0,0,False)
+        #     if y > 0:
+        #         self.displaceToPosition(0,-0.005,0,False)
+        #     if y < 0:
+        #         self.displaceToPosition(0,-0.005,0,False)
+        # self.moving = False
 
 
     def moveToGrasp(self):
@@ -314,18 +372,21 @@ class OpenLoopGraspController(object):
 
     # main
     def go(self):
-        # self.moveToHome()
+        
         raw_input('Press Enter to go to start.')
+        self.moveToPosition(-0.3, 0, 0.5, pi/2, 0, 0)
         while not rospy.is_shutdown():
             self.OpenGripper()
             # self.spawningObject()
             raw_input('Press Enter to scan table')
+
             # scan table for objects from yolo, storing them in a list self.latest_scene
             self.scanObjects()
-            print(self.latest_scene[0].Class)
+            print('Objects found:')
+            print(self.getNames())
             # print(type(self.latest_scene[0].Class))
-            raw_input('Press Enter to go to grasp view position')
-            self.goToObj()
+            selected_object = int(input('Which object would you like to grasp?\nFrom the easiest to the most difficult\n\t1 - Cube\n\t2 - Coke can \n\t3 - plastic cup \n\t4 - cricket ball\n\t5 - door handle\n\t6 - wooden peg\n\t7 - hammer\n\t8 - bowl\n\t'))
+            self.goToObj(self.getTargetLoc(selected_object))
 
             raw_input('Press Enter to attempt to grasp object')
             self.get_grasp()
@@ -336,16 +397,17 @@ class OpenLoopGraspController(object):
             self.displaceToPosition(0, 0, -0.1)  # lower by 0.1
             self.CloseGripper()
             self.displaceToPosition(0, 0, 0.1)  # raise by 0.1
-            print(self.latest_scene[0].Class)
-            gg=str(self.latest_scene[0].Class)
-            print("gg:",gg,sep='')
-            if gg == "cup":
+
+
+            print(self.targetname)
+            
+            if self.targetname == 'cup\r':
                 self.moveToPosition(0, 0.5, 0.36, pi/2,
                                     0, 0)  # drop off location
                 self.displaceToPosition(0, 0, -0.1)  # lower by 0.1
                 self.OpenGripper()
                 delete_object("plastic_cup1")
-            elif gg == "coke":
+            elif self.targetname == 'coke\r':
                 self.moveToPosition(-0.2, 0.5, 0.36, pi/2,
                                     0, 0)  # drop off location
                 self.displaceToPosition(0, 0, -0.1)  # lower by 0.1
