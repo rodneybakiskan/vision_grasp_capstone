@@ -238,7 +238,7 @@ class OpenLoopGraspController(object):
     # 8 - bowl
 
         if selection == 1:
-            self.targetname = "cube\r"
+            self.targetname = "box\r"
         elif selection ==  2:
             self.targetname = "coke\r"
         elif selection == 3:
@@ -314,6 +314,63 @@ class OpenLoopGraspController(object):
         #         self.displaceToPosition(0,-0.005,0,False)
         # self.moving = False
 
+    def place_object(self):
+        if self.targetname == 'cup\r':
+            self.moveToPosition(0, 0.5, 0.36, pi/2,
+                                0, 0)  # drop off location
+            self.displaceToPosition(0, 0, -0.1)  # lower by 0.1
+            self.OpenGripper()
+            try:
+                delete_object("plastic_cup1")
+            except:
+                print("cant delete")
+        elif self.targetname == 'coke\r':
+            self.moveToPosition(-0.2, 0.5, 0.36, pi/2,
+                                0, 0)  # drop off location
+            self.displaceToPosition(0, 0, -0.1)  # lower by 0.1
+            self.OpenGripper()
+            try:
+                delete_object("coke_can1")
+            except:
+                print("cant delete")
+        elif self.targetname == 'handle\r':
+            self.moveToPosition(0.8, -0.1, 0.36, pi/2,
+                                0, 0)  # drop off location
+            self.displaceToPosition(0, 0, -0.1)  # lower by 0.1
+            self.OpenGripper()
+            try:
+                delete_object("door_handle1")
+            except:
+                print("cant delete")
+        elif self.targetname == 'bowl\r':
+            self.moveToPosition(0.8, -0.4, 0.36, pi/2,
+                                0, 0)  # drop off location
+            self.displaceToPosition(0, 0, -0.1)  # lower by 0.1
+            self.OpenGripper()
+            try:
+                delete_object("bowl1")
+            except:
+                print("cant delete")
+        elif self.targetname == 'box\r':
+            self.moveToPosition(0.2, 0.5, 0.36, pi/2,
+                                0, 0)  # drop off location
+            self.displaceToPosition(0, 0, -0.1)  # lower by 0.1
+            self.OpenGripper()
+            try:
+                delete_object("cube1")
+            except:
+                print("cant delete")
+        elif self.targetname == 'ball\r':
+            self.moveToPosition(-0.3, 0.5, 0.36, pi/2,
+                                0, 0)  # drop off location
+            self.displaceToPosition(0, 0, -0.1)  # lower by 0.1
+            self.OpenGripper()
+            try:
+                delete_object("cricket_ball1")
+            except:
+                print("cant delete")
+        else:
+            rospy.loginfo("Nothing found!")
 
     def moveToGrasp(self):
         print("moving to grasp pose")
@@ -388,7 +445,7 @@ class OpenLoopGraspController(object):
             selected_object = int(input('Which object would you like to grasp?\nFrom the easiest to the most difficult\n\t1 - Cube\n\t2 - Coke can \n\t3 - plastic cup \n\t4 - cricket ball\n\t5 - door handle\n\t6 - wooden peg\n\t7 - hammer\n\t8 - bowl\n\t'))
             self.goToObj(self.getTargetLoc(selected_object))
 
-            raw_input('Press Enter to attempt to grasp object')
+            # raw_input('Press Enter to attempt to grasp object')
             self.get_grasp()
             self.moveToGrasp()
 
@@ -401,25 +458,12 @@ class OpenLoopGraspController(object):
 
             print(self.targetname)
             
-            if self.targetname == 'cup\r':
-                self.moveToPosition(0, 0.5, 0.36, pi/2,
-                                    0, 0)  # drop off location
-                self.displaceToPosition(0, 0, -0.1)  # lower by 0.1
-                self.OpenGripper()
-                delete_object("plastic_cup1")
-            elif self.targetname == 'coke\r':
-                self.moveToPosition(-0.2, 0.5, 0.36, pi/2,
-                                    0, 0)  # drop off location
-                self.displaceToPosition(0, 0, -0.1)  # lower by 0.1
-                self.OpenGripper()
-                delete_object("coke_can1")
-            else:
-                rospy.loginfo("Nothing found!")
+            self.place_object()
 
 
             self.displaceToPosition(0, 0, 0.1)  # raise by 0.1
 
-            raw_input('Press Enter to move back to overlook position')
+            # raw_input('Press Enter to move back to overlook position')
 
 
 if __name__ == '__main__':
