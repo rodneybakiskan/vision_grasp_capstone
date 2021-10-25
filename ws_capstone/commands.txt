@@ -36,7 +36,11 @@ rosrun mvp_grasping spawn_models.py
 
 rosrun mvp_grasping delete_models.py
 
-
 rosrun mvp_grasping objects_task1.py
+
 rosrun mvp_grasping objects_task2.py
 
+
+
+////////////////// Depenecies //////////////////
+sudo apt-get install ros-melodic-gazebo-ros ros-melodic-eigen-conversions ros-melodic-object-recognition-msgs ros-melodic-roslint

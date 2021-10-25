@@ -2,6 +2,7 @@
 
 import rospy
 from gazebo_msgs.srv import DeleteModel
+from gazebo_msgs.srv import SpawnModel, SpawnModelRequest, SpawnModelResponse
 from tf.transformations import quaternion_from_euler
 
 

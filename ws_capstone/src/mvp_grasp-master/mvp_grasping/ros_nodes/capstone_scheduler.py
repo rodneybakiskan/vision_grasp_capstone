@@ -336,7 +336,7 @@ class OpenLoopGraspController(object):
         elif self.targetname == 'handle\r':
             self.moveToPosition(0.8, -0.1, 0.36, pi/2,
                                 0, 0)  # drop off location
-            self.displaceToPosition(0, 0, -0.1)  # lower by 0.1
+            self.displaceToPosition(0, 0, 0)  # lower by 0.1
             self.OpenGripper()
             try:
                 delete_object("door_handle1")

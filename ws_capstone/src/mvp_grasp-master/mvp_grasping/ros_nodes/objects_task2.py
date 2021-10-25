@@ -66,7 +66,7 @@ if (abs(x4-x2) and abs(y4-y2) <0.05) or (abs(x1-x4) and abs(y1-y4) <0.05) or (ab
 x5= random.uniform(x_min,x_max)
 y5= random.uniform(y_min,y_max)
 
-if (abs(x5-x1) and abs(y5-y1) <0.1) or (abs(x5-x2) and abs(y5-y2) <0.1) or (abs(x5-x3) and abs(y5-y3) <0.1)or (abs(x5-x4) and abs(y5-y4) <0.1):
+if (abs(x5-x1) and abs(y5-y1) <0.05) or (abs(x5-x2) and abs(y5-y2) <0.05) or (abs(x5-x3) and abs(y5-y3) <0.05)or (abs(x5-x4) and abs(y5-y4) <0.05):
     condition_met = 0
     counter = 0
     while not condition_met:
@@ -74,7 +74,7 @@ if (abs(x5-x1) and abs(y5-y1) <0.1) or (abs(x5-x2) and abs(y5-y2) <0.1) or (abs(
         x5= random.uniform(x_min,x_max)
         y5= random.uniform(y_min,y_max)
         counter+=1
-        if not((abs(x5-x1) and abs(y5-y1) <0.1) or (abs(x5-x2) and abs(y5-y2) <0.1) or (abs(x5-x3) and abs(y5-y3) <0.1)or (abs(x5-x4) and abs(y5-y4) <0.1)):
+        if not((abs(x5-x1) and abs(y5-y1) <0.05) or (abs(x5-x2) and abs(y5-y2) <0.05) or (abs(x5-x3) and abs(y5-y3) <0.05)or (abs(x5-x4) and abs(y5-y4) <0.05)):
             condition_met = 1
         if counter > 7:
             condition_met = 1
@@ -112,7 +112,7 @@ rospy.loginfo(y1)
 req1 = create_cube_request("cube1",
                             x1, y1, 0.05,  # position
                             0.0, 0.0, 0.0,  # rotation
-                            0.057, 0.057, 0.057)  # size
+                            0.06, 0.06, 0.06)  # size
 spawn_srv.call(req1)
 # rospy.sleep(1.0)
 
