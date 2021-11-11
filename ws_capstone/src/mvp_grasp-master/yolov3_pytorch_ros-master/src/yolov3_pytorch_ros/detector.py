@@ -111,8 +111,10 @@ class DetectorManager():
 
             self.cv_image = self.bridge.imgmsg_to_cv2(data, "rgb8")
             self.last_image_pose = tfh.current_robot_pose(
-                'base_link', 'realsense_d435_color_optical_frame')
+                'base_link', 'realsense_d435_color_optical_frame')  # change this topic when using real D435
+
             # save imgs
+
             # raw_input("Press enter to take pic")
             # filename = raw_input("Object+number: ")
             # filename += ".png"
@@ -171,12 +173,16 @@ class DetectorManager():
                 detection_msg.probability = conf
                 detection_msg.Class = self.classes[int(det_class)]
                 orig_detection_results.bounding_boxes.append(detection_msg)
+
+                # This transform requires float numbers which changes the structure of the bounding box msg (changed from int64 to float64). 
+                # This breaks the bounding box visualisation however
                 ret = self.transform(detection_msg)
 
                 detection_results.bounding_boxes.append(ret)
 
             # Publish detection results
             self.pub_.publish(detection_results)
+
             # Visualize detection results
             if (self.publish_image):
                 self.visualizeAndPublish(orig_detection_results, self.cv_image)

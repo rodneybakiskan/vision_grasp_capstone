@@ -37,7 +37,7 @@ class OpenLoopGraspController(object):
         # Initialises the OpenLoopGraspController object
 
         ##
-        #  GGCNN stuff
+        #  GGCNN paramaters and ROS subscribers
 
         ggcnn_service_name = '/ggcnn_service'
         rospy.wait_for_service(ggcnn_service_name + '/predict')
@@ -47,7 +47,7 @@ class OpenLoopGraspController(object):
         self.best_grasp = Grasp()
 
         ##
-        # YOLO
+        #  YOLO paramaters and ROS subscribers
 
         yolo_service_name = '/detected_objects_in_image'
         self.yolo_srv = rospy.Subscriber(
@@ -63,7 +63,7 @@ class OpenLoopGraspController(object):
         self.conf = 0.7
         self.targetname=''
         ##
-        # Moveit stuff
+        # Moveit 
 
         self.timeout = 50
         # Defines groups
@@ -80,7 +80,7 @@ class OpenLoopGraspController(object):
             queue_size=20,
         )
 
-        # Gets Basic Information
+        # Some Basic Information
         # We can get the name of the reference frame for this robot:
         self.gripper_planning_frame = self.gripper_group.get_planning_frame()
         print("============ Gripper planning frame: %s" %
@@ -107,18 +107,13 @@ class OpenLoopGraspController(object):
     ##
     #
     # Member functions
-
     def moveToHome(self):
         self.arm_group.set_named_target("home")
         plan1 = self.arm_group.go()
 
-    # Sets the robot arm to overlook postion
-
     def moveToOverlook(self):
         self.arm_group.set_named_target("overlook")
         plan1 = self.arm_group.go()
-
-    # Opens gripper
 
     def OpenGripper(self):
         # pose_goal = gripper_group.get_current_link_values()
@@ -132,15 +127,6 @@ class OpenLoopGraspController(object):
     def CloseGripper(self):
         self.gripper_group.set_named_target("close")
         plan1 = self.gripper_group.go()
-
-    # Adding Object(box) into the Plannning Scene
-    #   box_pose = geometry_msgs.msg.PoseStamped()
-    #   box_pose.header.frame_if = "Rev26"
-    #  box_pose.pose.orientation.w = 1
-    # box_pose.pose.position.z= 0.07
-        #box_name = "box"
-        # Dimensions needed of item we want to add into planning scene
-        #scene.add_box(box_name,box_pose, size=(1,1,1))
 
     def Attachitem(self):
         grasping_group = 'gripper2'
@@ -181,8 +167,7 @@ class OpenLoopGraspController(object):
         rospy.sleep(5)
         moveit_commander.roscpp_shutdown()
 
-    # invoke GGCNN
-
+    ## invoke GGCNN
     def get_grasp(self):
         ret = self.ggcnn_srv.call()
         if not ret.success:
@@ -193,7 +178,7 @@ class OpenLoopGraspController(object):
         self.best_grasp = best_grasp
         rospy.sleep(1)
 
-        # Offset for initial pose.
+        # Apply offset
         EE_offset = 0.10
         Z_offset = 0.20
         tfh.publish_pose_as_transform(
@@ -205,11 +190,12 @@ class OpenLoopGraspController(object):
         print(self.best_grasp.pose)
         return True
 
-    # invoke YOLO
-    def getObjectsFromYOLO(self, bb):#change to append current yolo output to [0]----------------------------------------------------------
+    ## invoke YOLO
+    def getObjectsFromYOLO(self, bb):
         if self.scanning:
             length = len(bb.bounding_boxes)
             if (length > 0):
+                # format changes if more than one bounding box
                 if length > 1:
                     for i in range(0, length-1):
                         self.latest_scene.append(bb.bounding_boxes[i])
@@ -227,7 +213,8 @@ class OpenLoopGraspController(object):
         return names
 
     def getTargetLoc(self, selection):
-
+        #Finds the highest probability object in the list and returns the location of it's bounding box midpoint
+    
     # 1 - Cube
     # 2 - Coke can 
     # 3 - plastic cup 
@@ -271,6 +258,7 @@ class OpenLoopGraspController(object):
         return (obj.xmin + obj.xmax)/2, (obj.ymin + obj.ymax)/2
 
     def scanObjects(self):
+        # Scan must be set to height of 0.5m for translation to robot frame to work, see notes
         self.latest_scene = []
         # Move to scan positions 
         self.moveToPosition(-0.3, 0, 0.5, pi/2, 0, 0)
@@ -314,6 +302,7 @@ class OpenLoopGraspController(object):
         #         self.displaceToPosition(0,-0.005,0,False)
         # self.moving = False
 
+        ## for the love of god, refactor this
     def place_object(self):
         if self.targetname == 'cup\r':
             self.moveToPosition(0, 0.5, 0.36, pi/2,
@@ -427,7 +416,7 @@ class OpenLoopGraspController(object):
         spawn_srv.call(req1)
         rospy.sleep(1.0)
 
-    # main
+    ##### main 
     def go(self):
         
         raw_input('Press Enter to go to start.')
@@ -449,21 +438,16 @@ class OpenLoopGraspController(object):
             self.get_grasp()
             self.moveToGrasp()
 
-            # self.moveToPosition(0,0,0.36,1.57079632679,0,0) #fake grasp
-
             self.displaceToPosition(0, 0, -0.1)  # lower by 0.1
             self.CloseGripper()
             self.displaceToPosition(0, 0, 0.1)  # raise by 0.1
 
-
             print(self.targetname)
-            
             self.place_object()
-
 
             self.displaceToPosition(0, 0, 0.1)  # raise by 0.1
 
-            # raw_input('Press Enter to move back to overlook position')
+            raw_input('Press Enter to move back to overlook position')
 
 
 if __name__ == '__main__':
